@@ -49,7 +49,7 @@ plugins:
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: Pandoc
+markdown: kramdown
 # pandoc:
   # extensions:
     # - normalize
@@ -57,14 +57,14 @@ markdown: Pandoc
     # - mathjax
     # - bibliography: bibliography/references.bib
     # - citeproc
-# kramdown:
-  # input: GFM # use Github Flavored Markdown !important
-  # syntax_highlighter_opts:
-    # span:
-      # line_numbers: false
-    # block:
-      # line_numbers: true
-      # start_line: 1
+kramdown:
+  input: GFM # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 # Disqus settings
 disqus_username: fromuly
