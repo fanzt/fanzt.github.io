@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: fanzt2006@sjtu.edu.cn
 description: "fromuly's blog"
 keyword: "fromuly, fanzt, rimuly, physics"
-url: "tbd" # your host, for absolute URL
+url: "https://fanzt.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
