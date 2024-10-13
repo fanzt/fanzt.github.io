@@ -6,6 +6,7 @@ date:       2024-10-13 19:00:00
 author:     "fromuly"
 header-img: "img/post-bg-2024.jpg"
 catalog: true
+usemathjax: true
 tags:
     - Personal
 ---
