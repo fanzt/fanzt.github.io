@@ -54,7 +54,6 @@ pandoc:
     - normalize
     - smart
     - mathjax
-    - csl: _styles/apa.csl
     - bibliography: bibliography/references.bib
     - citeproc
 # kramdown:
