@@ -52,10 +52,7 @@ plugins:
 markdown: Pandoc
 pandoc:
   extensions:
-    - normalize
-    - smart
     - mathjax
-    - bibliography: bibliography/references.bib
     - citeproc
 # kramdown:
   # input: GFM # use Github Flavored Markdown !important
