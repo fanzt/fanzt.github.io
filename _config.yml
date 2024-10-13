@@ -50,10 +50,13 @@ plugins:
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: Pandoc
-Pandoc:
-  extensions:
-    - mathjax
-    - citeproc
+# pandoc:
+  # extensions:
+    # - normalize
+    # - smart
+    # - mathjax
+    # - bibliography: bibliography/references.bib
+    # - citeproc
 # kramdown:
   # input: GFM # use Github Flavored Markdown !important
   # syntax_highlighter_opts:
