@@ -7,6 +7,7 @@ author:     "fromuly"
 header-img: "img/post-bg-2024.jpg"
 catalog: true
 usemathjax: true
+music-id: 564989
 tags:
     - Physics
     - Weinberg QFT Notes
