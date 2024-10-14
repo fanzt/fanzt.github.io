@@ -1694,3 +1694,12 @@ img::-moz-selection {
 .no-scroll {
   overflow-y: hidden;
 }
+#iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#iframe-container iframe {
+  width: 700px;
+  height: 90px;
+}
