@@ -4,7 +4,7 @@ title:      "Schwinger Quantum Action Principle"
 subtitle:   "From a footnote in Weinberg QFT."
 date:       2024-10-15 22:40:00
 author:     "fromuly"
-header-img: "img/post-bg-2024.jpg"
+header-img: "img/post-bg-2024-2.jpg"
 catalog: true
 usemathjax: true
 music-id: 534064298
