@@ -98,7 +98,7 @@ $$
     {\tau_2}=\mathcal{U}_{12}{\tau_1}\mathcal{U}_{12}^{-1}
 $$
 
-其中 `$\mathcal{U}_{12}$` 为一幺正算符。分别考虑其本征态 `$\left\vert{{\tau'}_1,\Sigma_1}\right\rangle$` 和 `$\left\vert{{\tau'}_2,\Sigma_2}\right\rangle$`，我们自然有：
+其中 `$\mathcal{U}_{12}$` 为一幺正算符。分别考虑其本征态 `$\left\vert{\tau'}_1,\Sigma_1\right\rangle$` 和 `$\left\vert{\tau'}_2,\Sigma_2\right\rangle$`，我们自然有：
 
 $$
     \left\vert{{\tau'}_2,\Sigma_2}\right\rangle=\mathcal{U}_{12}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
@@ -107,13 +107,13 @@ $$
 考虑跃迁振幅，有：
 
 $$
-    \left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{{\tau'}_1,\Sigma_1}\right\rangle=\left\langle{{\tau'}_1,\Sigma_1}\right\vert{\mathcal{U}^{-1}_{12}}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
+    \left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{\tau'}_1,\Sigma_1\right\rangle=\left\langle{{\tau'}_1,\Sigma_1}\right\vert{\mathcal{U}^{-1}_{12}}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
 $$
 
 计算其变分，有：
 
 $$
-    \delta\left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{{\tau'}_1,\Sigma_1}\right\rangle=\left\langle{{\tau'}_1,\Sigma_1}\right\vert{\delta\mathcal{U}^{-1}_{12}}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
+    \delta\left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{\tau'}_1,\Sigma_1\right\rangle=\left\langle{{\tau'}_1,\Sigma_1}\right\vert{\delta\mathcal{U}^{-1}_{12}}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
 $$
 
 由于算符 $\mathcal{U}_{12}$ 的幺正性，我们必须有：
@@ -131,7 +131,7 @@ $$
 于是有：
 
 $$
-    \delta\left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{{\tau'}_1,\Sigma_1}\right\rangle=i\left\langle{{\tau'}_2,\Sigma_2}\right\vert{\delta{S_{12}}}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
+    \delta\left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{\tau'}_1,\Sigma_1\right\rangle=i\left\langle{{\tau'}_2,\Sigma_2}\right\vert{\delta{S_{12}}}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
 $$
 
 容易看到，$\delta{S_{12}}$ 总具有可加性（适当插入完备性关系即可）：
@@ -150,7 +150,7 @@ $$
 而将我们在 Quantum Mechanics 部分的讨论进行推广，我们又知道跃迁振幅的变分可以被描述为一无穷小幺正变换 $F$ 的差：
 
 $$
-    \delta\left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{{\tau'}_1,\Sigma_1}\right\rangle=i\left\langle{{\tau'}_2,\Sigma_2}\right\vert{F(\Sigma_2)-F(\Sigma_1)}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
+    \delta\left\langle{{\tau'}_2,\Sigma_2}\right\vert\left.{\tau'}_1,\Sigma_1\right\rangle=i\left\langle{{\tau'}_2,\Sigma_2}\right\vert{F(\Sigma_2)-F(\Sigma_1)}\left\vert{{\tau'}_1,\Sigma_1}\right\rangle
 $$
 
 于是我们有：
