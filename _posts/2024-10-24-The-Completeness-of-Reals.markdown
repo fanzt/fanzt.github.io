@@ -106,6 +106,7 @@ $$
 $$
     \exists!\:\xi\:s.t.\bigcap_{n=1}^{\infty}[a_n,b_n]={\xi}
 $$
+
 亦即：
 
 $$
