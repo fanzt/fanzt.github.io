@@ -49,13 +49,17 @@ $子列定理:{x_n}收敛\Leftrightarrow其任意子列均收敛到同一个数�
 
 $Stolz定理:$
 若有：
+
 $$
     \{y_n\}单调增且\lim_{n\rightarrow\infty}y_n=+\infty,\:\lim_{n\rightarrow\infty}\frac{x_{n+1}-x_{n}}{y_{n+1}-y_n}=a
 $$
+
 则有：
+
 $$
     \lim_{n\rightarrow\infty}\frac{x_n}{y_n}=a
 $$
+
 *注：Stolz定理的逆定理并不成立。*
 常见于分式数列的求解。
 
