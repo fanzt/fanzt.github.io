@@ -50,9 +50,11 @@ $$
   - 大N截断：用于由极限条件推导极限结论，常见于分式加和的极限（令前N项为有限值截断，后N项依赖于n但收敛）
 
 $子列定理:{x_n}收敛\Leftrightarrow其任意子列均收敛到同一个数。$
+
 可用于利用两个或多个子列拼凑出原数列；更常用于反证极限不存在。
 
 $Stolz定理:$
+
 若有：
 
 $$
@@ -73,13 +75,19 @@ $$
 $\mathrm{Theorem}:单调有界实数列必收敛。$
 
 $\mathrm{Proof}:$
-$$\{x_n\} 有上界 \Leftrightarrow \exists{M}s.t.\forall{n\geq1},x_n\leq{M}$$
+
+$$
+\{x_n\} 有上界 \Leftrightarrow \exists{M}s.t.\forall{n\geq1},x_n\leq{M}
+$$
 
 又由单调增有：
 
-$$x_1\leq x_2\leq x_3\cdots\leq M$$
+$$
+x_1\leq x_2\leq x_3\cdots\leq M
+$$
 
 利用实数的无限小数定义思想
+
 $$
 \begin{aligned}
     &\exists n_0\:s.t.\:x_{n_1}\in(n_0,n_0+1]
@@ -90,6 +98,7 @@ $$
 $$
 
 于是有：
+
 $$
 \begin{aligned}
     &\forall{\varepsilon>0},\exists{k}\:s.t.\:10^{-k}<\varepsilon,
@@ -105,6 +114,7 @@ $$
 ## 闭区间套定理
 
 `$\mathrm{Theorem}:对一闭区间集合 \{[a_n,b_n]\}_{n\geq{1}}$`
+
 若有：
 
 1. $[a_{n+1},b_{n+1}]\subset[a_n,b_n]$
@@ -123,6 +133,7 @@ $$
 $$
 
 $\mathrm{Proof}:$
+
 由单调收敛定理有：$a_n$ 单调递增有上界，$b_n$ 单调递减有下界，因而其均收敛，设极限分别为 $\xi$、$\eta$。又由条件2有 $\xi-\eta=0$.
 
 - 常见用法：多用于证明其余定理。
@@ -169,6 +180,7 @@ $$
 $\mathrm{Theorem}:实数列{x_n}收敛当且仅当其为 Cauchy 列。$
 
 $\mathrm{Proof}:$
+
 一方面，当 `${x_n}$` 是 Cauchy 列时，我们总可以取 Cauchy 列定义中的 $\varepsilon$ 为一有限值（例如，取为1），则 $N$ 之后的所有项均被限制在 `$x_N\pm{1}$` 中。这意味着数列的大小被限制在前有限项中，自然有界；而由 B-W 定理知其必存在一收敛子列。将截断标准 $N$ 取得比 Cauchy 列与 B-W 收敛子列的两个截断标准 $N_1$ 与 $N_2$ 都要大，就可以保证剩余项同时满足 Cauchy 与 B-W 的检验，而由此就有：
 
 $$
@@ -192,6 +204,7 @@ $$
 ### 压缩映像
 
 - $\mathrm{Theorem:Banach不动点定理}$
+
     考虑 $f:\mathbb{R}\rightarrow\mathbb{R}$，满足：$\exists\:0<q<1$，且有：
 
     $$
@@ -206,6 +219,7 @@ $$
 
     称 $\xi$ 为 $f(x)$ 的不动点。
 - $\mathrm{Proof:}$
+
     任取 `$x_1\in\mathbb{R}$`, 令 `$x_{n+1}=f(x_n)$`，则有：
 
     $$
@@ -254,8 +268,10 @@ $$
 
     则称 $\alpha$ 和 $\beta$ 分别为 $S$ 的下确界和上确界，记为 $\alpha=\inf{S}$，$\beta=\sup{S}$.
 - $\mathrm{Theorem}:确界存在定理$
+
   - 非空有上界的数集必有上确界，非空有下界的集合必有下确界。
   - $\mathrm{Proof:}$
+
     以上确界为例，利用二分法构造闭区间套压低上界。取初始上界为 $b$,取 $a\in{S}$，二等分 $[a,b]$ 为 $[a,(a+b)/2]$ 和 $[(a+b)/2,b]$，若后者与 $S$ 交集非空则取后者为 `$[a_1,b_1]$`，否则取前者为 `$[a_1,b_1]$`，继续对 `$[a_1,b_1]$` 如此重复，可得系列闭区间套 `$[a_n,b_n]$`，其满足闭区间套定理的要求且保证 `$b_n$` 永远是 $S$ 的上界，`$a_n$` 永远属于 $S$。于是由闭区间套定理有：
 
     $$
