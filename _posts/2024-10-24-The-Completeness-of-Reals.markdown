@@ -26,14 +26,19 @@ $$
 ## 数列极限
 
 1. 存在极限：
+
    $$
         \forall{\varepsilon}>0,\:\exists{N\in{\mathbb{N}}},\:s.t.\forall{n>N}, |x_n-a|<\varepsilon\Leftrightarrow\lim_{n\rightarrow\infty}x_n=a.
     $$
+
 2. 不存在极限：
+
     $$
         \forall{a\in{\mathbb{R}}},\:\exists\varepsilon_0>0,\:\forall{N\in\mathbb{N}},\:\exists{n>N},\:|x_n-a|>\varepsilon_0
     $$
+
 3. 极限无穷大：
+
     $$
         \forall{M>0},\:\exists{N\in{\mathbb{N}}},\:s.t.\forall{n>N},x_n>M\Leftrightarrow{\lim_{n\rightarrow\infty}}x_n=+\infty
     $$
@@ -133,8 +138,8 @@ $\mathrm{Proof}:$
 $$\exists{a_1<b_1},\:s.t.x_n\in[a_1,b_1]\:\forall{n>1}
 $$
 
-将 `$[a_1,b_1]$` 二等分，其中必有一个有 `${x_n}$` 中无穷多个点。记该闭区间为 $[a_2,b_2]$. 
-数学归纳法，有 
+将 `$[a_1,b_1]$` 二等分，其中必有一个有 `${x_n}$` 中无穷多个点。记该闭区间为 $[a_2,b_2]$.
+数学归纳法，有
 
 $$
 \begin{aligned}
@@ -184,6 +189,90 @@ $$
 
 - 常见用法：证明级数列是否收敛；证明其余定理。
 
+### 压缩映像
+
+- $\mathrm{Theorem:Banach不动点定理}$
+    考虑 $f:\mathbb{R}\rightarrow\mathbb{R}$，满足：$\exists\:0<q<1$，且有：
+
+    $$
+        \forall a,b\in\mathbb{R},\:|f(a)-f(b)|\leq q|a-b|,
+    $$
+
+    则有：
+
+    $$
+        \exists!\xi\in\mathbb{R},\:s.t.\xi=f(\xi)
+    $$
+
+    称 $\xi$ 为 $f(x)$ 的不动点。
+- $\mathrm{Proof:}$
+    任取 `$x_1\in\mathbb{R}$`, 令 `$x_{n+1}=f(x_n)$`，则有：
+
+    $$
+    \begin{aligned}
+        |x_{n+1}-x_n|&=|f(x_n)-f(x_{n-1})|\\&<q|x_n-x_{n-1}|<\cdots<q^{n-1}|x_2-x_1|
+    \end{aligned}
+    $$
+
+    因而有：
+
+    $$
+    \begin{aligned}
+        &|x_{n+m}-x_n|
+        \\&\leq|x_{n+m}-x_{n+m-1}|+|x_{n+m-1}-x_{n+m-2}|+\cdots+|x_{n+1}-x_{n}|
+        \\&<q^{n-1}\left(\sum_{k=0}^{m-1}{q^k}\right)|x_2-x_1|
+        \\&\leq q^n\frac{1}{1-q}|x_2-x_1|
+    \end{aligned}
+    $$
+
+    当 $n$ 任意大的时候，上式可以任意小，因而 $x_n$ 为一 Cauchy 列，其有极限 $\xi$.
+    进一步考虑 `$\lim_{n\rightarrow\infty}f(x_n)$`，有：
+
+    $$
+        |f(x_n)-f(\xi)|\leq q|x_n-\xi|<c\varepsilon
+    $$
+
+    因而极限成立。于是我们可以对递推公式两边取极限：
+
+    $$
+        \lim_{n\rightarrow\infty}x_{n+1}=\lim_{n\rightarrow\infty}f(x_n)\Rightarrow\xi=f(\xi)
+    $$
+
+    由此命题得证。
+
 ## 确界原理
 
-TBD.
+- 确界的定义：
+  - 给定非空数集 $S$，若存在实数 $\alpha$ 和 $\beta$ 分别满足：
+
+    $$
+    \begin{aligned}
+        \forall x\in S&,\alpha\leq x\leq\beta
+        \\\:\forall\varepsilon>0,\:\exists x_0,x_1\in S,&\:s.t. x_0<\alpha+\varepsilon,\:x_0>\beta-\varepsilon
+    \end{aligned}
+    $$
+
+    则称 $\alpha$ 和 $\beta$ 分别为 $S$ 的下确界和上确界，记为 $\alpha=\inf{S}$，$\beta=\sup{S}$.
+- $\mathrm{Theorem}:确界存在定理$
+  - 非空有上界的数集必有上确界，非空有下界的集合必有下确界。
+  - $\mathrm{Proof:}$
+    以上确界为例，利用二分法构造闭区间套压低上界。取初始上界为 $b$,取 $a\in{S}$，二等分 $[a,b]$ 为 $[a,(a+b)/2]$ 和 $[(a+b)/2,b]$，若后者与 $S$ 交集非空则取后者为 `$[a_1,b_1]$`，否则取前者为 `$[a_1,b_1]$`，继续对 `$[a_1,b_1]$` 如此重复，可得系列闭区间套 `$[a_n,b_n]$`，其满足闭区间套定理的要求且保证 `$b_n$` 永远是 $S$ 的上界，`$a_n$` 永远属于 $S$。于是由闭区间套定理有：
+
+    $$
+        \exists\xi\:s.t.\lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n=\xi
+    $$
+
+    这意味着对于 $\xi$，有 $\forall x\in S, x\leq\xi$；且有：
+
+    $$
+        \forall\varepsilon>0,\exists N\in\mathbb{N},\forall{n>N},\:\xi-a_n<\varepsilon,\:b_n-\xi<\varepsilon
+    $$
+
+    亦即：
+
+    $$
+        \forall\varepsilon>0,\exists N\in\mathbb{N},\forall{n>N},\:\xi-\varepsilon<a_n\in{S}
+    $$
+
+    这就满足了上确界的条件，因此 $\sup{S}=\xi$.
+    下确界的证明类似；特别地，若一个数集 $A$ 没有上界，则 $\sup{A}=+\infty$；若其没有下界，则 $\inf{A}=-\infty$. 规定 $\sup{\varnothing}=-\infty$，$\inf{\varnothing}=+\infty$.
