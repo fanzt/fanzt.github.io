@@ -28,7 +28,7 @@ $$
 1. 存在极限：
 
    $$
-        \forall{\varepsilon}>0,\:\exists{N\in{\mathbb{N}}},\:s.t.\forall{n>N}, |x_n-a|<\varepsilon\Leftrightarrow\lim_{n\rightarrow\infty}x_n=a.
+        \forall{\varepsilon}>0,\:\exists{N\in{\mathbb{N}}},\:s.t.\forall{n>N}, |x_n-a|<\varepsilon\iff\lim_{n\rightarrow\infty}x_n=a.
     $$
 
 2. 不存在极限：
@@ -40,7 +40,7 @@ $$
 3. 极限无穷大：
 
     $$
-        \forall{M>0},\:\exists{N\in{\mathbb{N}}},\:s.t.\forall{n>N},x_n>M\Leftrightarrow{\lim_{n\rightarrow\infty}}x_n=+\infty
+        \forall{M>0},\:\exists{N\in{\mathbb{N}}},\:s.t.\forall{n>N},x_n>M\iff{\lim_{n\rightarrow\infty}}x_n=+\infty
     $$
 
 - 数列极限的性质：唯一性，有界性，保序性
@@ -49,7 +49,7 @@ $$
   - 四则运算：仅可用于有限次，需要先保证被运算极限存在；
   - 大N截断：用于由极限条件推导极限结论，常见于分式加和的极限（令前N项为有限值截断，后N项依赖于n但收敛）
 
-$子列定理:{x_n}收敛\Leftrightarrow其任意子列均收敛到同一个数。$
+$子列定理:{x_n}收敛\iff其任意子列均收敛到同一个数。$
 
 可用于利用两个或多个子列拼凑出原数列；更常用于反证极限不存在。
 
@@ -70,6 +70,24 @@ $$
 *注：Stolz定理的逆定理并不成立。*
 常见于分式数列的求解。
 
+### 几个需要注意的结论
+
+*常见的坏东西不是振荡就是调和级数。*
+
+1. 发散数列的绝对值数列可能收敛。
+   - e.g. `$x_n=(-1)^{n-1}$`
+2. 收敛数列与发散数列的积既可以是收敛的，也可以是发散的。
+   - e.g.1 `$a_n=\frac{1}{n},b_n=n\Rightarrow{a_nb_n}$` 收敛。
+   - e.g.2 `$a_n=\frac{1}{n+1},b_n=n\sin{\frac{n\pi}{2}}\Rightarrow{a_nb_n}$` 发散。
+3. 非负发散数列的积可以收敛。
+   - e.g. $x_n=\frac{1+(-1)^n}{2},y_n=\frac{1-(-1)^n}{2}\Rightarrow{x_ny_n=0}$.
+4. 非负发散数列的和可以收敛。
+   - e.g. 取一个收敛于 $a$ 的数列，间隔插入 $0$ 构成不收敛的交错数列，再取一个在上述数列为 $0$ 的项为 $a$，非零项为 $0$ 的数列，二者加和显然收敛于 $a$.
+5. 算术平均值收敛的数列可以发散（亦即Stolz定理的逆不成立）。
+6. 对任意的 `$p\in\mathbb{N}$`，总可以有数列 `$a_n$` 使得 `$\lim_{n\rightarrow\infty}(a_{n+p}-a_n)=0$` 而 `${a_n}$` 发散。
+   - e.g. 调和级数前 $n$ 项和。
+   - 与 Cauchy 列等价定义的区别：Cauchy 列定义要求固定 $n$ 后对每个 $p$ 都有 `$|x_{n+p}-x_{n}|<\varepsilon$`，而这里则是固定了 $p$ 之后对任意大的 $n$ 有 `$|x_{n+p}-x_{n}|<\varepsilon$`.
+
 ## 单调收敛定理
 
 $\mathrm{Theorem}:单调有界实数列必收敛。$
@@ -77,7 +95,7 @@ $\mathrm{Theorem}:单调有界实数列必收敛。$
 $\mathrm{Proof}:$
 
 $$
-\{x_n\} 有上界 \Leftrightarrow \exists{M}s.t.\forall{n\geq1},x_n\leq{M}
+\{x_n\} 有上界 \iff \exists{M}s.t.\forall{n\geq1},x_n\leq{M}
 $$
 
 又由单调增有：
@@ -192,7 +210,7 @@ $$
 
 $$
 \begin{aligned}
-    \lim_{n\rightarrow\infty}x_n=\xi&\Leftrightarrow\forall{\varepsilon>0},\exists{N\in\mathbb{N}},\:\forall{n>N},\:|x_n-\xi|<\frac{\varepsilon}{2}
+    \lim_{n\rightarrow\infty}x_n=\xi&\iff\forall{\varepsilon>0},\exists{N\in\mathbb{N}},\:\forall{n>N},\:|x_n-\xi|<\frac{\varepsilon}{2}
     \\&\Rightarrow|x_n-x_m|=|x_n-\xi+\xi-x_m|\leq|x_n-\xi|+|x_m-\xi|<\varepsilon
 \end{aligned}
 $$
@@ -200,6 +218,15 @@ $$
 即有其为 Cauchy 列。
 
 - 常见用法：证明级数列是否收敛；证明其余定理。
+
+### Cauchy 收敛的几个等价表述
+
+1. 数列 ${x_n}$ 收敛 `$\iff\forall\varepsilon>0,\exists N=N(\varepsilon), \forall n,m>N, |x_n-x_m|<\varepsilon$`.
+2. 数列 ${x_n}$ 收敛 `$\iff\forall\varepsilon>0,\exists N=N(\varepsilon),\forall n>N,\forall p\in\mathbb{N}, |x_{n+p}-x_n|<\varepsilon$`
+3. 数列 ${x_n}$ 收敛 `$\iff\forall\varepsilon>0,\exists N=N(\varepsilon), \forall m\in\mathbb{N}, |x_{N+m}-x_N|<\varepsilon$`
+
+问题：若将 $\mathbb{N}$ 替换为 $\mathbb{N}$ 的任意子集 $P$ 如何？
+答案是这样的替换无法保证数列仍旧收敛。上述叙述与数列收敛等价要求 $P=\mathbb{N}$ 必须成立。
 
 ### 压缩映像
 
@@ -292,3 +319,4 @@ $$
 
     这就满足了上确界的条件，因此 $\sup{S}=\xi$.
     下确界的证明类似；特别地，若一个数集 $A$ 没有上界，则 $\sup{A}=+\infty$；若其没有下界，则 $\inf{A}=-\infty$. 规定 $\sup{\varnothing}=-\infty$，$\inf{\varnothing}=+\infty$.
+
