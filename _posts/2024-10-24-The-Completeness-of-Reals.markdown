@@ -70,6 +70,31 @@ $$
 *注：Stolz定理的逆定理并不成立。*
 常见于分式数列的求解。
 
+### 自然常数 $e$
+
+$\mathrm{Definition:}$
+
+$$
+    e=\lim_{n\rightarrow\infty}\sum_{k=0}^n\frac{1}{k!}=\lim_{n\rightarrow\infty}x_n
+$$
+
+估算 $e$ 和有限项数列的误差：
+$$
+\begin{aligned}
+    x_{n+m}-x_{n}&=\sum_{k=1}^m\frac{1}{(n+k)!}
+    \\&=\frac{1}{(n+1)!}\left(1+\sum_{k=2}^m\frac{1}{\prod_{j=2}^k(n+j)}\right)
+    \\&\leq\frac{1}{(n+1)!}\sum_{k=0}^{m-1}\frac{1}{(n+2)^k}
+    \\&\leq\frac{1}{(n+1)!}\frac{n+2}{n+1}
+    \\&=\frac{1}{n!n}\frac{n(n+2)}{(n+1)^2}\leq\frac{1}{n!n}
+\end{aligned}
+$$
+
+因此有：
+
+$$
+    0<e-x_n\leq\frac{1}{n!n}\quad\Rightarrow e=x_n+\frac{\theta_n}{n!n}.
+$$
+
 ### 几个需要注意的结论
 
 *常见的坏东西不是振荡就是调和级数。*
