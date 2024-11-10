@@ -17,21 +17,29 @@ tags:
 六种趋近，四类结果。
 
 - `$\lim_{x\rightarrow+\infty}f(x)=A\in\mathbb{R}\quad(D_f=[a,+\infty))$`
+
     $$
         \forall{\varepsilon>0},\exists N,\forall x>N, |f(x)-A|<\varepsilon
     $$
+
 - `$\lim_{x\rightarrow-\infty}f(x)=A\in\mathbb{R}\quad(D_f=(-\infty,a])$`
+
     $$
         \forall{\varepsilon>0},\exists N,\forall x<-N, |f(x)-A|<\varepsilon
     $$
+
 - `$\lim_{x\rightarrow\infty}f(x)=A\in\mathbb{R}\quad(D_f=(-\infty,b]\cup[a,+\infty))$`
+
     $$
         \forall{\varepsilon>0},\exists N,\forall |x|>N, |f(x)-A|<\varepsilon
     $$
+
 - `$\lim_{x\rightarrow x_0}f(x)=A\in\mathbb{R}\quad(D_f=(x_0-\delta,x_0)\cup(x_0,x_0+\delta))$`
+
     $$
         \forall{\varepsilon>0},\exists\delta>0,\forall 0<|x-x_0|<\delta, |f(x)-A|<\varepsilon
     $$
+
 - 特殊发散： $\varepsilon\rightarrow M$，`$|f(x)-A|<\varepsilon\rightarrow f(x)>M/f(x)<-M$`
 
 *注意：函数极限的复合要求被复合函数必须从去心邻域映射到去心邻域，又或者复合函数在中心点连续。*
