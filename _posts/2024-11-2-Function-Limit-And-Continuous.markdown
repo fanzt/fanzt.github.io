@@ -47,6 +47,7 @@ tags:
 ## Heine 定理
 
 $\mathrm{Theorem}:\lim_{x\rightarrow x_0}f(x)=A\iff\forall x_n\rightarrow x_0,\lim_{n\rightarrow\infty}f(x_n)=A.$
+
 $\mathrm{Proof}:$
 懒得写了。
 充分性主要思想在于取数列的 $\varepsilon$ 为函数的 $\delta.$
@@ -57,6 +58,7 @@ $\mathrm{Proof}:$
 ## Cauchy 收敛准则
 
 `$\mathrm{Theorem}:\lim_{x\rightarrow x_0}收敛\iff\forall\varepsilon>0,\exists\delta>0,\forall{x_1,x_2}\in\mathring{O}(x_0,\delta),|f(x_1)-f(x_2)|<\varepsilon$`.
+
 $\mathrm{Proof}:$
 利用 Heine 定理。核心思想仍旧在于将数列极限的 $\varepsilon$ 作为函数极限的 $\delta$ 使用。
 
@@ -64,6 +66,7 @@ $\mathrm{Proof}:$
 
 $\mathrm{Theorem}:若f(x)在(x_0,x_0+\delta)中单调有界，则\lim_{x\rightarrow x_0^+}f(x)收敛.$
 $类似地，若f(x)在(x_0-\delta,x_0)中单调有界，则\lim_{x\rightarrow x_0^-}f(x)收敛.$
+
 $\mathrm{Proof:}$
 此处数列的单调收敛定理联合 Heine 定理仅能给出单调趋近 `$x_0$` 的数列 `$x_n$` 保证 `$f(x_n)$` 收敛。因此我们选定一个单调数列，利用该数列将所有去心邻域中的点夹在数列两项之间，再利用迫敛性给出极限。
 
