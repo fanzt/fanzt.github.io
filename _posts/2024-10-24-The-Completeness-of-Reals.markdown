@@ -346,4 +346,3 @@ $$
 
     这就满足了上确界的条件，因此 $\sup{S}=\xi$.
     下确界的证明类似；特别地，若一个数集 $A$ 没有上界，则 $\sup{A}=+\infty$；若其没有下界，则 $\inf{A}=-\infty$. 规定 $\sup{\varnothing}=-\infty$，$\inf{\varnothing}=+\infty$.
-
