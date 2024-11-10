@@ -79,6 +79,7 @@ $$
 $$
 
 估算 $e$ 和有限项数列的误差：
+
 $$
 \begin{aligned}
     x_{n+m}-x_{n}&=\sum_{k=1}^m\frac{1}{(n+k)!}
