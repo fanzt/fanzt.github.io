@@ -81,3 +81,41 @@ $\mathrm{Proof:}$
 
 第一类：可去/跳跃
 第二类：无穷/振荡
+
+## 一致连续与闭区间上连续函数的性质
+
+*前有闭区间，接下来，B-W定理很有用。*
+
+$\mathrm{Definition:}$
+
+$$
+\begin{aligned}
+    \forall\varepsilon>0,\exists\delta(\varepsilon)>0,&\forall0<|x_1-x_2|<\delta,|f(x_1)-f(x_2)|<\varepsilon\\&\iff{f(x)\in U.C.(I)}
+\end{aligned}
+$$
+
+$\mathrm{Theorem1:}f\in C[a,b]\iff{f\in U.C.[a,b]}.$
+
+$\mathrm{Proof:}$
+
+反证，利用闭区间上的B-W子列定理与Heine定理联合。
+
+$\mathrm{Theorem2:}f\in C[a,b]\Rightarrow{f(x) 有界}.$
+
+$\mathrm{Proof:}$
+
+反证，同样利用闭区间上的B-W子列定理与Heine定理联合。
+
+$\mathrm{Theorem3:}f\in C[a,b]\Rightarrow{f(x) 存在可取到的最大值与最小值}.$
+
+$\mathrm{Proof:}$
+
+利用B-W子列定理构造数列，利用确界原理迫敛。
+
+$\mathrm{Theorem4:}零点存在定理/介值定理$
+
+$\mathrm{Proof:}$
+
+闭区间套+Heine定理。*（终于不是B-W子列了。换成推B-W子列的东西了。）*  
+
+$\mathrm{推论:}$ 闭区间上连续函数总具有不动点。
