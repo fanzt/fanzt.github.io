@@ -14,7 +14,7 @@ tags:
 
 > 存稿.
 
-## 1.1.1 Propagator
+## 1 Propagator
 
 &emsp;&emsp;首先我们来介绍传播子（Propagator）的概念。
 &emsp;&emsp;考虑一个态矢量的时间演化，我们显然有：
@@ -84,7 +84,7 @@ tags:
 
 对于谐振子的传播子，在此不再展开，计划下一篇给出。
 
-## 1.1.2 Transition Amplitude and the Sum over Paths
+## 2 Transition Amplitude and the Sum over Paths
 
 &emsp;&emsp;进一步考虑传播子的物理意义，我们显然有：
     $$
@@ -117,7 +117,7 @@ tags:
 
 对每一个时刻的所有可能位置进行积分，即可以理解为对时间演化上每一条可能的路径的影响进行求和，因而上式的形式某种意义上解释了“路径积分”一词的来源。这样的理解将路径积分引导向了它的经典对应——Lagrange力学。
 
-## 1.1.3 Feynman's Formulation and Path Integral
+## 3 Feynman's Formulation and Path Integral
 
 &emsp;&emsp;既然路径积分的经典对应是Lagrange力学，我们便先考虑一个作用量：
     $$
