@@ -16,8 +16,7 @@ tags:
 
 ## 1 Propagator
 
-&emsp;&emsp;首先我们来介绍传播子（Propagator）的概念。
-&emsp;&emsp;考虑一个态矢量的时间演化，我们显然有：
+首先我们来介绍传播子（Propagator）的概念。考虑一个态矢量的时间演化，我们显然有：
 
 $$
     \begin{aligned}
@@ -27,7 +26,7 @@ $$
     \end{aligned}
 $$
 
-&emsp;&emsp;对态矢量左乘一个位置本征矢来获得该态在位置表象下的波函数，有：
+对态矢量左乘一个位置本征矢来获得该态在位置表象下的波函数，有：
 
 $$
     \begin{aligned}
@@ -35,7 +34,7 @@ $$
     \end{aligned}
 $$
 
-&emsp;&emsp;再在态矢量与能量本征态之间插入一个位置矢量的完备性关系，即可有：
+再在态矢量与能量本征态之间插入一个位置矢量的完备性关系，即可有：
 
 $$
     \begin{aligned}
@@ -43,7 +42,7 @@ $$
     \end{aligned}
 $$
 
-&emsp;&emsp;于是我们可以显然的看到，上式形成了一个如下的形式：
+于是我们可以显然的看到，上式形成了一个如下的形式：
 
 $$
     \begin{aligned}
@@ -69,13 +68,13 @@ $$
 $$
 
 称为传播子（Propagator）。
-&emsp;&emsp;由上述推导，我们可以看到，传播子本质上是一个积分核，其通过对初态的波函数进行一个积分变换而得到了末态的波函数。如果对电动力学有一定的了解，我们可以看出传播子的功能类似于Schrodinger Equation的格林函数。事实上，我们的确有：
+由上述推导，我们可以看到，传播子本质上是一个积分核，其通过对初态的波函数进行一个积分变换而得到了末态的波函数。如果对电动力学有一定的了解，我们可以看出传播子的功能类似于Schrodinger Equation的格林函数。事实上，我们的确有：
 
 $$
         \left[-\frac{\hbar^2}{2m}\nabla^2+V(\mathbf{x})-i\hbar\frac{\partial}{\partial{t}}\right]K(\mathbf{x},t;\mathbf{x'},t_0)=-i\hbar\delta^3(\mathbf{x}-\mathbf{x'})\delta(t-t_0)
 $$
 
-&emsp;&emsp;考虑最简单的Hamiltonian为一维自由粒子的情况，有：
+考虑最简单的Hamiltonian为一维自由粒子的情况，有：
 
 $$
     \begin{aligned}
@@ -95,7 +94,7 @@ $$
 
 ## 2 Transition Amplitude and the Sum over Paths
 
-&emsp;&emsp;进一步考虑传播子的物理意义，我们显然有：
+进一步考虑传播子的物理意义，我们显然有：
 
 $$
     \begin{aligned}
@@ -106,14 +105,14 @@ $$
 $$
 
 即传播子是从 `$t_0$` 时刻某一位置本征态变为 $t$ 时刻另一位置本征态的振幅，称作跃迁振幅（Transition Amplitude）。
-&emsp;&emsp;考虑到任意时刻的所有位置本征态构成一组完备基矢，我们总有：
+考虑到任意时刻的所有位置本征态构成一组完备基矢，我们总有：
 
 $$
         \langle\mathbf{x'''},t'''|\mathbf{x'},t'\rangle=\int{}d^3x''\langle\mathbf{x'''},t'''|\mathbf{x''},t''\rangle\langle\mathbf{x''},t''|\mathbf{x'},t'\rangle\qquad\qquad(t'''>t''>t')
 $$
 
 因此，我们显然可以像上式一样，无限地在两个态之间插入完备性关系，而这为量子力学的路径积分形式打下了基础。
-&emsp;&emsp;不失一般性的，仍旧考虑一维问题。我们考虑一个粒子从初始的 `$(x_1,t_1)$` 状态演化到 `$(x_N,t_N)$` 状态的跃迁振幅。我们首先将 `$t_1$` 到 `$t_N$` 之间的事件分割为 `$N$` 等份，即有：
+不失一般性的，仍旧考虑一维问题。我们考虑一个粒子从初始的 `$(x_1,t_1)$` 状态演化到 `$(x_N,t_N)$` 状态的跃迁振幅。我们首先将 `$t_1$` 到 `$t_N$` 之间的事件分割为 `$N$` 等份，即有：
 
 $$
         t_j-t_{j-1}=\Delta{t}=\frac{t_N-t_1}{N-1}
@@ -132,7 +131,7 @@ $$
 
 ## 3 Feynman's Formulation and Path Integral
 
-&emsp;&emsp;既然路径积分的经典对应是Lagrange力学，我们便先考虑一个作用量：
+既然路径积分的经典对应是Lagrange力学，我们便先考虑一个作用量：
 
 $$
         S(n,n-1)\equiv\int^{t_n}_{t_{n-1}}d{t}L_{classical}(x,\dot{x})
