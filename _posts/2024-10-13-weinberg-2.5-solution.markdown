@@ -11,6 +11,7 @@ music-id: 564989
 tags:
     - Physics
     - Weinberg QFT Notes
+    - Quantum Field Theory
 ---
 
 # 2+1维时空的单粒子态

@@ -11,6 +11,7 @@ music-id: 534064298
 tags:
     - Physics
     - Quantum Mechanics
+    - Quantum Field Theory
     - Weinberg QFT Notes
 ---
 
