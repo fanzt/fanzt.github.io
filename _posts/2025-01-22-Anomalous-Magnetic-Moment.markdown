@@ -27,12 +27,16 @@ $$
 其显然描述了电磁相互作用耦合中去除电磁场的部分。依据基本的对称性，我们可以对该矩阵元给出如下约束信息：
 
 1. 平移对称性：
-   $$
+    $$
         \langle{\mathbf{p}',\sigma'}|J^\mu(x)|\mathbf{p},\sigma\rangle=\exp[i(p-p')\cdot x]\langle{\mathbf{p}',\sigma'}|J^\mu(0)|\mathbf{p},\sigma\rangle
-   $$
+    $$
 
 2. 规范对称性：
-   $$
-    \frac{\partial}{\partial x^\mu}\langle{\mathbf{p}',\sigma'}|J^\mu(x)|\mathbf{p},\sigma\rangle=0
-   $$
+    $$
+        \partial_\mu\langle{\mathbf{p}',\sigma'}|J^\mu(x)|\mathbf{p},\sigma\rangle=0
+    $$
 
+3. Lorentz 协变性：
+    $$
+        \langle{\mathbf{p}',\sigma'}|J^\mu(0)|\mathbf{p},\sigma\rangle=iq(2\pi)^{-3}\bar{u}(\mathbf{p}',\sigma')\Gamma^{\mu}(p',p)u(\mathbf{p},\sigma)
+    $$
