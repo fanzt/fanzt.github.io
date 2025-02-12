@@ -43,3 +43,5 @@ $$
     $$
         \langle{\mathbf{p}',\sigma'}|J^\mu(0)|\mathbf{p},\sigma\rangle=iq(2\pi)^{-3}\bar{u}(\mathbf{p}',\sigma')\Gamma^{\mu}(p',p)u(\mathbf{p},\sigma)
     $$
+
+*说真的，我算完了。但我不想把那长达两页纸的反对易关系化简抄上来。太恶心了。*
