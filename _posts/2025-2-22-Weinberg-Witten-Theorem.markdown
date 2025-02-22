@@ -4,7 +4,7 @@ title:      "A note abount Weinberg-Witten Theorem"
 subtitle:   "Simple but beautiful result."
 date:       2025-01-22 09:00:00
 author:     "fromuly"
-header-img: "img/post-bg-2025-1.png"
+header-img: "img/post-bg-2025-1.jpg"
 catalog: true
 usemathjax: true
 music-id: 2141328400
