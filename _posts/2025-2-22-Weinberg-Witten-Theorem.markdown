@@ -15,11 +15,11 @@ tags:
 ---
 
 > *读点东西，写点东西。*
-> 
-> https://inspirehep.net/literature/154422
+>
+> <https://inspirehep.net/literature/154422>
 > DOI: 10.1016/0370-2693(80)90212-9
 > *Limits on Massless Particles*
-> Steven Weinberg, Edward Witten, 
+> Steven Weinberg, Edward Witten,
 > Phys.Lett.B 96 (1980) 59-62
 
 ## Weinberg-Witten 定理
