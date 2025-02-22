@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "A note abount Weinberg-Witten Theorem"
+title:      "A note about Weinberg-Witten Theorem"
 subtitle:   "Simple but beautiful result."
 date:       2025-01-22 09:00:00
 author:     "fromuly"
