@@ -4,7 +4,7 @@ title:      "Calculating The Vacuum Energy by Path Integral"
 subtitle:   "Interesting method."
 date:       2025-3-1 22:30:00
 author:     "fromuly"
-header-img: "img/post-bg-2025-3.png"
+header-img: "img/post-bg-2025-3.jpg"
 catalog: true
 usemathjax: true
 music-id: 2020880853
