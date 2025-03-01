@@ -2,7 +2,7 @@
 layout:     post
 title:      "A note about Weinberg-Witten Theorem"
 subtitle:   "Simple but beautiful result."
-date:       2025-01-22 09:00:00
+date:       2025-02-22 09:00:00
 author:     "fromuly"
 header-img: "img/post-bg-2025-1.jpg"
 catalog: true
