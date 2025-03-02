@@ -185,15 +185,25 @@ $$
     iE_0T=\frac{1}{2}VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)
 $$
 
-做掉这个积分，我们有：
+然而，容易注意到，表达式中的对数竟然含有量纲，并且这个积分是发散的。为此，我们需要引入一个正规化因子。将积分改写为：
+
+$$
+    iE_0T=\frac{1}{2}VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\left[\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)-\ln\left(\frac{p^2+m'^2-\mathrm{i}\varepsilon}{2\pi}\right)\right]
+$$
+
+由于正规化因子不应当对能量有任何实质的贡献，我们需要在计算的最后令 `$E'_{\mathbf{p}}=\sqrt{|\mathbf{p}|^2+m'^2}=0$`.
+
+做掉这个正规化后的积分，我们有：
 
 $$
 \begin{aligned}
-    \int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)&=-\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{2\pi}{|\mathbf{p}|^2-(p^0)^2+m^2-\mathrm{i}\varepsilon}\cdot(\frac{-2p^0}{2\pi})
-    \\&=i\int\frac{\mathrm{d}^3p}{(2\pi)^3}2E_{\mathbf{p}}^2\frac{1}{2E_{\mathbf{p}}}
+    \int\frac{\mathrm{d}^4p}{(2\pi)^4}\left[\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)-(m\rightarrow m')\right]&=-\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{2\pi}{|\mathbf{p}|^2-(p^0)^2+m^2-\mathrm{i}\varepsilon}\cdot(\frac{-2p^0}{2\pi})-(m\rightarrow m')
+    \\&=i\int\frac{\mathrm{d}^3p}{(2\pi)^3}2E_{\mathbf{p}}^2\frac{1}{2E_{\mathbf{p}}}-(E_{\mathbf{p}}\rightarrow E'_{\mathbf{p}})
     \\&=i\int\frac{\mathrm{d}^3p}{(2\pi)^3}E_{\mathbf{p}}
 \end{aligned}
 $$
+
+最后一步我们通过令 $E'_{\mathbf{p}}\rightarrow0$ 移除了正规化。
 
 于是我们最终有：
 
@@ -207,7 +217,7 @@ $$
     V=\int\mathrm{d}^3x\:\mathrm{e}^{\mathrm{i}p\cdot0}=(2\pi)^3\delta^3(0)
 $$
 
-于是这和正则方法的答案一致。
+这和正则方法的答案一致。
 
 同样，我们可以将这套方案应用在旋量场上。写出 Dirac 旋量场的生成泛函，我们有：
 
@@ -224,13 +234,13 @@ $$
     \mathcal{Z}[0]=\det\left[\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
-同样，利用行列式的恒等式，我们将其写为：
+利用行列式的恒等式，我们将其写为：
 
 $$
     \mathcal{Z}[0]=\exp\left[\mathrm{Tr}\ln\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
-同样将迹写为：
+将迹写为：
 
 $$
 \begin{aligned}
