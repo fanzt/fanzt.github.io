@@ -124,8 +124,10 @@ $$
 首先，路径积分的起始自然是写下我们熟悉的生成泛函：
 
 $$
-    \mathcal{Z}[J]=\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\:\mathscr{L}[\phi]+J\phi\right\}
+    \mathcal{Z}[J]=C_0\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\:\mathscr{L}[\phi]+J\phi\right\}
 $$
+
+其中 $C_0$ 是一个常数（来源于边界波函数）。
 
 我们知道对流 $J$ 求泛函导数可以获得关联函数。如果把流 $J$ 取成 $0$，我们可以给出其物理意义为：
 
@@ -142,7 +144,7 @@ $$
 其中 `$T=\lim_{t_1,t_2\rightarrow-\infty,+\infty}(t_2-t_1)$`，而 `$E_0$` 恰好正是 Hamiltonian 的真空期望值，也就是零点能。而另一方面，依生成泛函的表达式，我们又有：
 
 $$
-    \mathcal{Z}[0]=\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\:\mathscr{L}[\phi]\right\}
+    \mathcal{Z}[0]=C_0\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\:\mathscr{L}[\phi]\right\}
 $$
 
 于是，我们便有了一个很直接的想法：直接把这个积分积出来，再取对数，就可以求得我们需要的零点能了。接下来我们就会看到，这套思想确实是可行的。
@@ -151,21 +153,21 @@ $$
 
 $$
 \begin{aligned}
-    \mathcal{Z}[0]&=\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\:\left[-\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2-\mathrm{i}\varepsilon项\right]\right\}
-    \\&=\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\mathrm{d}^4y\:\left[-\frac{1}{2}\left(\frac{\partial}{\partial x^\mu}\frac{\partial}{\partial y_\mu}+m^2-\mathrm{i}\varepsilon项\right)\delta^4(x-y)\phi(x)\phi(y)\right]\right\}
+    \mathcal{Z}[0]&=C_0\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\:\left[-\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2-\mathrm{i}\varepsilon项\right]\right\}
+    \\&=C_0\int\mathcal{D}\phi\:\exp\left\{i\int\mathrm{d}^4x\mathrm{d}^4y\:\left[-\frac{1}{2}\left(\frac{\partial}{\partial x^\mu}\frac{\partial}{\partial y_\mu}+m^2-\mathrm{i}\varepsilon项\right)\delta^4(x-y)\phi(x)\phi(y)\right]\right\}
 \end{aligned}
 $$
 
 依据多变量高斯积分公式的一个直接的连续推广，我们可以将其积分出来：
 
 $$
-    \mathcal{Z}[0]=\left[\det\left(\frac{\partial_\mu\partial^\mu+m^2-\mathrm{i}\varepsilon}{2\pi}\delta^4(x-y)\right)\right]^{-1/2}
+    \mathcal{Z}[0]=C_0\left[\det\left(\frac{\partial_\mu\partial^\mu+m^2-\mathrm{i}\varepsilon}{2\pi}\delta^4(x-y)\right)\right]^{-1/2}
 $$
 
 再利用行列式的一个著名的公式，我们便可以将其化为指数形式：
 
 $$
-    \mathcal{Z}[0]=\exp\left[-\frac{1}{2}\mathrm{Tr}\ln\left(\frac{\partial_\mu\partial^\mu+m^2-\mathrm{i}\varepsilon}{2\pi}\delta^4(x-y)\right)\right]
+    \mathcal{Z}[0]=C_0\exp\left[-\frac{1}{2}\mathrm{Tr}\ln\left(\frac{\partial_\mu\partial^\mu+m^2-\mathrm{i}\varepsilon}{2\pi}\delta^4(x-y)\right)\right]
 $$
 
 $\delta^4(x-y)$ 仅有筛选作用，将其提到对数外面（严格来说我们应当将这里的 $\delta$ 函数定义在离散时空格点上。）
@@ -182,10 +184,10 @@ $$
 与零点能的公式对比，我们就有：
 
 $$
-    iE_0T=\frac{1}{2}VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)
+    iE_0T=\frac{1}{2}VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)+C'_0
 $$
 
-然而，容易注意到，表达式中的对数竟然含有量纲，并且这个积分是发散的。为此，我们需要引入一个正规化因子。将积分改写为：
+然而，容易注意到，表达式中的对数竟然含有量纲，并且这个积分是发散的。此时常数 `$C'_0$` 便有了用处。我们将其作为一个正规化因子引入。将积分改写为：
 
 $$
     iE_0T=\frac{1}{2}VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\left[\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)-\ln\left(\frac{p^2+m'^2-\mathrm{i}\varepsilon}{2\pi}\right)\right]
@@ -223,21 +225,21 @@ $$
 
 $$
 \begin{aligned}
-    \mathcal{Z}[0]&=\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\:\left[-\bar{\psi}(\gamma^\mu\partial_\mu+m)\psi-\mathrm{i}\varepsilon项\right]\right\}
-    \\&=\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\mathrm{d}^4y\:\left[-\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon项\right)\delta^4(x-y)i\psi^\dagger(x)\psi(y)\right]\right\}
+    \mathcal{Z}[0]&=C_0\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\:\left[-\bar{\psi}(\gamma^\mu\partial_\mu+m)\psi-\mathrm{i}\varepsilon项\right]\right\}
+    \\&=C_0\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\mathrm{d}^4y\:\left[-\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon项\right)\delta^4(x-y)i\psi^\dagger(x)\psi(y)\right]\right\}
 \end{aligned}
 $$
 
 注意，我们不使用 $\bar{\psi}$ 的原因是它不是正则共轭变量。利用 Grassmann 代数的换元和积分规则，我们可以得到：
 
 $$
-    \mathcal{Z}[0]=\det\left[\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
+    \mathcal{Z}[0]=C_0\det\left[\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
 利用行列式的恒等式，我们将其写为：
 
 $$
-    \mathcal{Z}[0]=\exp\left[\mathrm{Tr}\ln\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
+    \mathcal{Z}[0]=C_0\exp\left[\mathrm{Tr}\ln\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
 将迹写为：
