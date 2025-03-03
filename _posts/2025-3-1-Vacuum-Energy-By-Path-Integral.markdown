@@ -242,6 +242,8 @@ $$
     \mathcal{Z}[0]=C_0\exp\left[\mathrm{Tr}\ln\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
+（其实我们在这里已经可以窥见费米子和玻色子零点能系数区别的端倪，二者刚好相差负二倍。负号来源于 Grassmann 代数的反对易性，二倍则来自于 Grassmann 代数中正则场和共轭正则动量是独立变量。）
+
 将迹写为：
 
 $$
