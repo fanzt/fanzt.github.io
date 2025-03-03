@@ -226,20 +226,20 @@ $$
 $$
 \begin{aligned}
     \mathcal{Z}[0]&=C_0\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\:\left[-\bar{\psi}(\gamma^\mu\partial_\mu+m)\psi-\mathrm{i}\varepsilon项\right]\right\}
-    \\&=C_0\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\mathrm{d}^4y\:\left[-\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon项\right)\delta^4(x-y)i\psi^\dagger(x)\psi(y)\right]\right\}
+    \\&=C_0\int\mathcal{D}\psi\mathcal{D}(i\psi^\dagger)\:\exp\left\{i\int\mathrm{d}^4x\mathrm{d}^4y\:\left[-\gamma^0\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon项\right)\delta^4(x-y)i\psi^\dagger(x)\psi(y)\right]\right\}
 \end{aligned}
 $$
 
 注意，我们不使用 $\bar{\psi}$ 的原因是它不是正则共轭变量。利用 Grassmann 代数的换元和积分规则，我们可以得到：
 
 $$
-    \mathcal{Z}[0]=C_0\det\left[\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
+    \mathcal{Z}[0]=C_0\det\left[\gamma^0\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
 利用行列式的恒等式，我们将其写为：
 
 $$
-    \mathcal{Z}[0]=C_0\exp\left[\mathrm{Tr}\ln\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
+    \mathcal{Z}[0]=C_0\exp\left[\mathrm{Tr}\ln\gamma^0\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]
 $$
 
 （其实我们在这里已经可以窥见费米子和玻色子零点能系数区别的端倪，二者刚好相差负二倍。负号来源于 Grassmann 代数的反对易性，二倍则来自于 Grassmann 代数中正则场和共轭正则动量是独立变量。）
@@ -248,8 +248,8 @@ $$
 
 $$
 \begin{aligned}
-    \mathrm{Tr}\ln\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)&=\sum_{\ell}\int\mathrm{d}^4x\:\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)\mathrm{e}^{\mathrm{i}p\cdot(x-x)}
-    \\&=VT\sum_{\ell}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)
+    \mathrm{Tr}\ln\gamma^0\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)&=\sum_{\ell}\int\mathrm{d}^4x\:\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)\mathrm{e}^{\mathrm{i}p\cdot(x-x)}
+    \\&=VT\sum_{\ell}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)
 \end{aligned}
 $$
 
