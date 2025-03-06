@@ -176,8 +176,8 @@ $\delta^4(x-y)$ 仅有筛选作用，将其提到对数外面（严格来说我�
 
 $$
 \begin{aligned}
-    \mathrm{Tr}\ln\left(\frac{\partial_\mu\partial^\mu+m^2-\mathrm{i}\varepsilon}{2\pi}\right)\delta^4(x-y)&=\int\mathrm{d}^4x\:\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)\mathrm{e}^{\mathrm{i}p\cdot(x-x)}
-    \\&=VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)
+    &\mathrm{Tr}\ln\left(\frac{\partial_\mu\partial^\mu+m^2-\mathrm{i}\varepsilon}{2\pi}\right)\delta^4(x-y)&\\=&\int\mathrm{d}^4x\:\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)\mathrm{e}^{\mathrm{i}p\cdot(x-x)}
+    \\=&\:VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)
 \end{aligned}
 $$
 
@@ -199,9 +199,10 @@ $$
 
 $$
 \begin{aligned}
-    \int\frac{\mathrm{d}^4p}{(2\pi)^4}\left[\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)-(m\rightarrow m')\right]&=-\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{2\pi}{|\mathbf{p}|^2-(p^0)^2+m^2-\mathrm{i}\varepsilon}\cdot(\frac{-2p^0}{2\pi})-(m\rightarrow m')
-    \\&=i\int\frac{\mathrm{d}^3p}{(2\pi)^3}2E_{\mathbf{p}}^2\frac{1}{2E_{\mathbf{p}}}-(E_{\mathbf{p}}\rightarrow E'_{\mathbf{p}})
-    \\&=i\int\frac{\mathrm{d}^3p}{(2\pi)^3}E_{\mathbf{p}}
+    &\int\frac{\mathrm{d}^4p}{(2\pi)^4}\left[\ln\left(\frac{p^2+m^2-\mathrm{i}\varepsilon}{2\pi}\right)-(m\rightarrow m')\right]
+    \\=&-\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{2\pi}{|\mathbf{p}|^2-(p^0)^2+m^2-\mathrm{i}\varepsilon}\cdot(\frac{-2p^0}{2\pi})-(m\rightarrow m')
+    \\=&\:i\int\frac{\mathrm{d}^3p}{(2\pi)^3}2E_{\mathbf{p}}^2\frac{1}{2E_{\mathbf{p}}}-(E_{\mathbf{p}}\rightarrow E'_{\mathbf{p}})
+    \\=&\:i\int\frac{\mathrm{d}^3p}{(2\pi)^3}E_{\mathbf{p}}
 \end{aligned}
 $$
 
@@ -248,11 +249,70 @@ $$
 
 $$
 \begin{aligned}
-    \mathrm{Tr}\ln\gamma^0\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)&=\sum_{\ell}\int\mathrm{d}^4x\:\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)\mathrm{e}^{\mathrm{i}p\cdot(x-x)}
-    \\&=VT\sum_{\ell}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)
+    &\mathrm{Tr}\ln\gamma^0\left(\gamma^\mu\frac{\partial}{\partial x^\mu}+m-\mathrm{i}\varepsilon\right)\delta^4(x-y)
+    \\=&\sum_{\ell}\int\mathrm{d}^4x\:\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)\mathrm{e}^{\mathrm{i}p\cdot(x-x)}
+    \\=&\:VT\sum_{\ell}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)
 \end{aligned}
 $$
 
 其中 $\ell$ 是旋量指标。
 
-TBD.
+对比后我们便得到了 Dirac 旋量零点能的表达式：
+
+$$
+    iE_0T=-VT\sum_{\ell}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)+C'_0
+$$
+
+其中 $C_0'$ 同样将作为正规化因子引入，以便令我们将对数无量纲化并使得积分收敛。
+
+做掉这个积分，我们有：
+
+$$
+\begin{aligned}
+    &\sum_{\ell}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)+C'_0
+    \\=&\sum_{\ell}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}\ln\gamma^0\left(\mathrm{i}p\!\!\!/+m-\mathrm{i}\varepsilon\right)+C'_0
+    \\=&-\sum_{\ell}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\left(-\gamma^0\frac{-ip\!\!\!/+m}{p^2+m^2-\mathrm{i}\varepsilon}\right)\cdot\left(-i\gamma^0\gamma^0\right)+C'_0
+    \\=&-\sum_{\ell}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\left(-\gamma^0\frac{-ip\!\!\!/+m}{p^2+m^2-\mathrm{i}\varepsilon}\right)\cdot\left(-i\gamma^0\gamma^0\right)+C'_0
+    \\=&\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\left(\frac{4p^0}{p^2+m^2-\mathrm{i}\varepsilon}\right)+C'_0
+\end{aligned}
+$$
+
+于是经过与标量场类似的计算，我们可以最终得到：
+
+$$
+    E_0=-\int\frac{\mathrm{d}^3p}{(2\pi)^3}2E_{\mathbf{p}}V
+$$
+
+或许我们会疑惑这个结果为什么是标量场的四倍而非我们预期的二倍。事实上这是因为 Dirac 场同时描述了自旋为 $+1/2$ 和 $-1/2$ 的费米子，而我们这里的结果实际上是对自旋求和了，因此又额外增加了二倍。这也与一般见到的正则方法获得的结果一致（正则方法一般会保留对自旋的求和号）。
+
+## Gauge Field Example: Electromagnet Field
+
+通过上面的讨论，我们看到路径积分方法的确给出了和正则方法一致的结果。然而，众所周知，相比于正则形式，路径积分方法一个显著的优势是其可以保证显式的 Lorentz 不变性和更加方便的规范对称性处理。因此，我们接下来便考虑利用路径积分方法处理最简单的规范场零点能，也就是电磁场的零点能。
+
+首先写出经过了 Faddeev-Popov 规范固定后的有效生成泛函：
+
+$$
+\begin{aligned}
+    \mathcal{Z}[0]&=\int\mathcal{D}A_{\mu}\exp\left\{\mathrm{i}\int\mathrm{d}^4x\left[-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-\frac{1}{2}\alpha\left(\partial_{\mu}A^{\mu}\right)^2-\mathrm{i}\varepsilon 项\right]\right\}
+    \\&=\int\mathcal{D}A_{\mu}\exp\left\{\mathrm{i}\int\mathrm{d}^4x\mathrm{d}^4y\left[-\frac{1}{2}\left(\eta_{\mu\nu}\frac{\partial}{\partial x^\rho}\frac{\partial}{\partial y_\rho}-(1-\alpha)\frac{\partial}{\partial x^\mu}\frac{\partial}{\partial y^\nu}-\mathrm{i}\varepsilon\right)\delta^4(x-y)A^{\mu}(x)A^{\nu}(y)\right]\right\}
+\end{aligned}
+$$
+
+经过一串几乎与标量场完全一致的讨论，我们最终需要的便是做掉这个积分：
+
+$$
+    I=\sum_{\mu=\nu}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\eta_{\mu\nu}p^2-(1-\alpha)p_{\mu}p_{\nu}-\mathrm{i}\varepsilon\right)+C'
+$$
+
+利用类似的操作进行化简，我们有：
+
+$$
+\begin{aligned}
+    I&=-\sum_{\mu=\nu}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{1}{p^2-\mathrm{i}\varepsilon}\left[\eta^{\mu\rho}-\left(1-\frac{1}{\alpha}\right)\frac{p^{\mu}p^{\rho}}{p^2}\right]\cdot\left[-2p^0\eta_{\rho\nu}-(1-\alpha)\left(\eta_{0\rho}p_{\nu}+p_{\rho}\eta_{0\nu}\right)\right]+C'
+    \\&=-\sum_{\mu=\nu}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{1}{p^2-\mathrm{i}\varepsilon}\left[-8p^0+2p^0\left(1-\frac{1}{\alpha}\right)-(1-\alpha)(-p^0-p^0)+\left(1-\frac{1}{\alpha}\right)(1-\alpha)(-p^0-p^0)\right]+C'
+    \\&=-\sum_{\mu=\nu}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{-2p^0}{p^2-\mathrm{i}\varepsilon}\left[4-\left(1-\frac{1}{\alpha}\right)-(1-\alpha)+(1-\alpha)\left(1-\frac{1}{\alpha}\right)\right]+C'
+    \\&=-\sum_{\mu=\nu}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{-2p^0}{p^2-\mathrm{i}\varepsilon}\times 4+C'
+\end{aligned}
+$$
+
+可以看到，规范项恰好消掉了，因此我们验证了真空能量的规范不变性。上式给出了与标量场一致的形式，但是差了四倍的系数。然而我们都知道，光子场只有两个物理自由度，其应当是标量场的两倍。事实上，这是因为我们未考虑 Faddeev-Popov 鬼场的贡献。虽然电磁场情形下，鬼场与电磁场没有耦合而不需要处理进 Lagrangian 中，但是其对真空能量是存在贡献的。而其为标量 Grassmann 变量场，刚好可以给出负二倍的自由度，因而抵掉上方计算的其中两个。所以我们确实成功利用路径积分方法计算出了电磁场的真空能量。
