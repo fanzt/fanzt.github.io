@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "Spontaneous Symmetry Breaking and CCWZ Construction 1"
-subtitle:   "A Useful Method to construct EFT."
-date:       2025-3-22 13:30:00
+subtitle:   "Review of SSB and Goldstone Theorem."
+date:       2025-3-23 13:30:00
 author:     "fromuly"
 header-img: "img/post-bg-2025-8.jpg"
 catalog: true
