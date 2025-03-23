@@ -200,6 +200,5 @@ $$
 [^1]: *The Quantum Theory of Fields, Vol.I, Chapter 7*, Steven Weinberg
 [^2]: 注意，下式的 `$Q_a|0\rangle$` 在无限大的空间中其实不是良定义的量，但我们可以通过先在有限体积中处理问题将其绕过去。
 [^3]: *The Quantum Theory of Fields, Vol.II, Chapter 19*, Steven Weinberg
-[^4]: Ian Low and Aneesh V. Manohar. Spontaneously broken spacetime symmetries and
-goldstone’s theorem. *Physical Review Letters*, 88(10), February 2002.
+[^4]: Ian Low and Aneesh V. Manohar. Spontaneously broken spacetime symmetries and goldstone’s theorem. *Physical Review Letters*, 88(10), February 2002.
 [^5]: 这是因为 NG 模式必须依赖于其动量 $\vec{k}$（因为其没有能隙，所有耦合都必须直接与 $k$ 相关，或者说在 Lagrangian 中以导数耦合呈现），而动量只能在没有破缺平移对称性的空间中定义。
