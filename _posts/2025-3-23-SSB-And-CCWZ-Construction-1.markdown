@@ -116,9 +116,9 @@ $$
 
 $$
 \begin{aligned}
-    \bra{0}[Q,\Phi(x)]\ket{0}&=\int d^{d-1}x' \bra{0}[j^0(x'),\Phi(x)]\ket{0} \ , \\
-    &=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}\left(\bra{0}j^0(x')\ket{n_{\vec{k}}}\bra{n_{\vec{k}}}\Phi(x)\ket{0}\right. \\
-    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\bra{0}\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(x')\ket{0} \right) \ . \\
+    \langle{0}|[Q,\Phi(x)]|{0}\rangle&=\int d^{d-1}x' \langle{0}|[j^0(x'),\Phi(x)]|{0}\rangle \ , \\
+    &=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}\left(\langle{0}|j^0(x')|{n_{\vec{k}}}\rangle\langle{n_{\vec{k}}}|\Phi(x)|{0}\rangle\right. \\
+    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\langle{0}|\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(x')|{0}\rangle \right) \ . \\
 \end{aligned}
 $$
 
@@ -126,24 +126,28 @@ $$
 
 $$
 \begin{aligned}
-    \bra{0}[Q,\Phi(x)]\ket{0}&=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}} \, e^{-i k_{\mu} x'^{\mu}}\left(\bra{0}j^0(0)\ket{n_{\vec{k}}}\bra{n_{\vec{k}}}\Phi(x)\ket{0}\right. \\
-    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}}\left. -\bra{0}\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(0)\ket{0} \right)  \ ,\\
-    &= \sum\limits_{n}\int d^{d-1}k \, e^{-i E_n(\vec{k}) t^\prime}\,\delta^3(\vec{k})\left(\bra{0}j^0(0)\ket{n_{\vec{k}}}\bra{n_{\vec{k}}}\Phi(x)\ket{0}\right. \\
-    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\bra{0}\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(0)\ket{0} \right)  \ ,\\
+    \langle{0}|[Q,\Phi(x)]|{0}\rangle&=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}} \, e^{-i k_{\mu} x'^{\mu}}\left(\langle{0}|j^0(0)|{n_{\vec{k}}}\rangle\langle{n_{\vec{k}}}|\Phi(x)|{0}\rangle\right. \\
+    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}}\left. -\langle{0}|\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(0)|{0}\rangle \right)  \ ,\\
+    &= \sum\limits_{n}\int d^{d-1}k \, e^{-i E_n(\vec{k}) t^\prime}\,\delta^3(\vec{k})\left(\langle{0}|j^0(0)|{n_{\vec{k}}}\rangle\langle{n_{\vec{k}}}|\Phi(x)|{0}\rangle\right. \\
+    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\langle{0}|\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(0)|{0}\rangle \right)  \ ,\\
 \end{aligned}
 $$
 
-注意到荷本身不依赖于时间参量 $t^\prime$，这意味着上式想要成立，积掉动量后的 $E(0)=0$ 必须为零。而我们知道 $E(0)$ 实际上正代表了中间态 `$\ket{n_{\vec{k}}}$` 的质量，这表明激发态 `$\ket{n_{\vec{k}}}$` 必然描述了一个无能隙（即无质量）的粒子，称为 Nambu-Goldstone（NG） 粒子。
+注意到荷本身不依赖于时间参量 $t^\prime$，这意味着上式想要成立，积掉动量后的 $E(0)=0$ 必须为零。而我们知道 $E(0)$ 实际上正代表了中间态 `$|{n_{\vec{k}}}\rangle$` 的质量，这表明激发态 `$|{n_{\vec{k}}}\rangle$` 必然描述了一个无能隙（即无质量）的粒子，称为 Nambu-Goldstone（NG） 粒子。
 
 该证明无法给出这样的 NG 粒子的种类数。一些其他的证明[^3]可以给出明确的种类数（例如使用有效作用量的证明），但这一般要求对称群 $G$ 描述的是体系的内部对称性。我们不会使用这些证明，但我们会在接下来给出一个包括时空对称性的讨论，更加全面地给出对 NG 粒子的计数方法。
 
-接下来我们要对 NG 粒子的物理意义作一些讨论。回想我们对自发对称性破缺存在的基本要求是真空态在对称变换下不会回到原本的真空态。但我们可以看到，变化后的真空态理论上还会是系统的基态，因为我们的 Lagrangian 是具有对称性的，因而相互作用项以及有效势都是具有相应的对称性的，因此原本的对称变换不会改变体系的能量。这意味着我们有着可以用对称变换标记的，至少多于一个的真空态，即**简并真空**。由于我们的对称变换是连续的，这些简并真空便都可以被一个连续的变换联系在一起，也就是说它们之间不会有能隙或势阱。于是，一个沿着简并真空方向的微小涨落变化到二阶项为止都不会提供势能的变化，因而这些涨落态都是无质量的，而它们正是我们所需要的 NG 粒子。一方面，这可以从谱分解的讨论中看出，我们在 K-L 谱表示的证明中所计算的那个量不等于零正说明了中间态 `$\ket{n_{\vec{k}}}$` 在由守恒荷（守恒流）激发出的态 $\bra{0}j^0(x)$ 上有非零的投影，这表示其正是由破缺的对称变化生成的真空扰动产生的态；另一方面这一点也可以从一些具体模型中看出：我们最常见的标量场引发 $\mathrm{U}(1)$ 对称性破缺总会在最终将标量场写为：
+接下来我们要对 NG 粒子的物理意义作一些讨论。回想我们对自发对称性破缺存在的基本要求是真空态在对称变换下不会回到原本的真空态。但我们可以看到，变化后的真空态理论上还会是系统的基态，因为我们的 Lagrangian 是具有对称性的，因而相互作用项以及有效势都是具有相应的对称性的，因此原本的对称变换不会改变体系的能量。这意味着我们有着可以用对称变换标记的，至少多于一个的真空态，即**简并真空**。由于我们的对称变换是连续的，这些简并真空便都可以被一个连续的变换联系在一起，也就是说它们之间不会有能隙或势阱。于是，一个沿着简并真空方向的微小涨落变化到二阶项为止都不会提供势能的变化，因而这些涨落态都是无质量的，而它们正是我们所需要的 NG 粒子。一方面，这可以从谱分解的讨论中看出，我们在 K-L 谱表示的证明中所计算的那个量不等于零正说明了中间态 `$|{n_{\vec{k}}}\rangle$` 在由守恒荷（守恒流）激发出的态 $\langle{0}|j^0(x)$ 上有非零的投影，这表示其正是由破缺的对称变化生成的真空扰动产生的态；另一方面这一点也可以从一些具体模型中看出：我们最常见的标量场引发 $\mathrm{U}(1)$ 对称性破缺总会在最终将标量场写为：
 
 $$
     \phi(x)=\frac{v+h(x)}{\sqrt{2}}\mathrm{e}^{\mathrm{i}\pi(x)/v}
 $$
 
 其中 $\pi(x)$ 恰好会在 Lagrangian 中充当无质量的 Goldstone 粒子。实际上，如果我们考虑 $\phi(x)$ 处于基态，那么就可以更加显然地看到，$\pi(x)$ 也正好参数化了标量场真空期望值的扰动变化。
+
+### 时空对称性的破缺与 NG 粒子计数
+
+
 
 [^1]: *The Quantum Theory of Fields, Vol.I, Chapter 7*, Steven Weinberg
 [^2]: 注意，下式的 $Q_a|0\rangle$ 在无限大的空间中其实不是良定义的量，但我们可以通过先在有限体积中处理问题将其绕过去。
