@@ -172,7 +172,7 @@ $$
 $$
 \begin{aligned}
     0&=P_\mu c_a(\vec{r})T^a\langle\phi(\vec{r})\rangle
-    \\&=c_a(\vec{r}) \left[P_\mu,T^a\right] \langle\phi(\vec{r})\rangle
+    \\&=\left[P_\mu,c_a(\vec{r})T^a\right] \langle\phi(\vec{r})\rangle
     \\&=-i\left(\partial_\mu c_a(\vec{r})T^a-{f^{\mu a}}_bc_a(\vec{r})T^b\right)\langle\phi(\vec{r})\rangle
 \end{aligned}
 $$
