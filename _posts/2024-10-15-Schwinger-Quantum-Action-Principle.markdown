@@ -17,6 +17,8 @@ tags:
 
 # Schwinger Quantum Action Principle
 
+**以下内容大概率全是错误，暂且请勿参考！**
+
 本篇blog的起源是笔者在学习 Weinberg QFT Chapter 6 时，于6.4节的脚注中注意到了一个全新的概念：“Schwinger 作用量原理”。在经过各方资料查阅后，笔者决定依据包括 Schwinger 原始论文在内的各方资料，将自己对该思想的理解与推导记录于此。鉴于本文内容多为笔者本人的理解，其内容可能存在错误，欢迎读者指正。（可以去Github上开issue（？））
 
 ## The Schwinger Action Principle in Quantum Mechanics
