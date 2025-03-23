@@ -165,7 +165,7 @@ $$
     c_a(\vec{r})T^a\langle\phi(\vec{r})\rangle=0
 $$
 
-那么独立的 NG 模式的个数就不会是 $|a|=\mathrm{dim}(G/H)$ 个，而是 $\mathrm{dim}(G/H)-n$ 个。
+那么独立的 NG 模式的个数就不会是 `$|a|=\mathrm{dim}(G/H)$` 个，而是 `$\mathrm{dim}(G/H)-n$` 个。
 
 为了看到这一点，考虑在该方程的左右两边作用未破缺平移生成元 $P_\mu$：
 
