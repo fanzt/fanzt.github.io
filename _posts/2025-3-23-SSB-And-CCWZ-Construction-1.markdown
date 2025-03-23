@@ -118,7 +118,7 @@ $$
 \begin{aligned}
     \langle{0}|[Q,\Phi(x)]|{0}\rangle&=\int d^{d-1}x' \langle{0}|[j^0(x'),\Phi(x)]|{0}\rangle \ , \\
     &=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}\left(\langle{0}|j^0(x')|{n_{\vec{k}}}\rangle\langle{n_{\vec{k}}}|\Phi(x)|{0}\rangle\right. \\
-    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\langle{0}|\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(x')|{0}\rangle \right) \ . \\
+    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\langle{0}|\Phi(x)|{n_{-\vec{k}}}\rangle\langle{n_{-\vec{k}}}|j^0(x')|{0}\rangle \right) \ . \\
 \end{aligned}
 $$
 
@@ -127,9 +127,9 @@ $$
 $$
 \begin{aligned}
     \langle{0}|[Q,\Phi(x)]|{0}\rangle&=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}} \, e^{-i k_{\mu} x'^{\mu}}\left(\langle{0}|j^0(0)|{n_{\vec{k}}}\rangle\langle{n_{\vec{k}}}|\Phi(x)|{0}\rangle\right. \\
-    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}}\left. -\langle{0}|\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(0)|{0}\rangle \right)  \ ,\\
+    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{d-1}}}\left. -\langle{0}|\Phi(x)|{n_{-\vec{k}}}\rangle\langle{n_{-\vec{k}}}|j^0(0)|{0}\rangle \right)  \ ,\\
     &= \sum\limits_{n}\int d^{d-1}k \, e^{-i E_n(\vec{k}) t^\prime}\,\delta^3(\vec{k})\left(\langle{0}|j^0(0)|{n_{\vec{k}}}\rangle\langle{n_{\vec{k}}}|\Phi(x)|{0}\rangle\right. \\
-    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\langle{0}|\Phi(x)\ket{n_{-\vec{k}}}\bra{n_{-\vec{k}}}j^0(0)|{0}\rangle \right)  \ ,\\
+    & \phantom{=\int d^{d-1}x' \sum\limits_{n}\int \frac{d^{d-1}k}{(2\pi)^{3}}}\left. -\langle{0}|\Phi(x)|{n_{-\vec{k}}}\rangle\langle{n_{-\vec{k}}}|j^0(0)|{0}\rangle \right)  \ ,\\
 \end{aligned}
 $$
 
