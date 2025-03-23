@@ -195,6 +195,8 @@ $$
 
 也就是说，$T^a$ 生成的 NG 模式 $c_a$ 的导数与 $T^b$ 生成的 NG 模式 $c_b$ 线性相关，二者并不独立。而每一个这样的不独立都为一开始的方程贡献了一个非平凡的解，因而就要扣除掉一个 NG 模式数量。于是我们自然得到独立的 NG 模式只能有 $\mathrm{dim}(G/H)-n$ 个。
 
+----
+
 [^1]: *The Quantum Theory of Fields, Vol.I, Chapter 7*, Steven Weinberg
 [^2]: 注意，下式的 `$Q_a|0\rangle$` 在无限大的空间中其实不是良定义的量，但我们可以通过先在有限体积中处理问题将其绕过去。
 [^3]: *The Quantum Theory of Fields, Vol.II, Chapter 19*, Steven Weinberg
