@@ -97,7 +97,7 @@ $$
 或者等价地：
 
 $$
-    -G_a\langle\phi^i\rangle=\langle0|[Q_a,\phi^i]|0\rangle\neq 0
+    -T_a\langle\phi^i\rangle=\langle0|[Q_a,\phi^i]|0\rangle\neq 0
 $$
 
 基于此，我们定义 $\langle\phi^i\rangle$ ，即场的真空期望值（Vacuum Expectation Value, VEV）为 **序参量（Order Parameter）** ，用于描述系统是否发生 SSB. 如果物理系统存在 SSB，则 $\langle\phi^i\rangle\neq0$.
@@ -145,10 +145,59 @@ $$
 
 其中 $\pi(x)$ 恰好会在 Lagrangian 中充当无质量的 Goldstone 粒子。实际上，如果我们考虑 $\phi(x)$ 处于基态，那么就可以更加显然地看到，$\pi(x)$ 也正好参数化了标量场真空期望值的扰动变化。
 
-### 时空对称性的破缺与 NG 粒子计数
+### Spontaneous Spacetime Symmetry Breaking and the Counting of Nambu-Goldstone Particle[^4]
 
-TBD.
+接下来，我们考虑如何计数独立的 NG 粒子态。特别地，本节的方法会一并展示内部对称性和时空对称性破缺的 NG 粒子计数方法，并展示出它们的区别。
+
+我们在接下来的所有内容中用 `$T_A$` 表示原始对称群 $G$ 的生成元，用 `$T_\alpha$` 表示未破缺的子群 $H$ 的生成元，用 `$T_a$` 表示破缺的陪集 $G/H$ 的生成元。
+
+考察序参量的小振幅长波扰动：
+
+$$
+    \delta\phi(\vec{r})=c_A(\vec{r})T^A\langle\phi(\vec{r})\rangle=c_a(\vec{r})T^a\langle\phi(\vec{r})\rangle
+$$
+
+基于上一节的论述，我们知道每一个独立的 `$c_a(\vec{r})$` 代表了一个独立的 NG 粒子模式。直观来看，`$T_a$` 作为李代数 $\mathfrak{g}$ 一组独立基矢的一个子集，显然应该是互相独立的，因此我们应当自然地有每一个独立的破缺对称性 $T^a$ 都对应于一个独立的 `$c_a$`，于是我们有对每一个独立破缺的对称性，都会生成一个 NG 模式。这正是一般的教科书推导会给出的 Goldstone 定理的结论。
+
+然而，这一结论并不严谨，至少其不适用于时空对称性的自发破缺。这是因为，`$c_a(\vec{r})$` 是一个与未破缺平移对称性的剩余维度中的位矢 $r$ 相关的参数[^5]，这使得如果某些生成元之间产生了相互抵消，即下述方程如果有 $n$ 个非平凡解：
+
+$$
+    c_a(\vec{r})T^a\langle\phi(\vec{r})\rangle=0
+$$
+
+那么独立的 NG 模式的个数就不会是 $|a|=\mathrm{dim}(G/H)$ 个，而是 $\mathrm{dim}(G/H)-n$ 个。
+
+为了看到这一点，考虑在该方程的左右两边作用未破缺平移生成元 $P_\mu$：
+
+$$
+\begin{aligned}
+    0&=P_\mu c_a(\vec{r})T^a\langle\phi(\vec{r})\rangle
+    \\&=c_a(\vec{r}) \left[P_\mu,T^a\right] \langle\phi(\vec{r})\rangle
+    \\&=-i\left(\partial_\mu c_a(\vec{r})T^a-{f^{\mu a}}_bc_a(\vec{r})T^b\right)\langle\phi(\vec{r})\rangle
+\end{aligned}
+$$
+
+其中我们假设了破缺生成元与 $P_\mu$ 的对易关系：
+
+$$
+    [P_\mu,T^a]=i{f^{\mu a}}_b T^b+i{f^{\mu a}}_\beta T^\beta
+$$
+
+并利用了未破缺群 $H$ 的生成元对序参量作用为零的性质。
+
+对于内部对称性，基于定义其生成元必须与时空对称性的生成元对易，因而方程中的第二项直接消失，我们仅能从上述方程中获知 `$c_a(\vec{r})$` 是一个不依赖于坐标的常数，而这意味着一开始的方程仅能有所有系数均为零的平凡解，这也印证了其余常见证明中内部对称性破缺生成的独立 NG 模式数量恰好等于破缺对称性生成元数量（即 $\mathrm{dim}(G/H)$）的结论。
+
+而对于时空对称性，其生成元完全可以与 `$P_\mu$` 不对易。而这就意味着，我们可以给出：
+
+$$
+    \left(\partial_\mu c_a(\vec{r})-{f^{\mu b}}_ac_b(\vec{r})\right)T^a\langle\phi(\vec{r})\rangle=0
+$$
+
+也就是说，$T^a$ 生成的 NG 模式 $c_a$ 的导数与 $T^b$ 生成的 NG 模式 $c_b$ 线性相关，二者并不独立。而每一个这样的不独立都为一开始的方程贡献了一个非平凡的解，因而就要扣除掉一个 NG 模式数量。于是我们自然得到独立的 NG 模式只能有 $\mathrm{dim}(G/H)-n$ 个。
 
 [^1]: *The Quantum Theory of Fields, Vol.I, Chapter 7*, Steven Weinberg
 [^2]: 注意，下式的 `$Q_a|0\rangle$` 在无限大的空间中其实不是良定义的量，但我们可以通过先在有限体积中处理问题将其绕过去。
 [^3]: *The Quantum Theory of Fields, Vol.II, Chapter 19*, Steven Weinberg
+[^4]: Ian Low and Aneesh V. Manohar. Spontaneously broken spacetime symmetries and
+goldstone’s theorem. *Physical Review Letters*, 88(10), February 2002.
+[^5]: 这是因为 NG 模式必须依赖于其动量 $\vec{k}$（因为其没有能隙，所有耦合都必须直接与 $k$ 相关，或者说在 Lagrangian 中以导数耦合呈现），而动量只能在没有破缺平移对称性的空间中定义。
