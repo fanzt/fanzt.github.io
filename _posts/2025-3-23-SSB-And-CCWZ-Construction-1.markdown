@@ -97,10 +97,10 @@ $$
 或者等价地：
 
 $$
-    -T_a\langle\phi^i\rangle=\langle0|[Q_a,\phi^i]|0\rangle\neq 0
+    -\mathrm{i}T_a\langle\phi^i\rangle=\langle0|[Q_a,\phi^i]|0\rangle\neq 0
 $$
 
-基于此，我们定义 $\langle\phi^i\rangle$ ，即场的真空期望值（Vacuum Expectation Value, VEV）为 **序参量（Order Parameter）** ，用于描述系统是否发生 SSB. 如果物理系统存在 SSB，则 $\langle\phi^i\rangle\neq0$.
+基于此，我们定义 $\langle\phi^i\rangle$ ，即场的真空期望值（Vacuum Expectation Value, VEV）为 **序参量（Order Parameter）**，用于描述系统是否发生 SSB. 如果物理系统存在 SSB，则 $\langle\phi^i\rangle\neq0$.
 
 基于以上讨论，我们便可以开始证明所谓的 Goldstone 定理。
 
