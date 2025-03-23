@@ -147,7 +147,7 @@ $$
 
 ### 时空对称性的破缺与 NG 粒子计数
 
-
+TBD.
 
 [^1]: *The Quantum Theory of Fields, Vol.I, Chapter 7*, Steven Weinberg
 [^2]: 注意，下式的 `$Q_a|0\rangle$` 在无限大的空间中其实不是良定义的量，但我们可以通过先在有限体积中处理问题将其绕过去。
