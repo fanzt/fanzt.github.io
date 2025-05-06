@@ -85,6 +85,28 @@ $$
 
 ## Electroweak Theory
 
-我们当然要展示一下 Anderson-Higgs 机制最为著名的应用，电弱理论标准模型的 `$\mathrm{SU(2)\times U(1)}\rightarrow\mathrm{U(1)}$` 过程。作为例子，我们暂时不考察含费米子项的手征理论，只关注规范场和 Higgs 部分。
+我们当然要展示一下 Anderson-Higgs 机制最为著名的应用（或许也是人类目前为止最为成功的理论），电弱理论标准模型的 `$\mathrm{SU(2)\times U(1)}\rightarrow\mathrm{U(1)}$` 过程。
+
+我们知道电弱理论是 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 的理论，因此我们先写下两个规范矢量场的 Lagrangain：
+
+$$
+    \mathscr{L}_{gauge}=-\frac{1}{4}W^a_{\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} 
+$$
+
+其中 `$W^a_{\mu\nu}$` 是 `$\mathrm{SU}(2)_{L}$` 的伴随表示下的规范场张量，其对应于所谓的弱同位旋，定义为：
+
+$$
+    W^a_{\mu\nu}=\partial_{\mu}A^a_{\nu}-\partial_{\nu}A^{a}_{\mu}+g\varepsilon_{abc}A^{b}_{\mu}A^{c}_{\nu}
+$$
+
+而 `$F_{\mu\nu}$` 是 `$\mathrm{U}(1)_Y$` 超场，其对应于所谓的 $Y$ 超荷，定义为我们最熟悉的：
+
+$$
+    F_{\mu\nu}=\partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}
+$$
+
+这二者便是规范群 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 对应的规范场。（注意，`$\mathrm{U}(1)_Y$` 超场不是我们熟悉的电磁场 `$\mathrm{U}(1)_{EM}$`.）
+
+实验告诉我们电弱理论中有且仅有一个无质量的规范玻色子，也就是光子。因此接下来我们考虑如何将这个所谓的 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 规范作用量破缺到只剩下一个 `$\mathrm{U}(1)_{EM}$` 的作用量。
 
 TBD.
