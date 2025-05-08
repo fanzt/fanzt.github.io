@@ -83,23 +83,123 @@ $$
 
 此时，我们会发现，矢量场 `$A'_\mu$` 获得了第三个自由度，并获得了一个大小为 $ev$ 的质量。而获得质量 $2\lambda v^2$ 的标量场 $\sigma$，便是我们所知的 Higgs 粒子。
 
-## Electroweak Theory
+## Electroweak Theory[^1]
 
 我们当然要展示一下 Anderson-Higgs 机制最为著名的应用（或许也是人类目前为止最为成功的理论），电弱理论标准模型的 `$\mathrm{SU(2)\times U(1)}\rightarrow\mathrm{U(1)}$` 过程。
 
-我们知道电弱理论是 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 的理论，因此我们先写下两个规范矢量场的 Lagrangain：
+首先，实验告诉我们，弱相互作用对物质场的效果是手征的。为此，我们先构建轻子部分。首先是电子型轻子：
 
 $$
-    \mathscr{L}_{gauge}=-\frac{1}{4}W^a_{\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} 
+    e_L=\frac{1}{2}(1+\gamma_5)e,\:e_R=\frac{1}{2}(1-\gamma_5)e
 $$
 
-其中 `$W^a_{\mu\nu}$` 是 `$\mathrm{SU}(2)_{L}$` 的伴随表示下的规范场张量，其对应于所谓的弱同位旋，定义为：
+其次是电子中微子型轻子[^2]：
+
+$$
+    \gamma_5\nu_{eL}=\nu_{eL}
+$$
+
+弱相互作用只与左手场耦合，因此我们简单地假设规范群为：
+
+$$
+    \mathrm{SU}(2)_L\otimes\mathrm{U}(1)_L\otimes\mathrm{U}(1)_R
+$$
+
+于是场的变换为：
+
+$$
+    \delta
+    \begin{pmatrix}
+        \nu_e
+        \\e
+    \end{pmatrix}
+    =\mathrm{i}[\epsilon_i t^i+\epsilon_L t_L+\epsilon_R t_R]
+    \begin{pmatrix}
+        \nu_e
+        \\e
+    \end{pmatrix}
+$$
+
+其中我们分别有：
+
+$$
+    \boldsymbol{t}=\frac{g}{4}(1+\gamma_5)
+        \left\{
+            \begin{pmatrix}
+                0 & 1
+                \\1 & 0
+            \end{pmatrix}
+            ,
+            \begin{pmatrix}
+                0 & -\mathrm{i}
+                \\\mathrm{i} & 0
+            \end{pmatrix}
+            ,
+            \begin{pmatrix}
+                1 & 0
+                \\0 & -1
+            \end{pmatrix}
+        \right\}
+$$
+
+称为**弱同位旋（Weak Isospin）**，以及：
+
+$$
+    t_L\propto(1+\gamma_5)
+    \begin{pmatrix}
+        1 & 0
+        \\0 & 1
+    \end{pmatrix},\:t_R\propto(1-\gamma_5)
+$$
+
+出于理论和实验的相符性，我们不使用 $t_L,\:t_R$ 而使用如下两个生成元：
+
+$$
+\begin{aligned}
+    y&=g'\left[\left(\frac{1+\gamma_5}{4}\right)
+    \begin{pmatrix}
+        1 & 0
+        \\0 & 1
+    \end{pmatrix}+\left(\frac{1-\gamma_5}{2}\right)\right]
+    \\n_e&=g''\left[\left(\frac{1+\gamma_5}{2}\right)
+    \begin{pmatrix}
+        1 & 0
+        \\0 & 1
+    \end{pmatrix}+\left(\frac{1-\gamma_5}{2}\right)\right]
+\end{aligned}
+$$
+
+其中第一个称为**超荷（Hypercharge）**，第二个则显然正是轻子数。
+
+我们在这里讨论一下上述这些生成元和我们熟悉的电荷的关系。容易看到，右手电子 $e_R$ 携带的超荷比左手电子中微子和左手电子 $\nu_{eL},e_L$ 多 $1/2$；而左手电子的弱同位旋第三分量又比右手电子多 $1/2$. 我们又知道，电子不论左右手，携带的电荷是一样的，因此我们构造电荷：
+
+$$
+    q=\frac{e}{g}t_3-\frac{e}{g'}y
+    =e\begin{pmatrix}
+        0 & 0
+        \\0 & -1
+    \end{pmatrix}
+$$
+
+理论上我们应当为这四个生成元都引入对应的规范场，但实验中并未观测到轻子数对应的规范场。因此我们去掉 $n_e$，便获得了电弱理论的规范群：
+
+$$
+    \mathrm{SU}(2)_{L}\otimes U(1)_Y
+$$
+
+于是我们写下两个规范矢量场的 Lagrangain：
+
+$$
+    \mathscr{L}_{gauge}=-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} 
+$$
+
+其中 `$W^a_{\mu\nu}$` 是 `$\mathrm{SU}(2)_{L}$` 的伴随表示下的规范场张量，对应于所谓的弱同位旋，定义为：
 
 $$
     W^a_{\mu\nu}=\partial_{\mu}A^a_{\nu}-\partial_{\nu}A^{a}_{\mu}+g\varepsilon_{abc}A^{b}_{\mu}A^{c}_{\nu}
 $$
 
-而 `$F_{\mu\nu}$` 是 `$\mathrm{U}(1)_Y$` 超场，其对应于所谓的 $Y$ 超荷，定义为我们最熟悉的：
+而 `$F_{\mu\nu}$` 是 `$\mathrm{U}(1)_Y$` 超场，对应于所谓的 $Y$ 超荷，定义为我们最熟悉的：
 
 $$
     F_{\mu\nu}=\partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}
@@ -107,6 +207,22 @@ $$
 
 这二者便是规范群 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 对应的规范场。（注意，`$\mathrm{U}(1)_Y$` 超场不是我们熟悉的电磁场 `$\mathrm{U}(1)_{EM}$`.）
 
-实验告诉我们电弱理论中有且仅有一个无质量的规范玻色子，也就是光子。因此接下来我们考虑如何将这个所谓的 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 规范作用量破缺到只剩下一个 `$\mathrm{U}(1)_{EM}$` 的作用量。
+实验告诉我们电弱理论中有且仅有一个无质量的规范玻色子，也就是光子。因此接下来我们考虑如何将这个所谓的 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 规范作用量破缺到只剩下一个 `$\mathrm{U}(1)_{EM}$` 的作用量。为此，我们需要考虑这些规范场的线性组合（也就是这些李代数的线性组合）。
 
-TBD.
+实验告诉我们，电弱理论应该有一个自旋为 1 且有质量的带电荷粒子 `$W^{\pm}$`，自旋为 1 且有质量的中性粒子 `$Z^0$`，以及自旋为一且无质量的中性粒子 `$\gamma$`. 因此我们分别构造如下四个场：
+
+$$
+\begin{aligned}
+    W^{\mu}&=\frac{1}{\sqrt{2}}(A^{\mu}_1+iA^{\mu}_2)
+    \\W^{\mu*}&=\frac{1}{\sqrt{2}}(A^{\mu}_1-iA^{\mu}_2)
+    \\Z^{\mu}&=\cos{\theta}A_3^{\mu}+\sin{\theta}B^{\mu}
+    \\A^{\mu}&=-sin{\theta}A_3^{\mu}+\cos{\theta}B^{\mu}
+\end{aligned}
+$$
+
+其中 $\theta$ 称为 Weinberg 角，表征了 `$\mathrm{SU}(2)_L$` 与 `$\mathrm{U}(1)_Y$` 的混合程度。
+
+----
+
+[^1]: *The Quantum Theory of Fields, Vol.II, Chapter 21*, Steven Weinberg
+[^2]: 目前我们尚未发现右手中微子，如果需要的话可以在模型里补入。
