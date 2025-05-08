@@ -7,7 +7,7 @@ author:     "fromuly"
 header-img: "img/post-bg-2025-7.jpg"
 catalog: true
 usemathjax: true
-music-id: 496869422
+music-id: 2100328966
 tags:
     - Physics
     - Quantum Field Theory
@@ -199,23 +199,23 @@ $$
     \mathscr{L}_{gauge}=-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} 
 $$
 
-其中 `$W^a_{\mu\nu}$` 是 `$\mathrm{SU}(2)_{L}$` 的伴随表示下的规范场张量，对应于所谓的弱同位旋，定义为：
+其中 `$W^a_{\mu\nu}$` 是 `$\mathrm{SU}(2)_{L}$` 的伴随表示下的规范场张量，对应于弱同位旋，定义为：
 
 $$
     W^a_{\mu\nu}=\partial_{\mu}A^a_{\nu}-\partial_{\nu}A^{a}_{\mu}+g\varepsilon_{abc}A^{b}_{\mu}A^{c}_{\nu}
 $$
 
-而 `$F_{\mu\nu}$` 是 `$\mathrm{U}(1)_Y$` 超场，对应于所谓的 $Y$ 超荷，定义为我们最熟悉的：
+而 `$F_{\mu\nu}$` 是 `$\mathrm{U}(1)_Y$` 超场，对应于 $Y$ 超荷，定义为我们最熟悉的：
 
 $$
     F_{\mu\nu}=\partial_{\mu}B_{\nu}-\partial_{\nu}B_{\mu}
 $$
 
-这二者便是规范群 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 对应的规范场。（注意，`$\mathrm{U}(1)_Y$` 超场不是我们熟悉的电磁场 `$\mathrm{U}(1)_{EM}$`.）
+这二者便是规范群 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 对应的规范场。
 
 实验告诉我们电弱理论中有且仅有一个无质量的规范玻色子，也就是光子。因此接下来我们考虑如何将这个所谓的 `$\mathrm{SU}(2)_{L}\otimes U(1)_Y$` 规范作用量破缺到只剩下一个 `$\mathrm{U}(1)_{EM}$` 的作用量。为此，我们需要考虑这些规范场的线性组合（也就是这些李代数的线性组合）。
 
-实验告诉我们，电弱理论应该有一个自旋为 1 且有质量的带电荷粒子 `$W^{\pm}$`，自旋为 1 且有质量的中性粒子 `$Z^0$`，以及自旋为一且无质量的中性粒子 `$\gamma$`. 因此我们分别构造如下四个场：
+实验告诉我们，电弱理论应该有一个自旋为 1 且有质量的带电荷粒子 `$W^{\pm}$`，自旋为 1 且有质量的中性粒子 `$Z^0$`，以及自旋为一且无质量的中性粒子 `$\gamma$`. 基于前面的讨论，我们知道 `$\gamma$` 应当由 `$A_3$` 与 `$B$`组合而成，因此我们分别构造如下四个场：
 
 $$
 \begin{aligned}
@@ -228,7 +228,13 @@ $$
 
 其中 $\theta$ 称为 Weinberg 角，表征了 `$\mathrm{SU}(2)_L$` 与 `$\mathrm{U}(1)_Y$` 的混合程度。
 
+### 轻子场部分
+
+接下来我们考虑构造规范不变的轻子场 Lagrangian. 首先，我们看到不论是电子型轻子还是左手电子中微子型轻子，都至少携带一种内部对称性对应的守恒荷，因此其都应当是 Dirac 费米子[^3][^4]。
+
 ----
 
 [^1]: *The Quantum Theory of Fields, Vol.II, Chapter 21*, Steven Weinberg
 [^2]: 目前我们尚未发现右手中微子，如果需要的话可以在模型里补入。
+[^3]: 然而这个想法其实是有些 naive 的，我们可以构造一个 dimension 5 的 “Weinberg Operator” $\propto\bar{l}\tilde{H}\tilde{H}l^c$，其保证了在保持手征二重态的情况下实现中微子的 Majorana 质量项（这其实是因为在低能下弱同位旋对称性的破缺，我们根本看不到 weak isospin 荷。）
+[^4]: 顺便，我们还可以利用所谓的 seesaw 机制给出 Weinberg Operator 的高能可重整实现，在此不多赘述。
