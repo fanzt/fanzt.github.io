@@ -196,7 +196,7 @@ $$
 于是我们写下两个规范矢量场的 Lagrangain：
 
 $$
-    \mathscr{L}_{gauge}=-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu} 
+    \mathscr{L}_{gauge}=-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
 $$
 
 其中 `$W^a_{\mu\nu}$` 是 `$\mathrm{SU}(2)_{L}$` 的伴随表示下的规范场张量，对应于弱同位旋，定义为：
@@ -230,11 +230,90 @@ $$
 
 ### 轻子场部分
 
-接下来我们考虑构造规范不变的轻子场 Lagrangian. 首先，我们看到不论是电子型轻子还是左手电子中微子型轻子，都至少携带一种内部对称性对应的守恒荷，因此其都应当是 Dirac 费米子[^3][^4]。
+接下来我们考虑构造规范不变的轻子场 Lagrangian. 轻子场的动力学项是简单的：只是将导数换成协变导数，即有：
+
+$$
+    \mathscr{L}_e=-\bar{l}(\gamma^\mu\partial_\mu-\mathrm{i}\gamma^\mu\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}\gamma^\mu B_\mu y)l
+$$
+
+然而轻子的质量项则成为了大麻烦。首先，我们看到不论是电子型轻子还是左手电子中微子型轻子，都至少携带一种内部对称性对应的守恒荷，因此其都应当是 Dirac 费米子[^3][^4]。然而，在我们讨论自发对称性破缺赋予质量之前，轻子到底是什么类型的费米子其实并没有意义（因为 Dirac 和 Majorana 之分别仅在质量项上）。通常的 Dirac 质量项不能被我们在这里引入进来，因为我们讨论的弱相互作用是手性的，而 Dirac 质量项在手性规范对称群下显然不是一个规范单态。但显然地，现实中的轻子都有质量。因此我们希望自发对称性破缺机制也可以合理地为轻子引入质量，为此引入 Higgs 和轻子场的 Yukawa 耦合：
+
+$$
+    \mathscr{L}_{\phi e}=-G_e\overline{
+        \begin{pmatrix}
+            \nu_e\\
+            e
+        \end{pmatrix}
+    }_L
+        \begin{pmatrix}
+            \phi^+\\
+            \phi^0
+        \end{pmatrix}e_R
+$$
+
+其中我们定义 $(\phi^+,\phi^0)$ 双重态的变换生成元为：
+
+$$
+    \boldsymbol{t}^{(\phi)}=\frac{g}{2}
+    \left\{
+        \begin{pmatrix}
+            0 & 1
+            \\1 & 0
+        \end{pmatrix}
+        ,
+        \begin{pmatrix}
+            0 & -\mathrm{i}
+            \\\mathrm{i} & 0
+        \end{pmatrix}
+        ,
+        \begin{pmatrix}
+            1 & 0
+            \\0 & -1
+        \end{pmatrix}
+    \right\}
+$$
+
+以及 `$\mathrm{U}(1)_Y$` 生成元：
+
+$$
+    y^{(\phi)}=-\frac{g'}{2}
+        \begin{pmatrix}
+            1 & 0\\
+            0 & 1
+        \end{pmatrix}
+$$
+
+于是容易看到上述构造的 Yukawa 耦合在 $\mathrm{SU}(2)_L\otimes\mathrm{U}(1)_Y$ 下不变。（$t_3:-1/2+1/2=0,\:y:-1/2-1/2+1=0$.）
+
+于是可以看出 Higgs 的电荷矩阵为：
+
+$$
+    q=\frac{e}{g}t_3-\frac{e}{g'}y
+    =e\begin{pmatrix}
+        1 & 0
+        \\0 & 0
+    \end{pmatrix}
+$$
+
+Higgs 的动力学项也需要替换为协变导数，并且 Landau-Ginzburg 势当然也是 SSB 必不可少的。
+
+于是我们至此可以写出 Lagrangian：
+
+$$
+\begin{aligned}
+    \mathscr{L}_{ElectroWeak}=&-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-\bar{l}(\gamma^\mu\partial_\mu-\mathrm{i}\gamma^\mu\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}\gamma^\mu B_\mu y)l\\&-G_e\overline{\left(P_L l\right)}\phi P_Rl-\frac{1}{2}\left|(\partial_\mu-\mathrm{i}\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}B_\mu y)\phi\right|^2-\frac{\mu^2}{2}\phi^{\dagger}\phi-\frac{\lambda}{4}(\phi^\dagger\phi)^2
+\end{aligned}
+$$
+
+其中 $P_L$ 和 $P_R$ 分别是获取对应手征分量的投影算符。我们在标量场部分添加了 $1/2$ 的系数，这是因为在经历 SSB 之后，标量场只会剩下一个分量作为物理自由度，在这里添加 $1/2$ 才能使这个物理场是正则归一化的。
+
+### 自发对称性破缺
+
+TBD.
 
 ----
 
 [^1]: *The Quantum Theory of Fields, Vol.II, Chapter 21*, Steven Weinberg
 [^2]: 目前我们尚未发现右手中微子，如果需要的话可以在模型里补入。
-[^3]: 然而这个想法其实是有些 naive 的，我们可以构造一个 dimension 5 的 “Weinberg Operator” $\propto\bar{l}\tilde{H}\tilde{H}l^c$，其保证了在保持手征二重态的情况下实现中微子的 Majorana 质量项（这其实是因为在低能下弱同位旋对称性的破缺，我们根本看不到 weak isospin 荷。）
-[^4]: 顺便，我们还可以利用所谓的 seesaw 机制给出 Weinberg Operator 的高能可重整实现，在此不多赘述。
+[^3]: 这个想法其实是很 naive 的（不然也不会有关于中微子是否是 Majorana 粒子的问题了），这里有很多细节上的问题。首先，对于 $\mathrm{SU}(2)$ 的基本表示（是一个 pseudo-real 表示），最普通的手征 Weyl 费米子 Majorana 质量项其实确实是一个规范单态，因而不被规范对称性禁止；然而，由于 $\mathrm{SU}(2)$ 基本表示的 pseudo-real 性质（“度规”反对称），这样的项其实恒为零。
+[^4]: 但是，我们可以构造一个 dimension 5 的单态算符，称为 “Weinberg Operator” $\propto\bar{l}\tilde{H}\tilde{H}l^c$，其保证了在保持规范对称性的情况下实现中微子的 Majorana 质量项（这其实是因为在低能下弱同位旋对称性的破缺，我们根本看不到 weak isospin 荷。）顺便，我们还可以利用所谓的 seesaw 机制给出 Weinberg Operator 的高能可重整实现，这玩意儿还挺好玩的，但我们在此不多赘述。
