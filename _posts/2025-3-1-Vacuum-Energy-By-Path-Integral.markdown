@@ -315,4 +315,42 @@ $$
 \end{aligned}
 $$
 
-可以看到，规范项恰好消掉了，因此我们验证了真空能量的规范不变性。上式给出了与标量场一致的形式，但是差了四倍的系数。然而我们都知道，光子场只有两个物理自由度，其应当是标量场的两倍。事实上，这是因为我们未考虑 Faddeev-Popov 鬼场的贡献。虽然电磁场情形下，鬼场与电磁场没有耦合而不需要处理进 Lagrangian 中，但是其对真空能量是存在贡献的。而其为标量 Grassmann 变量场，刚好可以给出负二倍的自由度，因而抵掉上方计算的其中两个。所以我们确实成功利用路径积分方法计算出了电磁场的真空能量。
+可以看到，规范项恰好消掉了，因此我们验证了真空能量的规范不变性。上式给出了与标量场一致的形式，但是差了四倍的系数。然而我们都知道，光子场只有两个物理自由度，其应当是标量场的两倍。事实上，这是因为我们未考虑 Faddeev-Popov 鬼场的贡献。
+
+## Ghost Field
+
+$$
+    \begin{aligned}
+        \mathcal{Z}[0]_G=C_1\int\mathcal{D}\omega^*\mathcal{D}\omega\exp\left\{\mathrm{i}\int\mathrm{d}^4x\mathrm{d}^4y{\omega}^*(x)\omega(y)\mathcal{M}(x,y)\right\}=C_1\det\mathcal{M}(x,y)
+    \end{aligned}
+$$
+
+基于类似的讨论，有：
+
+$$
+    \begin{aligned}
+        -\mathrm{i}E_{0G}T&=\mathrm{tr}\ln\left[\left(\frac{\partial}{\partial x_\mu}\frac{\partial}{\partial y^\mu}-\mathrm{i}\varepsilon\right)\delta^4(x-y)\right]+\ln{C_1}
+        \\&=VT\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(p^2-\mathrm{i}\varepsilon\right)+\ln{C'_1}
+    \end{aligned}
+$$
+
+类似地进行积分，可以算出：
+
+$$
+    \begin{aligned}
+        \mathrm{i}E_{0G}&=V\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\frac{-2p^0}{|\mathbf{p}|^2-(p^0)^2-\mathrm{i}\varepsilon}+C'
+        \\&=-\mathrm{i}V\int\frac{\mathrm{d}^3p}{(2\pi)^3}\left(E_{\mathbf{p}}-E'_{\mathbf{p}}\right)
+    \end{aligned}
+$$
+
+因而有：
+
+$$
+    E_{0G}=-2\times\frac{1}{2}V\int\frac{\mathrm{d}^3p}{(2\pi)^3}\left(E_{\mathbf{p}}-E'_{\mathbf{p}}\right).
+$$
+
+将两项的贡献加和，即有：
+
+$$
+    E_0=(4-2)\times\frac{1}{2}V\int\frac{\mathrm{d}^3p}{(2\pi)^3}\left(E_{\mathbf{p}}-E'_{\mathbf{p}}\right)=2\times\frac{1}{2}V\int\frac{\mathrm{d}^3p}{(2\pi)^3}\left(E_{\mathbf{p}}-E'_{\mathbf{p}}\right).
+$$
