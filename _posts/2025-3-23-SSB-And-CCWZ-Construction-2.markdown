@@ -368,7 +368,7 @@ $$
     m_e=vG_e
 $$
 
-由此，我们成功地通过自发对称性破缺机制赋予了弱规范玻色子与轻子合适的质量，并给出了轻子-规范玻色子之间的电弱相互作用。以上内容即是著名的 **Glashow–Weinberg–Salam 电弱标准模型**，其被 Sheldon Lee Glashow 于 1961 年，Mohammad Abdus Salam 于 1964 年，Steven Weinberg 于 1967 年分别独立提出，并为他们赢得了 1979 年的诺贝尔物理学奖。Higgs 与规范玻色子之间的弱相互作用也可以通过对 Lagrangian 的进一步展开获得，我们在此不再详述。
+由此，我们成功地通过自发对称性破缺机制赋予了弱规范玻色子与轻子合适的质量，并给出了轻子-规范玻色子之间的电弱相互作用。以上内容即是著名的 **Glashow–Weinberg–Salam 电弱标准模型**，其被 Sheldon Lee Glashow 于 1961 年，Mohammad Abdus Salam 于 1964 年，Steven Weinberg 于 1967 年分别独立提出、完善，并为他们赢得了 1979 年的诺贝尔物理学奖。Higgs 与规范玻色子之间的弱相互作用也可以通过对 Lagrangian 的进一步展开获得，我们在此不再详述。
 
 ----
 
