@@ -353,7 +353,7 @@ $$
 由此 Higgs 的动力学项中规范联络部分给出了 $W$ 和 $Z$ 的质量：
 
 $$
-    -\frac{1}{2}\left|(\boldsymbol{A}_\mu\cdot\boldsymbol{t}+B_\mu y)\phi\right|^2=-\frac{1}{4}g^2v^2W^{\dagger}_{\mu}W^{\mu}-\frac{1}{8}(g^2+g'^2)v^2Z_\mu Z^\mu
+    -\frac{1}{2}\left|(\boldsymbol{A}_\mu\cdot\boldsymbol{t}+B_\mu y)\langle\phi\rangle\right|^2=-\frac{1}{4}g^2v^2W^{\dagger}_{\mu}W^{\mu}-\frac{1}{8}(g^2+g'^2)v^2Z_\mu Z^\mu
 $$
 
 可以看到其中刚好没有 $A_\mu$ 的质量项，这保证了光子仍旧零质量，并且我们有：
