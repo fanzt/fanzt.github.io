@@ -64,13 +64,13 @@ $$
     \xi(x)\rightarrow\xi(x)+\alpha(x),\quad A_\mu(x)\rightarrow A_\mu(x)-\frac{1}{e}\partial_\mu\alpha(x)\ .
 $$
 
-于是 Lagrangian 显然规范不变。然而，我们知道所谓 Anderson-Higgs 机制描述的实际上是 NG 粒子被规范场吸收提供了纵向极化态的过程。因此接下来我们要**取定规范**：
+我们称其为规范变换的一个**非线性实现**，于是 Lagrangian 显然规范不变。然而，我们知道所谓 Anderson-Higgs 机制描述的实际上是 NG 粒子被规范场吸收提供了纵向极化态的过程。因此接下来我们要**取定规范**：
 
 $$
     A'_\mu=A_\mu+\frac{1}{e}\partial_\mu\xi
 $$
 
-直到这一步，我们才相当于移除了系统的规范对称性。从此处可以看到，规范对称性的消失**并不是一个自发对称性破缺的过程**。没有任何序参量描述规范对称性的消失。
+直到这一步，我们才相当于定下了系统的规范。从此处可以看到，Higgs 机制**并不是一个自发对称性破缺的过程**，其只是将线性的规范变换隐藏起来，以非线性的方式实现了。没有任何序参量描述规范对称性的消失。
 
 在取定规范后，我们有：
 
@@ -177,7 +177,7 @@ $$
 
 $$
     q=\frac{e}{g}t_3-\frac{e}{g'}y
-    =e\begin{pmatrix}
+    =g_e\begin{pmatrix}
         0 & 0
         \\0 & -1
     \end{pmatrix}
@@ -289,7 +289,7 @@ $$
 
 $$
     q=\frac{e}{g}t_3-\frac{e}{g'}y
-    =e\begin{pmatrix}
+    =g_e\begin{pmatrix}
         1 & 0
         \\0 & 0
     \end{pmatrix}
@@ -308,6 +308,38 @@ $$
 其中 $P_L$ 和 $P_R$ 分别是获取对应手征分量的投影算符。我们在标量场部分添加了 $1/2$ 的系数，这是因为在经历 SSB 之后，标量场只会剩下一个分量作为物理自由度，在这里添加 $1/2$ 才能使这个物理场是正则归一化的。
 
 ### 自发对称性破缺
+
+接下来我们来探讨该理论的 SSB 过程，并展示其将为规范玻色子与轻子分别赋予质量。
+
+为了方便接下来的讨论，我们先将轻子-规范耦合拆开成 $A、Z、W$ 的形式：
+
+$$
+    i\mathscr{L}_e'=-\bar{l}\gamma^\mu A_{\mu}^{a}t_al
+$$
+
+将之前的表达式带入化简，有：
+
+$$
+\begin{aligned}
+    i\mathscr{L}_e'=&\frac{g}{\sqrt{2}}\left(\bar{e}\gamma^\mu W_\mu P_L\nu_e\right)+\frac{g}{\sqrt{2}}\left(\bar{\nu_e}\gamma^\mu W_\mu^*P_Le\right)
+    \\&-\frac{1}{2}\sqrt{g^2+g'^2}\bar{\nu_e}\gamma^\mu Z_\mu P_L\nu_e+\frac{(g^2-g'^2)}{2\sqrt{g^2+g'^2}}\bar{e}\gamma^\mu Z_\mu P_L e
+    \\&+g'\bar{e}\gamma^\mu Z_\mu P_Re-g_e(\bar{e}\gamma^\mu A_\mu e)
+\end{aligned}
+$$
+
+现在回来关注 Higgs 场。当参量 $\mu^2<0$ 时，我们可以给出 Landau-Ginzburg 势下的 Higgs 真空期望值：
+
+$$
+    \langle\phi^\dagger\rangle\langle\phi\rangle\equiv v^2=\frac{|\mu^2|}{\lambda}
+$$
+
+我们总可以取一个规范变换（无非就是转转角度）使得 Higgs 场达到所谓的幺正规范，即 $\phi^+=0$ 而 $\phi^0$ 厄米。于是有：
+
+$$
+    \langle\phi^+\rangle=0,\:\langle\phi^0\rangle=v
+$$
+
+由此 Higgs 的动力学项给出了 $W$ 和 $Z$ 的质量：
 
 TBD.
 
