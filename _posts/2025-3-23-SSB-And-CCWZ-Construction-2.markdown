@@ -293,6 +293,8 @@ $$
     \end{pmatrix}
 $$
 
+### 电弱标准模型的拉格朗日量
+
 Higgs 的动力学项也需要替换为协变导数，并且 Landau-Ginzburg 势当然也是 SSB 必不可少的。
 
 于是我们至此可以写出 Lagrangian：
