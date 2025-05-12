@@ -217,14 +217,25 @@ $$
 
 $$
 \begin{aligned}
-    W^{\mu}&=\frac{1}{\sqrt{2}}(A^{\mu}_1+iA^{\mu}_2)
-    \\W^{\mu*}&=\frac{1}{\sqrt{2}}(A^{\mu}_1-iA^{\mu}_2)
+    W^{\mu}&=\frac{1}{\sqrt{2}}(A^{\mu}_1+\mathrm{i}A^{\mu}_2)
+    \\W^{\mu*}&=\frac{1}{\sqrt{2}}(A^{\mu}_1-\mathrm{i}A^{\mu}_2)
     \\Z^{\mu}&=\cos{\theta}A_3^{\mu}+\sin{\theta}B^{\mu}
     \\A^{\mu}&=-sin{\theta}A_3^{\mu}+\cos{\theta}B^{\mu}
 \end{aligned}
 $$
 
 其中 $\theta$ 称为 Weinberg 角，表征了 `$\mathrm{SU}(2)_L$` 与 `$\mathrm{U}(1)_Y$` 的混合程度。
+
+为了之后的计算方便，我们反解出 $\boldsymbol{A}$ 和 $B$：
+
+$$
+\begin{aligned}
+    A_1&=\frac{1}{\sqrt{2}}(W+W^*)
+    \\A_2&=\frac{1}{\sqrt{2}\mathrm{i}}(W-W^*)
+    \\A_3&=Z\cos{\theta}-A\sin{\theta}
+    \\B&=Z\sin{\theta}+A\cos{\theta}
+\end{aligned}
+$$
 
 ### 轻子场部分
 
@@ -246,7 +257,7 @@ $$
         \begin{pmatrix}
             \phi^+\\
             \phi^0
-        \end{pmatrix}e_R
+        \end{pmatrix}e_R+h.c.
 $$
 
 其中我们定义 $(\phi^+,\phi^0)$ 双重态的变换生成元为：
@@ -301,7 +312,7 @@ Higgs 的动力学项也需要替换为协变导数，并且 Landau-Ginzburg 势
 
 $$
 \begin{aligned}
-    \mathscr{L}_{ElectroWeak}=&-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-\bar{l}(\gamma^\mu\partial_\mu-\mathrm{i}\gamma^\mu\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}\gamma^\mu B_\mu y)l\\&-G_e\overline{\left(P_L l\right)}\phi P_Rl-\frac{1}{2}\left|(\partial_\mu-\mathrm{i}\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}B_\mu y)\phi\right|^2-\frac{\mu^2}{2}\phi^{\dagger}\phi-\frac{\lambda}{4}(\phi^\dagger\phi)^2
+    \mathscr{L}_{ElectroWeak}=&-\frac{1}{4}W_{a\mu\nu}W^{a\mu\nu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-\bar{l}(\gamma^\mu\partial_\mu-\mathrm{i}\gamma^\mu\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}\gamma^\mu B_\mu y)l\\&-\frac{1}{2}\left|(\partial_\mu-\mathrm{i}\boldsymbol{A}_\mu\cdot\boldsymbol{t}-\mathrm{i}B_\mu y)\phi\right|^2-\frac{\mu^2}{2}\phi^{\dagger}\phi-\frac{\lambda}{4}(\phi^\dagger\phi)^2-G_e\overline{\left(P_L l\right)}\phi P_Rl+h.c.
 \end{aligned}
 $$
 
@@ -339,9 +350,25 @@ $$
     \langle\phi^+\rangle=0,\:\langle\phi^0\rangle=v
 $$
 
-由此 Higgs 的动力学项给出了 $W$ 和 $Z$ 的质量：
+由此 Higgs 的动力学项中规范联络部分给出了 $W$ 和 $Z$ 的质量：
 
-TBD.
+$$
+    -\frac{1}{2}\left|(\boldsymbol{A}_\mu\cdot\boldsymbol{t}+B_\mu y)\phi\right|^2=-\frac{1}{4}g^2v^2W^{\dagger}_{\mu}W^{\mu}-\frac{1}{8}(g^2+g'^2)v^2Z_\mu Z^\mu
+$$
+
+可以看到其中刚好没有 $A_\mu$ 的质量项，这保证了光子仍旧零质量，并且我们有：
+
+$$
+    m_W=|g|v,\quad m_Z=\frac{1}{2}\sqrt{g^2+g'^2}v
+$$
+
+此外，Yukawa 耦合也给出了电子的质量：
+
+$$
+    m_e=vG_e
+$$
+
+由此，我们成功地通过自发对称性破缺机制赋予了弱规范玻色子与轻子合适的质量，并给出了轻子-规范玻色子之间的电弱相互作用，也就是著名的 **Glashow–Weinberg–Salam 电弱标准模型**，其被 Sheldon Lee Glashow 于 1961 年，Mohammad Abdus Salam 于 1964 年，Steven Weinberg 于 1967 年分别独立提出，并为他们赢得了 1979 年的诺贝尔物理学奖。Higgs 与规范玻色子之间的弱相互作用也可以通过对 Lagrangian 的进一步展开获得，我们在此不再详述。
 
 ----
 
