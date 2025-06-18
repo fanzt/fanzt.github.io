@@ -4,7 +4,7 @@ title:      "Vacuum-Energy-of-Gravitational-Field"
 subtitle:   "Calculating by Path Integral"
 date:       2025-6-18 20:00:00
 author:     "fromuly"
-header-img: "img/post-bg-2025-9.jpg"
+header-img: "img/post-bg-2025-10.jpg"
 catalog: true
 usemathjax: true
 music-id: 1972447487
