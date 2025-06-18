@@ -15,7 +15,7 @@ tags:
 
 ## Review: Spontaneous Symmetry Breaking and Goldstone Theorem
 
-> 文章主要参考了 https://arxiv.org/abs/2110.14504.
+> 文章主要参考了 <https://arxiv.org/abs/2110.14504>.
 
 ### Symmetry in Classical and Quantum
 
