@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Vacuum-Energy-of-Gravitational-Field"
+title:      "Vacuum Energy of Gravitational Field"
 subtitle:   "Calculating by Path Integral"
 date:       2025-6-18 20:00:00
 author:     "fromuly"
