@@ -131,6 +131,5 @@ TBD.
 
 ----
 
-[^1]: Gerard ’t Hooft and M. J. G. Veltman. One loop divergencies in the theory of gravitation.
-*Ann. Inst. H. Poincare A Phys. Theor.*, 20:69–94, 1974.
+[^1]: Gerard ’t Hooft and M. J. G. Veltman. One loop divergencies in the theory of gravitation. *Ann. Inst. H. Poincare A Phys. Theor.*, 20:69–94, 1974.
 [^2]: Gustav Uhre Jakobsen. Schwarzschild-tangherlini metric from scattering amplitudes, 2020.
