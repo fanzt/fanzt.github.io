@@ -125,6 +125,10 @@ $$
 
 其中 `$\mathcal{M}_{\mu\nu}$` 也正是我们接下来计算真空能量所需要的二次型。
 
+## Calculation of Vacuum Energy
+
+TBD.
+
 ----
 
 [^1]: Gerard ’t Hooft and M. J. G. Veltman. One loop divergencies in the theory of gravitation.
