@@ -195,7 +195,7 @@ $$
 \begin{aligned}
     D_{\mu\nu,\rho\sigma}A^{\rho\sigma,\alpha\beta}=\frac{1}{2p^2}\left(1-\frac{1}{\xi}\right)(1-\xi)&(\eta_{\nu 0}p_{\mu}\eta^{\alpha\beta}p^2+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}-p_{0}p^{\alpha}p_{\mu}{\delta_{\nu}}^{\beta}-p^2p_{\mu}{\delta^{\alpha}}_{0}{\delta_{\nu}}^{\beta}
     \\&+\eta_{\mu 0}p_{\nu}\eta^{\alpha\beta}p^2+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}-p_{0}p_{\nu}p^{\alpha}{\delta_{\mu}}^{\beta}-p_{\nu}{\delta_{\mu}}^{\beta}{\delta^{\alpha}}_{0}p^2
-    \\&+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}+p^2\eta_{\nu 0}p_{\mu}\eta^{\alpha\beta}-\eta_{\nu 0}p^P{\alpha}p^{\beta}p_{\mu}-p_{\nu}p^{\beta}\eta_{\mu 0}p^{\alpha}
+    \\&+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}+p^2\eta_{\nu 0}p_{\mu}\eta^{\alpha\beta}-\eta_{\nu 0}p^{\alpha}p^{\beta}p_{\mu}-p_{\nu}p^{\beta}\eta_{\mu 0}p^{\alpha}
     \\&+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}+p^2\eta_{\mu 0}p_{\nu}\eta^{\alpha\beta}-\eta_{\mu 0}p^{\alpha}p^{\beta}p_{\nu}-p_{\mu}{\delta^{\alpha}}_{0}p_{\beta}p_{\nu})
 \end{aligned}
 $$
