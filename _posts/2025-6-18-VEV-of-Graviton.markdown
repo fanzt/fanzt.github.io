@@ -101,6 +101,8 @@ $$
     \mathscr{D}^{-1}_{\mu\nu,\rho\sigma}=\frac{1}{p^2-\mathrm{i}\varepsilon}\left\{\frac{1}{2}\left[(\eta_{\mu\rho}\eta_{\nu\sigma}+\eta_{\mu\sigma}\eta_{\nu\rho}-\eta_{\mu\nu}\eta_{\rho\sigma})-\frac{1-\xi}{p^2}(p_{\mu}p_{\sigma}\eta_{\nu\rho}+p_{\nu}p_{\sigma}\eta_{\mu\rho}+p_{\mu}p_{\rho}\eta_{\nu\sigma}+p_{\nu}p_{\rho}\eta_{\mu\sigma})\right]\right\}
 $$
 
+注意，这里 $\mathscr{D}$ 指标里的逗号只表示分割指标组，不表示导数。
+
 （其实我们的目的并不是获得传播子，而是获得二次项的逆以计算积分。）
 
 ## Faddeev-Popov Ghost
@@ -127,7 +129,154 @@ $$
 
 ## Calculation of Vacuum Energy
 
-TBD.
+做完了前置准备工作，我们便可以实际进行真空能量的计算了。整体的计算思路和方法其实与矢量场别无二致，考虑到接下来的计算过程实际其实很繁琐，在计算开始之前，通过一个简单的分析先给出预期的结果将会是十分有益的。
+
+我们知道，对于任意的一个四维时空，度规的分量组成了一个对称的 $4\times 4$ 矩阵。这意味着从表观上来看，度规张量场至少有 $4\times 4-6=10$ 个自由度。因此我们预期应当首先计算出一个 $10\times1/2\hbar\omega$ 的真空零点能。但正如电磁场被规范不变性限制到了只剩两个自由度，实际的引力场也只有两个独立的自由度，因此我们还需要鬼场去抵消掉 $8\times 1/2\hbar\omega$ 的零点能。而注意到对于引力场来说，鬼场 $c$ 和 $\bar{c}$ 将会直接称为一个携带有 Lorentz 指标的四分量 Grassmann 矢量，这意味着其将刚好提供 $-2\times 4=-8$ 倍的自由度抵消，使得引力场最终只剩下 $2\times 1/2\hbar\omega$ 的真空零点能。
+
+接下来我们将通过计算验证这一点。
+
+写下规范固定后的生成泛函：
+
+$$
+\begin{aligned}
+    \mathcal{Z}[0]_{h}&=\int\mathcal{D}g_{\mu\nu}\exp\left\{\mathrm{i}\int\mathrm{d}^4x\:\frac{R}{16\pi G_N}\right\}
+    \\&\sim\int\mathcal{D}h_{\mu\nu}\exp\left\{\mathrm{i}\int\mathrm{d}^4x\mathrm{d}^4y\left[-\frac{1}{2}h_{\mu\nu}(x)\mathscr{D}^{\mu\nu,\rho\sigma}(x,y)h_{\rho\sigma}(y)+\mathscr{L}_{GF}-\mathrm{i}\varepsilon\text{项}\right]\right\}
+\end{aligned}
+$$
+
+基于与之前推文一致的讨论，我们接下来要计算：
+
+$$
+    I=\sum_{\mu\nu=\rho\sigma}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\mathscr{D}^{\mu\nu,\rho\sigma}(p)
+$$
+
+在有正规化的意义下我们可以执行分部积分，于是有：
+
+$$
+\begin{aligned}
+    I&=-\sum_{\mu\nu=\alpha\beta}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{p^0}{2\pi}\mathrm{d}(\ln\mathscr{D}^{\mu\nu,\alpha\beta}(p))
+    \\&=-\sum_{\mu\nu=\alpha\beta}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}p^0\mathscr{D}^{-1}_{\mu\nu,\rho\sigma}\frac{\mathrm{d}}{\mathrm{d}p^0}\mathscr{D}^{\rho\sigma,\alpha\beta}(p)
+\end{aligned}
+$$
+
+最复杂繁琐的处理便是计算 `$\mathscr{D}^{-1}_{\mu\nu,\alpha\beta}{\mathrm{d}}/{\mathrm{d}p^0}(\mathscr{D}^{\alpha\beta,\rho\sigma}(p))$` 这一项。首先计算出 `$\mathscr{D}^{\alpha\beta,\rho\sigma}(p)$` 对 $p^0$ 的导数，有：
+
+$$
+\begin{aligned}
+    \frac{\mathrm{d}}{\mathrm{d}p^0}\mathscr{D}^{\rho\sigma,\alpha\beta}(p)=-2&\cdot\left[-\left(1-\frac{1}{\xi}\right)({\delta^{\rho}}_{0}p^{\sigma}\eta^{\alpha\beta}+p^{\rho}{\delta^{\sigma}}_{0}\eta^{\alpha\beta}-{\delta^{\sigma}}_{0}p^{\alpha}\eta^{\rho\beta}-p^{\sigma}{\delta^{\alpha}}_{0}\eta^{\rho\beta})\right.
+    \\&\left.-\frac{1}{2}(-2p^0\eta^{\rho\alpha}\eta^{\sigma\beta})+\left(\frac{1}{2}-\frac{1}{4\xi}\right)(-2p^0\eta^{\rho\sigma}\eta^{\alpha\beta})\right]
+\end{aligned}
+$$
+
+其次调用传播子的结果，给出：
+
+$$
+    \mathscr{D}^{-1}_{\mu\nu,\rho\sigma}=\frac{1}{p^2-\mathrm{i}\varepsilon}\left\{\frac{1}{2}\left[(\eta_{\mu\rho}\eta_{\nu\sigma}+\eta_{\mu\sigma}\eta_{\nu\rho}-\eta_{\mu\nu}\eta_{\rho\sigma})-\frac{1-\xi}{p^2}(p_{\mu}p_{\sigma}\eta_{\nu\rho}+p_{\nu}p_{\sigma}\eta_{\mu\rho}+p_{\mu}p_{\rho}\eta_{\nu\sigma}+p_{\nu}p_{\rho}\eta_{\mu\sigma})\right]\right\}
+$$
+
+将对 $p^0$ 的导数中除去 $-2$ 后的第一项记为 `$A^{\rho\sigma,\alpha\beta}$`，第二、三项记为 `$B^{\rho\sigma,\alpha\beta}$`；将传播子分子的第一项记为 `$C_{\mu\nu,\rho\sigma}$`，第二项记为 `$D_{\mu\nu,\rho\sigma}$`. 逐项相乘，给出：
+
+$$
+\begin{aligned}
+    C_{\mu\nu,\rho\sigma}A^{\rho\sigma,\alpha\beta}=-\frac{1}{2}\left(1-\frac{1}{\xi}\right)&(\eta_{\mu 0}p_{\nu}\eta^{\alpha\beta}+p_{\mu}\eta_{\nu 0}\eta^{\alpha\beta}-p_0\eta_{\mu\nu}\eta^{\alpha\beta}
+    \\&+p_{\mu}\eta_{\nu 0}\eta^{\alpha\beta}+p_{\nu}\eta_{\mu 0}\eta^{\alpha\beta}-p_0\eta_{\mu\nu}\eta^{\alpha\beta}
+    \\&-\eta_{\nu 0}p^{\alpha}{\delta_{\mu}}^{\beta}-\eta_{\mu 0}p^{\alpha}{\delta_{\nu}}^{\beta}+{\delta_{0}}^{\beta}p^{\alpha}\eta_{\mu\nu}
+    \\&-p_{\nu}{\delta_{\mu}}^{\beta}{\delta^{\alpha}}_{0}-p_{\mu}{\delta_{\nu}}^{\beta}{\delta^{\alpha}}_{0}+p^{\beta}{\delta^{\alpha}}_0\eta_{\mu\nu})
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    C_{\mu\nu,\rho\sigma}B^{\rho\sigma,\alpha\beta}=\frac{1}{2}({\delta_{\mu}}^{\alpha}+{\delta_{\mu}}^{\beta}{\delta_{\nu}}^{\alpha}-\eta_{\mu\nu}\eta^{\alpha\beta})p^0-\frac{1}{2}\left(1-\frac{1}{2\xi}(\eta_{\mu\nu}\eta^{\alpha\beta}+\eta_{\mu\nu}\eta^{\alpha\beta}-4\eta_{\mu\nu}\eta^{\alpha\beta})\right)p^0
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    D_{\mu\nu,\rho\sigma}A^{\rho\sigma,\alpha\beta}=\frac{1}{2p^2}\left(1-\frac{1}{\xi}\right)(1-\xi)&(\eta_{\nu 0}p_{\mu}\eta^{\alpha\beta}p^2+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}-p_{0}p^{\alpha}p_{\mu}{\delta_{\nu}}^{\beta}-p^2p_{\mu}{\delta^{\alpha}}_{0}{\delta_{\nu}}^{\beta}
+    \\&+\eta_{\mu 0}p_{\nu}\eta^{\alpha\beta}p^2+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}-p_{0}p_{\nu}p^{\alpha}{\delta_{\mu}}^{\beta}-p_{\nu}{\delta_{\mu}}^{\beta}{\delta^{\alpha}}_{0}p^2
+    \\&+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}+p^2\eta_{\nu 0}p_{\mu}\eta^{\alpha\beta}-\eta_{\nu 0}p^P{\alpha}p^{\beta}p_{\mu}-p_{\nu}p^{\beta}\eta_{\mu 0}p^{\alpha}
+    \\&+p_{0}p_{\mu}p_{\nu}\eta^{\alpha\beta}+p^2\eta_{\mu 0}p_{\nu}\eta^{\alpha\beta}-\eta_{\mu 0}p^{\alpha}p^{\beta}p_{\nu}-p_{\mu}{\delta^{\alpha}}_{0}p_{\beta}p_{\nu})
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    D_{\mu\nu,\rho\sigma}B^{\rho\sigma,\alpha\beta}=&-\frac{1-\xi}{2p^2}(p_{\mu}{\delta_{\nu}}^{\alpha}p^{\beta}+p_{\nu}p^{\beta}{\delta_{\mu}}^{\alpha}+p_{\mu}p^{\alpha}{\delta_{\nu}}^{\beta})p^0
+    \\&+\frac{1-\xi}{2p^2}\left(1-\frac{1}{2\xi}\right)(p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta})
+\end{aligned}
+$$
+
+取迹，即令 `$\mu\nu=\alpha\beta$`，给出：
+
+$$
+\begin{aligned}
+    &C_{\mu\nu,\rho\sigma}A^{\rho\sigma,\mu\nu}=-6\left(1-\frac{1}{\xi}\right)p^0
+    \\&C_{\mu\nu,\rho\sigma}B^{\rho\sigma,\mu\nu}=8p^0+4\left(1-\frac{1}{2\xi}\right)p^0
+    \\&D_{\mu\nu,\rho\sigma}A^{\rho\sigma,\mu\nu}=3\left(1-\frac{1}{\xi}\right)(1-\xi)p^0
+    \\&D_{\mu\nu,\rho\sigma}B^{\rho\sigma,\mu\nu}=-5(1-\xi)p^0+2(1-\xi)\left(1-\frac{1}{2\xi}\right)p^0
+\end{aligned}
+$$
+
+将这些项加在一起，我们发现所有含 $\xi$ 的项恰好相互消除掉，这表明引力场的零点能同样不依赖于规范的选取。于是我们有：
+
+$$
+\begin{aligned}
+    \sum_{\mu\nu=\alpha\beta}\mathscr{D}^{-1}_{\mu\nu,\rho\sigma}\frac{\mathrm{d}}{\mathrm{d}p^0}\mathscr{D}^{\rho\sigma,\alpha\beta}(p)&=\frac{-2}{p^2-\mathrm{i}\varepsilon}(C_{\mu\nu,\rho\sigma}A^{\rho\sigma,\mu\nu}+C_{\mu\nu,\rho\sigma}B^{\rho\sigma,\mu\nu}+D_{\mu\nu,\rho\sigma}A^{\rho\sigma,\mu\nu}+D_{\mu\nu,\rho\sigma}B^{\rho\sigma,\mu\nu})
+    \\&=\frac{-2p^0}{p^2-\mathrm{i}\varepsilon}\times 10
+\end{aligned}
+$$
+
+代回到零点能的积分，有：
+
+$$
+    I=-\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{\mathrm{d}p^0}{2\pi}\frac{-2(p^0)^2}{p^2-\mathrm{i}\varepsilon}\times 10
+$$
+
+而我们又有：
+
+$$
+    E_0=\frac{1}{2\mathrm{i}}V\cdot I
+$$
+
+因而有：
+
+$$
+    E_0=\frac{1}{2}\int\frac{\mathrm{d}^3p}{(2\pi)^3}E_{\mathbf{p}}V\times 10
+$$
+
+这正是我们最开始预期的表观结果。
+
+而进一步考虑鬼场的贡献，有：
+
+$$
+    \begin{aligned}
+        \mathcal{Z}[0]_G=C_1\int\mathcal{D}\bar{c}^{\mu}\mathcal{D}c^{\nu}\exp\left\{\mathrm{i}\int\mathrm{d}^4x\mathrm{d}^4y\bar{c}^{\mu}(x)c^{\nu}(y)\mathcal{M}_{\mu\nu}(x,y)\right\}=C_1\det\mathcal{M}(x,y)
+    \end{aligned}
+$$
+
+其中 `$\mathcal{M}_{\mu\nu}(x,y)=\eta_{\mu\nu}\partial^2\delta^4(x-y)$`. 基于类似的讨论，有：
+
+$$
+\begin{aligned}
+    -\mathrm{i}E_{0G}T&=VT\sum_{\mu=\nu}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\ln\left(\eta_{\mu\nu}(p^2-\mathrm{i}\varepsilon)\right)+\ln{C'_1}
+    \\&=VT\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{-2p^0}{p^2-\mathrm{i}\varepsilon}\times 4
+\end{aligned}
+$$
+
+于是这给出：
+
+$$
+    E_{0G}=-\frac{1}{2}\int\frac{\mathrm{d}^3p}{(2\pi)^3}E_{\mathbf{p}}V\times 8
+$$
+
+二者相加，恰好给出：
+
+$$
+    E_{0,Gravity}=2\times\frac{1}{2}\int\frac{\mathrm{d}^3p}{(2\pi)^3}E_{\mathbf{p}}V
+$$
+
+该结果不依赖于规范的选取，且与我们最初的预期完美一致。
 
 ----
 
