@@ -187,7 +187,7 @@ $$
 
 $$
 \begin{aligned}
-    C_{\mu\nu,\rho\sigma}B^{\rho\sigma,\alpha\beta}=\frac{1}{2}({\delta_{\mu}}^{\alpha}+{\delta_{\mu}}^{\beta}{\delta_{\nu}}^{\alpha}-\eta_{\mu\nu}\eta^{\alpha\beta})p^0-\frac{1}{2}\left(1-\frac{1}{2\xi}(\eta_{\mu\nu}\eta^{\alpha\beta}+\eta_{\mu\nu}\eta^{\alpha\beta}-4\eta_{\mu\nu}\eta^{\alpha\beta})\right)p^0
+    C_{\mu\nu,\rho\sigma}B^{\rho\sigma,\alpha\beta}=\frac{1}{2}({\delta_{\mu}}^{\alpha}+{\delta_{\mu}}^{\beta}{\delta_{\nu}}^{\alpha}-\eta_{\mu\nu}\eta^{\alpha\beta})p^0-\frac{1}{2}\left(1-\frac{1}{2\xi}\right)(\eta_{\mu\nu}\eta^{\alpha\beta}+\eta_{\mu\nu}\eta^{\alpha\beta}-4\eta_{\mu\nu}\eta^{\alpha\beta})p^0
 \end{aligned}
 $$
 
@@ -203,7 +203,7 @@ $$
 $$
 \begin{aligned}
     D_{\mu\nu,\rho\sigma}B^{\rho\sigma,\alpha\beta}=&-\frac{1-\xi}{2p^2}(p_{\mu}{\delta_{\nu}}^{\alpha}p^{\beta}+p_{\nu}p^{\beta}{\delta_{\mu}}^{\alpha}+p_{\mu}p^{\alpha}{\delta_{\nu}}^{\beta})p^0
-    \\&+\frac{1-\xi}{2p^2}\left(1-\frac{1}{2\xi}\right)(p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta})
+    \\&+\frac{1-\xi}{2p^2}\left(1-\frac{1}{2\xi}\right)(p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta}+p_{\mu}p_{\nu}\eta^{\alpha\beta})p^0
 \end{aligned}
 $$
 
