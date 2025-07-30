@@ -110,6 +110,8 @@ $$
     K^\mu=\frac{N}{8\pi^2}\varepsilon^{\mu\nu\rho\sigma}\left[A_{\gamma\nu}F^{\gamma}_{\rho\sigma}-\frac{2}{3}C_{\alpha\beta\gamma}A^{\alpha}_{\nu}A^{\beta}_{\rho}A^{\gamma}_{\sigma}\right]
 $$
 
+这便是修正后的反常轴矢流方程。
+
 ## 三角圈图与一般情况的反常
 
 TBD.
