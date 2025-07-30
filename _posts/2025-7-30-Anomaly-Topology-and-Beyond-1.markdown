@@ -92,7 +92,7 @@ $$
     \langle\partial_\mu J^{\mu}_5(x)\rangle=\mathscr{A}(x)
 $$
 
-即流守恒方程不再成立，这明显地意味着轴矢量 $U(1)$ 对称性被破坏了。这意味着对于整体我们需要对量子情形下的流守恒做出修正。如果有不错的注意力，我们可以观察到 $\mathscr{A}(x)$ 实际上可以被写为一个全导数（其中我们使用了伴随表示的归一化条件，这给出了 $N$）：
+即流守恒方程不再成立，这明显地意味着轴矢量 $U(1)$ 对称性被破坏了。因此，我们需要对量子情形下的流守恒做出修正。如果有不错的注意力，我们可以观察到 $\mathscr{A}(x)$ 实际上可以被写为一个全导数（其中我们使用了伴随表示的归一化条件，这给出了 $N$）：
 
 $$
     \mathscr{A}(x)=-\frac{N}{8\pi^2}\partial_\mu\varepsilon^{\mu\nu\rho\sigma}\left[A_{\gamma\nu}F^{\gamma}_{\rho\sigma}-\frac{2}{3}C_{\alpha\beta\gamma}A^{\alpha}_{\nu}A^{\beta}_{\rho}A^{\gamma}_{\sigma}\right]
