@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Anomaly, Topology and Beyond-1"
-subtitle:   "U(1) Axial Anomaly"
+subtitle:   "Anomaly"
 date:       2025-7-30 20:30:00
 author:     "fromuly"
 header-img: "img/post-bg-2025-16.jpg"
