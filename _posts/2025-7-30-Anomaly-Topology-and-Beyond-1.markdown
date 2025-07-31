@@ -31,7 +31,7 @@ tags:
 首先写下一个与某种规范场有非手征耦合的无质量自旋 $1/2$ 费米子的路径积分：
 
 $$
-    Z=\int[\mathscr{D}\psi\mathscr{D}\bar{\psi}\mathscr{D}A]\mathrm{e}^{-\mathrm{i}S}
+    \mathcal{Z}=\int[\mathscr{D}\psi\mathscr{D}\bar{\psi}\mathscr{D}A]\mathrm{e}^{-\mathrm{i}S}
 $$
 
 虽然我们目前讨论的手征反常是整体的，但从一些（稍后可以看到的，出于给出 Noether 定理的需求导致的）技术上的原因，我们考虑对费米场们做一个任意的定域幺正变换，即 `$\psi(x)\rightarrow U(x)\psi(x)$`. 基本的 Grassmann 代数规则告诉我们，在这样的变换下，泛函测度的变换为[^2]：
@@ -67,7 +67,7 @@ $$
     \mathscr{A}(x)=-2\text{tr}\{\gamma_5 t\}\delta^4(x-x)
 $$
 
-显然这个 $\mathscr{A}(x)$ 包含一个类似 $0\cdot\infty$ 的情形，需要进行正规化计算。我们在这里不展示细节的正规化计算过程，大致的思路就是将 $\delta^4(0)$ 写成动量积分，再引入一个正规化因子分离发散，可以发现发散会被求迹抵消，剩下一个有限大的值。
+显然这个 $\mathscr{A}(x)$ 包含一个类似 $0\cdot\infty$ 的情形，需要进行正规化计算。我们在这里不展示细节的正规化计算过程，大致的思路就是将 $\delta^4(0)$ 写成动量积分，再引入一个正规化因子分离发散，可以发现发散会被求迹抵消，剩下一个有限大的值。这里对正规化因子的引入要求保规范不变性，因而会同步引入那个与费米子耦合的规范场，进而带来最终的反常项。
 
 最终的计算结果为：
 
@@ -114,11 +114,60 @@ $$
 
 ## 三角圈图与一般情况的反常
 
-TBD.
+通过使用 Fujikawa 的方法，我们计算出了手征反常的结果。但对于一些其他的，更一般的反常（例如，我们下一节要讨论的规范反常和引力反常），一个直接的微扰论计算将是更加方便的。在本小节中，我们就来讨论直接计算三角圈图来获得反常的一些信息。特别的，我们不会将计算进行到底（因为最后有一些烦人的 Feynman 积分），对圈图的一个初步分析就可以给出我们所需要的关键参数。
+
+![三角圈图](../img/poster_img/triangle.png)
+
+考虑一个与规范场有手征耦合的无质量费米子理论，在一圈阶会有一个如上图所示的圈图，以及一个交换 `$j^\nu_\beta(y)$` 和 `$j^{\rho}_\gamma(z)$` 的另一张图。这两张图给出了关联函数：
+
+$$
+    \Gamma^{\mu\nu\rho}_{\alpha\beta\gamma}(x,y,z)=\langle\mathrm{T}\{j^{\mu}_{\alpha}(x)j^{\nu}_{\beta}(y)j^{\rho}_{\gamma}(z)\}\rangle
+$$
+
+按费曼规则读图写下关联函数，这给出：
+
+$$
+\begin{aligned}
+    \Gamma^{\mu\nu\rho}_{\alpha\beta\gamma}(x,y,z)=&-\mathrm{i}\:\mathrm{tr}\left[S(x-y)\gamma^{\nu}T_{\beta}P_LS(y-z)\gamma^{\rho}T_{\gamma}P_LS(z-x)\gamma^{\mu}T_{\alpha}P_L\right]
+    \\&-\mathrm{i}\:\mathrm{tr}\left[S(x-z)\gamma^{\rho}T_{\gamma}P_LS(z-y)\gamma^{\nu}T_{\beta}P_LS(y-x)\gamma^{\mu}T_{\alpha}P_L\right]
+\end{aligned}
+$$
+
+其中 $\mathrm{tr}$ 自动对所有旋量和规范指标求迹。
+
+将传播子的表达式带进去并进行一些化简，我们会发现这个顶点对应的两张图的贡献分别正比于如下两个规范生成元乘积的迹：
+
+$$
+    \mathrm{tr}[T_{\beta}T_{\gamma}T_{\alpha}],\:\mathrm{tr}[T_{\gamma}T_{\beta}T_{\alpha}]
+$$
+
+为了后续的分析，我们可以将这个迹分为对称和反对称两部分：
+
+$$
+    \mathrm{tr}[T_{\beta}T_{\gamma}T_{\alpha}]=\mathrm{tr}\left[\frac{1}{2}\{T_{\alpha},T_{\beta}\}T_{\gamma}+\frac{1}{2}[T_\alpha,T_{\beta}]T_{\gamma}\right]=D_{\alpha\beta\gamma}+\frac{1}{2}\mathrm{i}NC_{\alpha\beta\gamma}
+$$
+
+其中我们使用了一个假定的归一化条件 `$\mathrm{tr}[T_{\alpha}T_{\beta}]=N\delta_{\alpha\beta}$`，并且 `$C_{\alpha\beta\gamma}$` 是相应李代数的结构常数。我们注意到，被定义成加和中第一项的 `$D_{\alpha\beta\gamma}$` 关于 $\alpha\beta$ 是对称的，第二项则是反对称的。
+
+接下来我们考察 Ward 恒等式。如果这三个流都是守恒的，那么 Ward 恒等式会告诉我们：
+
+$$
+    \frac{\partial}{\partial x^{\mu}}\Gamma^{\mu\nu\rho}_{\alpha\beta\gamma}(x,y,z)=-\mathrm{i}C_{\alpha\beta\lambda}\delta^4(x-y)\langle \mathrm{T}\{j^{\nu}_{\lambda}(y)j^{\rho}_{\gamma}(z)\}\rangle-(\gamma\rightarrow\beta\rightarrow\lambda)\:\text{term}
+$$
+
+这其中只有关于 $\alpha\beta$ 的反对称项，而不存在正比于 `$D_{\alpha\beta\gamma}$` 的对称项！因此这个对称项的存在正代表了理论中对称性被破坏的贡献，也就是我们所面临的反常。
+
+这张三角圈图可以被进一步计算下去，利用平移被积分动量的方式进行正规化。这个结果不是本文讨论的重点，因而我们简单介绍一下过程。由于我们有两个被积动量，这里的平移变量有至少两个选取上的自由度，对应于一些选择的技巧。我们希望能够将这张图的反常都集中在一个流上，因此我们会额外对另两个流附加 Ward 恒等式的限制。这给可能的选取做出了一个限制。在这个限制下，进一步的计算确切保证了任何选取的方法都不能把正比于 `$D_{\alpha\beta\gamma}$` 的反常项彻底的消去，因此只要这个对称迹张量不为零，三角圈图就确实会给出一个非零的反常贡献。
 
 ## 规范反常、引力反常与理论的自洽性
 
-TBD.
+在上一小节中，我们通过计算圈图的方式看到了反常贡献的存在性被对称张量 `$D_{\alpha\beta\gamma}$` 所决定。对于整体对称性，反常的存在没有什么很大的问题，其充其量只是改变了理论的一些经典预言结果。然而，如果反常发生在一个规范对称性上，那么这将是灾难性的。规范对称性出现反常意味着理论的 Lorentz 不变性会遭到破坏，相应的 BRST 对称性与可重整性也会出现问题，这些都会导致理论出现不自洽性。因此，我们需要有能力考察一个理论是否能够保证其在规范对称性上不出现反常。
+
+理论不出现反常对应两种可能性，一种是对于相应的规范耦合，`$D_{\alpha\beta\gamma}$` 为零，这意味着反常直接不存在于这种规范对称性中。另一种可能则是理论中所有粒子给出的反常贡献中，所有的 `$D_{\alpha\beta\gamma}$` 相互抵消，总和为零，这保证了理论在总体层面上实现了没有反常。
+
+除了规范反常之外，引力反常也是理论要考虑的问题。虽然现有的可重整理论没有将引力包含进来，但仍旧不妨碍我们将引力作为有效理论引入到模型当中。当三角圈图的两条外流被引力流替代时，我们需要保证在背景引力场下理论不会出现反常带来的自洽性问题。
+
+在考虑到反常的自洽性问题后，一个自然的问题是：现有的标准模型是否能够保证自洽无反常？本小节我们便来讨论这个话题。
 
 ----
 
