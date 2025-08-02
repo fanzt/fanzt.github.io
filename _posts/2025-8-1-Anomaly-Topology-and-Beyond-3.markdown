@@ -4,7 +4,7 @@ title:      "Anomaly, Topology and Beyond-3"
 subtitle:   "Instanton and some Topology"
 date:       2025-7-31 17:30:00
 author:     "fromuly"
-header-img: "img/post-bg-2024-7.png"
+header-img: "img/post-bg-2024-7.jpg"
 catalog: true
 usemathjax: true
 music-id: 28556280
