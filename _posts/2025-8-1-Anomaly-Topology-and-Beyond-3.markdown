@@ -46,7 +46,7 @@ $$
 其中容易看到，单位面积上的能量值是：
 
 $$
-    E[\phi]=\frac{1}{2}(\partial_x\phi)^2+V(\phi)
+    E[\phi]=\int\mathrm{d}x\:\left[\frac{1}{2}(\partial_x\phi)^2+V(\phi)\right]
 $$
 
 作为例子，我们分别考虑两种不同的势能：Ginzberg-Landau 势 (a):
