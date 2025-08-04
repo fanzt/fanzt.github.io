@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Anomaly, Topology and Beyond-3"
-subtitle:   "Some basic topology and some examples."
+subtitle:   "Soliton."
 date:       2025-7-31 17:30:00
 author:     "fromuly"
 header-img: "img/post-bg-2025-19.jpg"
@@ -37,7 +37,9 @@ tags:
 
 ## 孤子与畴界
 
-我们先从最简单的一维空间开始。一维空间中上述的拓扑不平庸场构型出现在离散对称性破缺的场景中：对称性有可能在不同的畴中破缺到了不同的基态上，而这些畴被“畴界”隔离开来，每个畴界中真空场都会从势的一个极小值跃到另一个极小值上。一维空间中（或者说，假定场构型在 $yz$ 平面内平坦）的畴界也叫做孤子，其典型的作用量为：
+### 畴界解的基本性质
+
+我们先从最简单的一维空间开始，这个情形过于简单以至于我们还暂时用不到同伦群的内容。一维空间中上述的拓扑不平庸场构型出现在离散对称性破缺的场景中：对称性有可能在不同的畴中破缺到了不同的基态上，而这些畴被“畴界”隔离开来，每个畴界中真空场都会从势的一个极小值跃到另一个极小值上。考虑场构型在 $yz$ 平面内平坦，问题便可在一维空间中考虑。一维空间中的畴界也叫做孤子，其典型的作用量为：
 
 $$
     S[\phi]=\int\mathrm{d}^2x\:\left(\frac{1}{2}\dot{\phi}^2-\frac{1}{2}(\partial_x\phi)^2-V(\phi)\right)
@@ -63,7 +65,81 @@ $$
 
 为了方便起见，我们在这里都对势能做了调整以保证其最低点恰好为零。（这个操作不会带来什么影响，一个全局的大能量是没有任何物理意义的。）
 
-容易观察到，Ginzberg-Landau 势的最低点取在 $\phi=\pm F$ 的位置，而 Sine-Gordon 模型的势能最低点则取在了所有 $\phi=nF,\:n\in\mathbb{Z}$ 的点上。
+容易观察到，Ginzberg-Landau 势的最低点取在 $\phi=\pm F$ 的位置，而 Sine-Gordon 模型的势能最低点则取在了所有 `$\phi=nF, \: n\in\mathbb{Z}$` 的点上。我们研究的场构型是静态的，根据作用量可以给出 E-L 方程：
+
+$$
+    \frac{\partial^2\phi}{\partial x^2}-\frac{\partial V}{\partial\phi}=0
+$$
+
+两边乘 $\partial_x\phi$ 凑能量守恒，给出：
+
+$$
+    \partial_x\left(\frac{1}{2}(\partial_x\phi)^2-V(\phi)\right)=0
+$$
+
+这给出：
+
+$$
+    \frac{1}{2}(\partial_x\phi)^2-V(\phi)=Const
+$$
+
+为了获取这个常数，我们考虑到作用量有限的边界条件要求在 $x\rightarrow\infty$ 时 $\phi$ 要取在势能零点对应的那些常数场上，这意味着 `$x\rightarrow\infty, \: \partial_x\phi=0,V(\phi)=0$`，因此上式的常数就只能是零。于是我们可以解出：
+
+$$
+    x(\phi)=\int\frac{\mathrm{d}\phi}{\sqrt{2V(\phi)}}
+$$
+
+对于我们所考虑的这两种情况，$\phi$ 都可以被反解出来：
+
+$$
+\begin{aligned}
+    &(a):\quad\phi(x)=F\tanh\frac{1}{2}m(x-x_0)
+    \\&(b):\quad\phi(x)=\frac{2F}{\pi}\arctan\left(\mathrm{e}^{m(x-x_0)}\right)
+\end{aligned}
+$$
+
+其中 $m$ 是由 $\lambda,F,A$ 等决定的参数。在 $m$ 足够大的情况下，这两个函数的形式都如同 `$F\text{sgn}(x-x_0)$` 一样，将整个 $x$ 轴区分为了两部分，其中一部分的场取为众多真空期望值中的一个，另一个场取为期望值中的另一个，而二者中间则被一段快速的跃变隔开。这正是所谓“畴界”的含义。
+
+当 $m$ 足够大的时候，场方程就将会化为线性方程，此时我们就可以对这些解作线性叠加，而这就会带来所谓的“多孤子”（或者说，多畴界）场构型。这种构型会将 $x$ 轴分割为多个区域，每个区域都有自己的真空期望值；看起来就像很多墙壁各自围起来的地块一样。
+
+### 与费米子耦合
+
+考虑畴界和费米子场的耦合将是有用的，因为它可以为我们关于 Higgs 场的一些讨论做出演示。考察一个 $1+1d$ 的费米子场 Lagrangain：
+
+$$
+    \mathscr{L}_{\psi}=-\bar{\psi}(\gamma^{\mu}\partial_{\mu}+g\phi(x))\psi
+$$
+
+其中我们的 $\gamma$ 矩阵取为：
+
+$$
+    \gamma^1=\sigma_1,\gamma^4=\sigma_3,\gamma^5=\sigma_2
+$$
+
+而 $\phi(x)$ 则是上述 $(a)$ 情况的解。容易看到其实第二项充当了一个费米子的（空间依赖）的质量项。如果 $\phi(x)$ 的真空期望值在全空间都一样（我们熟知的 Higgs 机制），那么这就只会简单的给出一个 $m_{\psi}=gF$. 但如果 $\phi$ 取成孤子（畴界）解呢？同样考虑静态场，求解场方程，给出：
+
+$$
+    (\sigma_1\partial_x+g\phi)\psi_{\pm}=0
+$$
+
+其中 `$\psi_{\pm}$` 是零能的 $\sigma_1$ 本征值为 `$\pm 1$` 的解。最终我们可以解出：
+
+$$
+\begin{aligned}
+    &\psi_{+}=C_1\left(\cosh\frac{m}{2}(x-x_0)\right)^{-2m/m_{\psi}}
+    \begin{pmatrix}
+        1
+        \\1
+    \end{pmatrix}
+    \\&\psi_{-}=C_2\left(\cosh\frac{m}{2}(x-x_0)\right)^{-2m/m_{\psi}}
+    \begin{pmatrix}
+        1
+        \\-1
+    \end{pmatrix}
+\end{aligned}
+$$
+
+这被称为 Jackiw-Rebbi 模式；我们将其是做孤子-费米子束缚态；我们可以看到，当这个模式处在畴界上的时候，它将会不拥有质量。
 
 ----
 
