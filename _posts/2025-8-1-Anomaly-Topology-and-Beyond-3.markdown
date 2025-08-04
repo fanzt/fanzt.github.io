@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Anomaly, Topology and Beyond-3"
-subtitle:   "Soliton."
+subtitle:   "Soliton and Instanton"
 date:       2025-7-31 17:30:00
 author:     "fromuly"
 header-img: "img/post-bg-2025-19.jpg"
@@ -139,7 +139,25 @@ $$
 \end{aligned}
 $$
 
-这被称为 Jackiw-Rebbi 模式；我们将其是做孤子-费米子束缚态；我们可以看到，当这个模式处在畴界上的时候，它将会不拥有质量。
+这被称为 Jackiw-Rebbi 模式，我们将其是做孤子-费米子束缚态；我们可以看到，当这个模式处在畴界上的时候，它将不会拥有质量。
+
+## 瞬子
+
+另一个更加有趣（如前所述，也更加有用）的拓扑场构型被称为**瞬子**。不同于孤子描述的是类标量场的构型，瞬子描述的是更加物理的规范场理论。
+
+考虑一个 $d$ 维欧几里得空间的规范场，其作用量为：
+
+$$
+    S[A]=\frac{1}{4}\int\mathrm{d}^dxF_{\alpha ij}F^{\alpha ij}
+$$
+
+我们使用拉丁指标是因为这是欧几里得空间。作用量有限的条件告诉我们 Lagrangian 需要在无穷远处足够快的趋于零。简单的幂次分析告诉我们，只要场 `$A_{\alpha i}$` 快于 `$x^{1-d/2}$` 的趋于零，那么作用量就一定是有限的。然而，即使对于 $d\geq 4$ 的空间，规范带来的额外自由性告诉我们，以 $1/x$ 趋近于零的场构型仍旧有机会满足零作用量有限，只要我们能保证在 $x\rightarrow\infty$ 时场趋于纯规范，即：
+
+$$
+    \mathrm{i}t^{\alpha}A_{\alpha i}(\boldsymbol{x})\rightarrow g^{-1}(\hat{\boldsymbol{x}})\partial_i g(\hat{\boldsymbol{x}})
+$$
+
+其中 $\hat{\boldsymbol{x}}$ 表征方向；其构成了 `$S^{d-1}$`. 在这样的纯规范上进行一个常规范变换对场 `$A_{\alpha i}$` 是没有影响的，因此我们总可以对任意的这类构型选定一个统一的方向 $\hat{\boldsymbol{x}}_1$，并作整体规范变换，令这个方向的规范 `$g(\hat{\boldsymbol{x}}_1)=e$`. 这意味着，场构型构成了一类从 $S^{d-1}$ 到 $G$ 的映射，并且其把 $S^{d-1}$ 上某固定点 `$\hat{\boldsymbol{x}}_1$` 映到 $G$ 上的恒等元 $e$. 正如我们讨论过的，这定义了同伦群 `$\pi_{d-1}(G)$`. 特别地，数学上已经证明了，对于任意的半单李群 $G$，`$\pi_3(G)$` 都是非平庸的；因此我们将 $d=4$ 时这样非平庸的场构型称为**瞬子**。
 
 ----
 
