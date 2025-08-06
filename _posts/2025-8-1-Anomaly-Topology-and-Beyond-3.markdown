@@ -189,7 +189,41 @@ $$
 
 ### 涡旋线
 
-我们考虑的第一个例子是 $2+1d$ 时空中 $\text{U}(1)$ 完全被破缺的理论，这给出了一个涡旋线。
+我们考虑的第一个例子是 $2+1d$ 时空中 $\text{U}(1)$ 完全被破缺的理论，这给出了一个涡旋线。正如上文所说，我们需要选定一个方向作为映射到 $H$ 的位置。不妨令 $x$ 轴方向的场是实的，即：
+
+$$
+    \phi(\hat{r})=F\mathrm{e}^{\mathrm{i}\varphi(\hat{r})},\:\phi(\hat{x})=F
+$$
+
+并令任意方向的渐进场为该场的 $\text{U}(1)$ 变换：
+
+$$
+    \phi(\hat{r})=F\mathrm{e}^{\mathrm{i}\varphi(\hat{r})}
+$$
+
+这给出：
+
+$$
+    \vec{\partial}\phi=\frac{1}{r}\mathrm{i}F\mathrm{e}^{\mathrm{i}\varphi(\hat{r})}\frac{\mathrm{d}\varphi}{\mathrm{d}\theta}\hat{\theta}
+$$
+
+并顺便给出规范场的渐进行为：
+
+$$
+    \mathrm{i}e\vec{A}(\hat{r})=\mathrm{e}^{-\mathrm{i}\varphi(\hat{r})}\vec{\partial}\mathrm{e}^{\mathrm{i}\varphi(\hat{r})}=\frac{\mathrm{i}}{r}\frac{\mathrm{d}\varphi}{\mathrm{d}\theta}\hat{\theta}
+$$
+
+我们看到 $\vec{A}$ 正比于 $\hat{\theta}$，说明其是一个转圈圈的场，这也是其被称为“涡旋线”的原因。
+
+在这个例子里 $\varphi(\hat{r})=\varphi(\theta)$ 就是那个同伦映射，其需要满足 $\varphi(2\pi)-\varphi(0)=2\pi n$，以保证 $\hat{x}$ 方向总是实的。数学知识告诉我们，`$\pi_1(\text{U}(1))=\mathbb{Z}$`，也就是 $S^1$ 的基本群，因此 $n$ 即表征了所谓的**卷绕数（Winding Number）**.
+
+我们可以把这个“卷绕数”的物理意义展示得再清楚一些。考虑绕着原点的一个足够大（大到渐进行为可用）的圆路径，我们希望获得通过它的“磁通量”，这给出：
+
+$$
+    \Phi=\int_S \vec{B}\cdot\mathrm{d}\vec{S}=\int_{\partial S}\vec{A}\cdot\mathrm{d}\vec{l}=\int_{0}^{2\pi}\frac{1}{e}\frac{\mathrm{d}\varphi}{\mathrm{d}\theta}\mathrm{d}\theta=\frac{2\pi n}{e}
+$$
+
+这正给出了磁通量子化条件；因此，卷绕数的物理意义对应了所谓的“磁通量子”。需要注意到的是，正如我们先前讨论的，这是一个加性量子数；两个卷绕数分别为 `$n_1$` 和 `$n_2$` 的标量场对应的规范场加一加可以获得 `$n=n_1+n_2$` 的磁通量子。在下个例子中，我们将会看到，这会对应于将要出现的“磁单极子”。
 
 ### 单极子
 
