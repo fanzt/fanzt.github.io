@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Yang-Mills Theory and the Fiber Bundle"
-subtitle:   "*千古寸心事,欧高黎嘉陈*"
+subtitle:   "千古寸心事,欧高黎嘉陈"
 date:       2025-11-19 23:30:00
 author:     "fromuly"
 header-img: "img/post-bg-2025-20.jpg"
