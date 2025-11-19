@@ -7,10 +7,13 @@ author:     "fromuly"
 header-img: "img/post-bg-2025-20.jpg"
 catalog: true
 usemathjax: true
-music-id: 2160414447
+music-id: 2756892446
 tags:
     - Physics
     - Quantum Field Theory
     - Mathematics
 ---
 
+## The Basic Knowledge of Fiber Bundle
+
+我们首先来介绍一些纤维丛的基本知识。
