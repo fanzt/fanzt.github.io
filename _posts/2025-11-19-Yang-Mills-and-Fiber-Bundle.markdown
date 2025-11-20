@@ -73,7 +73,13 @@ $$
         \text{U}(1)\hookrightarrow S^{3}\rightarrow S^2
     $$
 - 例2：陪集构造 `$P(G/H,H)$`
-  - 当李群 $G$ 存在闭李子群 $H$ 时，容易看到 $H$ 作用在 $G$ 上的每一个轨道同胚于 $H$，于是我们可以识别：$H$ 作为纤维，$G/H$ 作为底流形，$G$ 本身作为丛流形。这种想法与自发对称性破缺不谋而合。[^2]
+  - 当李群 $G$ 存在闭李子群 $H$ 时，容易看到 $H$ 作用在 $G$ 上的每一个轨道同胚于 $H$，于是我们可以识别：$H$ 作为纤维，$G/H$ 作为底流形，$G$ 本身作为丛流形：
+  
+  $$
+    H\hookrightarrow G\rightarrow G/H
+  $$
+
+  这种想法与自发对称性破缺不谋而合。[^2]
 
 ### Connection and Curvature on Principle Bundle
 
