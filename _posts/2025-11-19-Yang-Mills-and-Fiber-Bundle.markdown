@@ -59,7 +59,7 @@ $$
 - 例2：陪集构造 `$P(G/H,H)$`[^2]
   - TBD
 
-### Connections on Principle Bundle
+### Connection and Curvature on Principle Bundle
 
 ----
 
