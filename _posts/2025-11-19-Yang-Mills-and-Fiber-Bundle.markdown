@@ -24,7 +24,7 @@ $$
     \psi_\alpha:\pi^{-1}(U_{\alpha})\rightarrow U_\alpha\times F
 $$
 
-可以将这种局域平凡化理解为纤维丛的**参数化**。我们知道流形上的覆盖往往会使得开集之间存在交，这就意味着对于某篇区域 $D$，其有可能出现 `$D\subset U_{\alpha}\cap U_{\beta}$` 的情形；于是对于 `$E_D=\{u\in E|\pi (u)\in D\}$`，我们就有另一个微分同胚映射：
+可以将这种局域平凡化理解为纤维丛的**参数化**。我们知道流形上的覆盖往往会使得开集之间存在交，这就意味着对于某片区域 $D$，其有可能出现 `$D\subset U_{\alpha}\cap U_{\beta}$` 的情形；于是对于 `$E_D=\{u\in E|\pi (u)\in D\}$`，我们就有另一个微分同胚映射：
 
 $$
     \psi_\beta:\pi^{-1}(U_{\beta})\rightarrow U_\beta\times F
@@ -48,7 +48,7 @@ $$
     R:P\times G\rightarrow G
 $$
 
-容易看到，这个作用应当是自由的（$u\cdot g=u\iff g=e$），并且轨道 `$\{u(g)|u(g)=u_0 g\}$` 同构于群 $G$，给出底流形 $M=P/G$，于是利用商空间（代表元）天然给出投影映射（称为正则投射） `$\pi:P\rightarrow M=P/G$`，满足：
+容易看到，这个作用应当是自由的（$u\cdot g=u\iff g=e$），并且轨道 `$\{u(g)|u(g)=u_0 g\}$` 同胚于群 $G$，给出底流形 $M=P/G$，于是利用商空间（代表元）天然给出投影映射（称为正则投射） `$\pi:P\rightarrow M=P/G$`，满足：
 
 $$
     \pi(R_g u)=\pi(ug)=\pi(u)\in M
@@ -72,12 +72,14 @@ $$
     $$
         \text{U}(1)\hookrightarrow S^{3}\rightarrow S^2
     $$
-- 例2：陪集构造 `$P(G/H,H)$`[^2]
-  - TBD
+- 例2：陪集构造 `$P(G/H,H)$`
+  - 当李群 $G$ 存在闭李子群 $H$ 时，容易看到 $H$ 作用在 $G$ 上的每一个轨道同胚于 $H$，于是我们可以识别：$H$ 作为纤维，$G/H$ 作为底流形，$G$ 本身作为丛流形。这种想法与自发对称性破缺不谋而合。[^2]
 
 ### Connection and Curvature on Principle Bundle
+
+Yang-Mills 规范场论在几何学上的最终形式由所谓的 Wu–Yang 字典提供，它给出了物理上规范理论中一系列概念与纤维丛理论中一系列概念的对应关系。为了详细介绍这个关系，我们首先要讲明如何在主丛上定义一系列相关的几何结构；其中最重要的便是如何给出主丛上联络与曲率的定义。
 
 ----
 
 [^1]: 从名字也能看出来，怎么可能大家都是平凡的……
-[^2]: 我们会在 CCWZ (Callan-Coleman-Wess-Zumino) 构造的内容中再次遇到这个情形。
+[^2]: 事实上，我们会在 CCWZ (Callan-Coleman-Wess-Zumino) 构造的内容中再次遇到这个情形。
