@@ -55,7 +55,23 @@ $$
 $$
 
 - 例1：第一 Hopf 丛 `$P(\text{C}P^n,\text{U}(1))$`
-  - TBD
+  - 考虑 `$\text{U}(1)\hookrightarrow S^{2n+1}\rightarrow \text{C}P^n$`，其中有：
+    $$
+        S^{2n+1}=\{Z\in\mathbb{C}^{n+1}:|Z|^2=1\}
+    $$
+
+    以及：
+    $$
+    \begin{aligned}
+        \text{C}P^{n}&=\{[Z]=[cZ],Z\in\mathbb{C}^{n+1},c\in\mathbb{C}\}
+        \\&=\{[Z]=[\mathrm{e}^{\mathrm{i}\varphi}Z],Z\in S^{2n+1},\mathrm{e}^{\mathrm{i}\varphi}\in\text{U}(1)\}
+    \end{aligned}
+    $$
+
+    注意到在 $\text{C}P^n$ 的定义中我们认同了 $Z$ 与 $\mathrm{e}^{\mathrm{i}\varphi}Z$，这正是商空间构造，因此在这种情况下我们可以将 $S^{2n+1}$ 识别为一个主丛，而将 $\text{C}P^{n}$ 识别为它的底流形，$\text{U}(1)$ 为它的结构群/纤维流形。特别地，当 $n=1$ 时，我们称该纤维丛为复 Hopf 丛或**第一 Hopf 丛**：
+    $$
+        \text{U}(1)\hookrightarrow S^{3}\rightarrow S^2
+    $$
 - 例2：陪集构造 `$P(G/H,H)$`[^2]
   - TBD
 
