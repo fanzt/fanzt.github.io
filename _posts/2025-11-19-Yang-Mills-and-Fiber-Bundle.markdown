@@ -241,7 +241,7 @@ $$
 替代地，我们可以选择改变截面的选取，即对整个主丛用右作用做自同构变换。考虑主丛上的两个不同截面 $s(x)$ 与 $s'(x)=s(x)g(x)$，在同一局域平凡化下做拉回，有：
 
 $$
-    A'=s'^*(\omega)=(s\cdot g)^*(\omega)=s^*[R_g^*(\omega)]=s^*[g^{-1}\omega g]=g^{-1}Ag+g^{-1}\mathrm{d}g
+    A'=s'^*(\omega)=(s\cdot g)^*(\omega)=s^*[R_g^*(\omega)]=s^*[g^{-1}\omega g+g^{-1}\mathrm{d}g]=g^{-1}Ag+g^{-1}\mathrm{d}g
 $$
 
 即给出了规范变换（最后一项来源于 $g=g(x)$ 不是常数）。
