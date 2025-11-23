@@ -113,4 +113,4 @@ $$
     \mathrm{Tr}[(D_{\mu}\vec{\phi})^{\dagger}(D^{\mu}\vec{\phi})]=\frac{1}{2}\partial_{\mu}\sigma\partial^\mu\sigma+\frac{1}{2}g^2v^2W^{+}_{\mu}W^{-\mu}+(\sigma WW\text{ terms})
 $$
 
-可以识别出 $m_W={1}/{\sqrt{2}}gv$. 
+可以识别出 $m_W={1}/{\sqrt{2}}gv$.
