@@ -29,5 +29,4 @@ TBD.
 ----
 
 [^1]: 当然，在现代振幅学中，这两套技术已经发生了深度的结合。
-[^2]: 参考：AIR [[arXiv:hep-ph/0404258](https://arxiv.org/abs/hep-ph/0404258)], Blade [[arXiv:2405.14621](https://arxiv.org/abs/2405.14621)], FIRE [[arXiv:2311.02370](https://arxiv.org/abs/2311.02370)],
-Kira [[arXiv:2008.06494](https://arxiv.org/abs/2008.06494)], LiteRed [[arXiv:1310.1145](https://arxiv.org/abs/1310.1145)], NeatIBP [[arXiv:2305.08783](https://arxiv.org/abs/2305.08783)] and Reduze [[arXiv:1201.4330](https://arxiv.org/abs/1201.4330)]
+[^2]: 参考：AIR [[arXiv:hep-ph/0404258](https://arxiv.org/abs/hep-ph/0404258)], Blade [[arXiv:2405.14621](https://arxiv.org/abs/2405.14621)], FIRE [[arXiv:2311.02370](https://arxiv.org/abs/2311.02370)], Kira [[arXiv:2008.06494](https://arxiv.org/abs/2008.06494)], LiteRed [[arXiv:1310.1145](https://arxiv.org/abs/1310.1145)], NeatIBP [[arXiv:2305.08783](https://arxiv.org/abs/2305.08783)] and Reduze [[arXiv:1201.4330](https://arxiv.org/abs/1201.4330)]
