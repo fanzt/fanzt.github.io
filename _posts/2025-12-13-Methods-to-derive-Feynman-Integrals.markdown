@@ -22,7 +22,51 @@ tags:
 
 ## Feynman Integral
 
-为了详细地介绍这一套流程，我们首先需要给定 Feynman 积分的一般形式。
+为了详细地介绍这一套流程，我们首先需要给定 Feynman 积分的一般形式。在最常用的维度正规化下，一个一般的 Feynman 积分具有如下形式：
+
+$$
+    I_{\boldsymbol{\alpha}}(s_j;d)=\int\prod_{k=1}^l\frac{\mathrm{d}^dq_k}{(2\pi)^d}\frac{1}{\mathcal{D}_{1}^{\alpha_1}\dots\mathcal{D}_n^{\alpha_n}}
+$$
+
+其中 $l$ 是圈动量的数量，亦即 Feynman 图的圈数，$d=4-2\epsilon$ 是维度正规化后的维数，$s_j$ 是所有的运动学不变量，$q_k$ 是圈动量而 $\mathcal{D}_i=p_i^2-m_i^2$ 是传播子分母，$\alpha_i$ 则是每个传播子的幂次数（也可以是负的）。
+
+然而，容易想到地，一般的圈图计算中常常会有上述形式未提到的分子出现在计算过程中。如果分子中不包含圈动量，这当然无关紧要；但如果分子中包含了圈动量，我们就需要想办法把这样的积分转化为上述标准形式。一个通用的方法是，将这样的分子表达为运动学不变量 $s_j$ 与分母 $\mathcal{D}_i^{\boldsymbol{\alpha}}$ 的线性组合。考虑到我们可以构造出最多 $l(l+1)/2+l(n-1)\sim l^2+l(n-1)$ 个独立的含圈动量内积（$l$ 个圈动量自相内积，加上 $l$ 个圈动量与 $n-1$ 个独立外线动量内积），我们至少也需要相同数量的分母，才能够实现一一的抵消化简；为此，我们可能需要在 Feynman 积分中加入额外的辅助分母。
+
+### Example: two-loop massless triangle
+
+![two-loop triangle diagram](/img/poster_img/Feynman_Integral/g85.svg)
+
+考虑一个如图所示的二圈图，其中的粒子都是无质量的。根据我们上述的计数，容易看到我们会有 $7$ 个独立的动量内积；但图中只有六个传播子，所以我们需要额外引入一个辅助分母来实现这 $7$ 个可能的内积分子。上图中已经包含的传播子是：
+
+$$
+\begin{aligned}
+    &\mathcal{D}_1=q_1^2,\qquad&\mathcal{D}_2=q_2^2
+    \\&\mathcal{D}_3=(q_1-p_1)^2\qquad &\mathcal{D}_4=(q_1-q_2)^2
+    \\&\mathcal{D}_5=(q_1-p_1-p_2)^2,\qquad&\mathcal{D}_6=(q_2-p_1-p_2)^2
+\end{aligned}
+$$
+
+再额外引入一个辅助分母 $\mathcal{D}_7=(q_2-p_1)^2$，我们就可以构造出所有需要的标量内积：
+
+| Scalar Product | Relation |
+|      ---       |    ---   |
+|     $q_1^2$    |$\mathcal{D}_1$|
+|     $q_2^2$    |$\mathcal{D}_2$|
+|     $q_1\cdot q_2$    |$\frac{1}{2}(\mathcal{D}_1+\mathcal{D}_2-\mathcal{D}_4)$|
+| $q_1\cdot p_1$| $\frac{1}{2}(\mathcal{D}_1-\mathcal{D}_3)$|
+| $q_1\cdot p_2$| $\frac{1}{2}(\mathcal{D}_3-\mathcal{D}_5)$|
+| $q_2\cdot p_1$| $\frac{1}{2}(\mathcal{D}_2-\mathcal{D}_7)$|
+| $q_2\cdot p_2$| $\frac{1}{2}(\mathcal{D}_7-\mathcal{D}_6)$|
+
+于是我们就可以将图中可能出现的积分转化为标准 Feynman 积分形式。例如，含导数顶点可能给出的如下形式圈积分即可化为标准积分：
+
+$$
+\begin{aligned}
+    \int\frac{\mathrm{d}^dq_1}{(2\pi)^d}\frac{\mathrm{d}^dq_2}{(2\pi)^d}\frac{q_1\cdot q_2}{\mathcal{D}_1\mathcal{D}_3\mathcal{D}_4\mathcal{D}_5}&=\frac{1}{2}\int\frac{\mathrm{d}^dq_1}{(2\pi)^d}\frac{\mathrm{d}^dq_2}{(2\pi)^d}\frac{\mathcal{D}_1+\mathcal{D}_2-\mathcal{D}_4}{\mathcal{D}_1\mathcal{D}_3\mathcal{D}_4\mathcal{D}_5}\\&=\frac{1}{2}(I_{0,0,1,1,1,0,0}+I_{1,-1,1,1,1,0,0}-I_{1,0,1,0,1,0,0})
+\end{aligned}
+$$
+
+## Integration-by-parts identities
 
 TBD.
 
