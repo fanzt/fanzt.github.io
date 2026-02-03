@@ -16,11 +16,11 @@ tags:
 
 ## Intro
 
-Kaluza-Klein theory is a kind of theory with some extra dimension, and they are often assumed to be compactified in a tiny scale. In this note, we will give a brief overview of some famous model based on this theory, and their experimental constraints.
+Kaluza-Klein theory is a kind of theory with some extra dimensions, and they are often assumed to be compactified in a tiny scale. In this note, we will give a brief review of some famous models based on this theory, and their experimental constraints.
 
 ## Kaluza-Klein Theory
 
-The basic set-up of Kaluza-Klein theory is a higher dimension action with a given geometric structure of those extra dimensions.
+The basic set-up of Kaluza-Klein theory is a higher dimensional action with a given geometric structure of those extra dimensions.
 
 Considering an Einstein-Hilbert action in $d+n$ dimension with $d$ macroscopic and $n$ mesoscopic or microscopic, we have:
 
@@ -65,7 +65,7 @@ $$
     \hat{\mathscr{L}}_{scalar}=-\frac{1}{2}\partial_{\hat{\mu}}\phi\partial^{\hat{\mu}}\phi=-\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}\partial_i\phi\partial^i\phi
 $$
 
-notice that we have taken `$\eta_{\hat{\mu}\hat{\nu}}$` as the background metric of $T^n$. We will assume that this field can propagate in the bulk, otherwise we need to add `$\delta^n(z-z_0)$` in the Lagrangian (which we do need to in the ADD model will be introduced later).
+notice that we have taken `$\eta_{\hat{\mu}\hat{\nu}}$` as the background metric of $T^n$. We will assume that this field can propagate in the bulk, otherwise we need to add `$\delta^n(z-z_0)$` in the Lagrangian (which we do need to in some models).
 
 By compactification, $\phi$ should have the mode expansion:
 
@@ -73,7 +73,7 @@ $$
     \phi(x,z)=\sum_{\vec{n}}\phi^{\vec{n}}(x)\exp\left(\mathrm{i}\frac{2\pi\vec{n}\cdot\vec{z}}{R}\right)
 $$
 
-Plugging this into the Lagrangian, and integrating out the $n$ extra dimension, we can get $d$ dimension effective Lagrangian:
+Substituting this into the Lagrangian, and integrating out the $n$ extra dimension, we can get $d$ dimensional effective Lagrangian:
 
 $$
     \begin{aligned}
@@ -125,7 +125,7 @@ $$
     \end{aligned}
 $$
 
-and we can begin to calculate the reduced form of Lagrangian. The `$F_{\mu i}$` can be expanded as:
+and we can calculate the $d$ dimensional effective Lagrangian. The `$F_{\mu i}$` can be expanded as:
 
 $$
     \begin{aligned}
@@ -167,7 +167,7 @@ $$
     \end{aligned}
 $$
 
-which is obvious. Plugging them into Lagrangian, we can get:
+which is obvious. Substituting them into Lagrangian, we can get:
 
 $$
     \begin{aligned}
