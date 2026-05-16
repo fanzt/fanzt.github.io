@@ -241,6 +241,81 @@ $$
     \end{aligned}
 $$
 
-So we can read out the propagators.
+So we can read out the propagators. The zero mode of `$A_{\mu}$` is just normal `$d$` dimension Yang-Mills fields, and `$\vec{n}\neq 0$` modes are the transverse components of massive vector fields; `$A^{i}$` perpendicular to `$n^i$` becomes massive scalars and proportional to `$n^i$` is recognized as Goldstone boson and becomes the longitudinal component of `$A^{\vec{n}}_{\mu}$`.
 
-TBD.
+#### Spinor Field
+
+We now try to deal with fermions. The beginning is the `$d+n$` dimensional massless Dirac Lagrangian:
+
+$$
+    \hat{\mathscr{L}}_{dirac}=\mathrm{i}\bar{\Psi}\Gamma^{\hat{\mu}}\partial_{\hat{\mu}}\Psi
+$$
+
+where `$\Gamma^{\hat{\mu}}$` satisfying $d+n$ dimensional Clifford algebra:
+
+$$
+    \{\Gamma^{\hat{\mu}},\Gamma^{\hat{\nu}}\}=2\eta^{\hat{\mu}\hat{\nu}}
+$$
+
+In order to do the Kaluza-Klein reduction, we first need to get the reduced form of Clifford algebra. Following the definitions in Ref.\cite{Freedman:2012zz}, we can decompose gamma matrix as:
+
+$$
+    \Gamma^{\mu}=\gamma^{\mu}\otimes\mathbf{1},\:\Gamma^{i}=\gamma_{*}\otimes\gamma^i
+$$
+
+where `$\gamma^\mu$ and $\gamma^i$` are normal $d$ and $n$ dimensional gamma matrix, and we have assumed $d$ is even to define chirality matrix `$\gamma_{*}=(-\mathrm{i})^{d/2+1}\gamma_{0}\gamma_1\cdots\gamma_{d-1}$`. Since the chirality matrix is anti-commuting with `$\gamma^{\mu}$`, we can verify that:
+
+$$
+    \{\Gamma^{\mu},\Gamma^i\}=0
+$$
+
+and thus we can write down the decomposition of Dirac spinor\footnote{Notice that even in a trivial manifold $T^n$, which we consider here, the eigenfunctions of the Dirac operator have more energy degenerate than the eigenfunctions of the Laplacian operator used for the scalar and Yang-Mills fields above, especially for the zero modes. If we try to deal with non-trivial manifold in extra dimension, then the eigenfunctions of the Laplacian operator may also have extra degeneracy too.}:
+
+$$
+    \Psi(x,z)=\sum_k\psi_{k,0}(x)\otimes \zeta_{k,0}(z)+\sum_{\vec{n},s}\left[\psi_{+,\vec{n},s}(x)\otimes\zeta_{+,\vec{n},s}(z)+\psi_{-,\vec{n},s}(x)\otimes\zeta_{-,\vec{n},s}(z)\right]
+$$
+
+where $s$ takes from $1$ to `$2^{\lfloor n/2\rfloor-1}$` denotes the spin degenerate, and `$\zeta_{\pm,n,s}(z)$` satisfies that:
+
+$$
+    \mathrm{i}\gamma^{i}\partial_i\zeta_{\pm,\vec{n},s}(z)=\mp\lambda_n\zeta_{\pm,\vec{n},s}(z),
+$$
+
+and `$\zeta_{k,0}(z)$` satisfies `$\mathrm{i}\gamma^{i}\partial_i\zeta_{k,0}(z)=0$`, thus `$\zeta_{k,0}$` are constant spinors and $k$ takes from $1$ to `$2^{\lfloor n/2\rfloor}$`.
+For $T^n$ situation, `$\lambda_n={2\pi|\vec{n}|}/{R}$` and $\zeta(z)$ is just the free particle solution:
+
+$$
+    \zeta_{\pm,\vec{n},s}(z)=u_{\pm,\vec{n},s}\exp\left(\mathrm{i}\frac{2\pi\vec{n}\cdot\vec{z}}{R}\right)
+$$
+
+where `$u_{\pm,\vec{n},s}$` satisfies that:
+
+$$
+    \gamma^i n_i u_{\pm,\vec{n},s}=\pm|\vec{n}|u_{\pm,\vec{n},s}
+$$
+
+and orthogonal relation:
+
+$$
+    \int\mathrm{d}^n z\:\left[u_{\alpha,\vec{m},s}\exp\left(\mathrm{i}\frac{2\pi\vec{m}\cdot\vec{z}}{R}\right)\right]^{\dagger}u_{\beta,\vec{n},s'}\exp\left(\mathrm{i}\frac{2\pi\vec{n}\cdot\vec{z}}{R}\right)=V_{n}\delta_{\alpha\beta}\delta_{\vec{m},\vec{n}}\delta_{ss'}.
+$$
+
+Substituting these to the Lagrangian, we get:
+
+$$
+    \begin{aligned}
+        \hat{\mathscr{L}}_{dirac}&=\mathrm{i}\Psi^{\dagger}\Gamma^0\Gamma^{\hat{\mu}}\partial_{\hat{\mu}}\Psi
+        \\&=\mathrm{i}\Psi^{\dagger}\Gamma^0\Gamma^{\mu}\partial_{\mu}\Psi+\mathrm{i}\Psi^{\dagger}\Gamma^0\Gamma^{i}\partial_{i}\Psi
+    \end{aligned}
+$$
+
+Integrating out extra dimensions, we get the compactified Lagrangian:
+
+$$
+    \begin{aligned}
+        \mathscr{L}_{dirac}&=\int\mathrm{d}^{n}z\hat{\mathscr{L}}_{dirac}
+        \\&=V_n\left\{\sum_k\mathrm{i}\bar{\psi}_{k,0}\gamma^{\mu}\partial_{\mu}\psi_{k,0}+\sum_{\vec{n},s}\bar{\psi}_{+,\vec{n},s}(\mathrm{i}\gamma^{\mu}\partial_{\mu}-\lambda_{n}\gamma_{*})\psi_{+,\vec{n},s}+\sum_{\vec{n},s}\bar{\psi}_{-,\vec{n},s}(\mathrm{i}\gamma^{\mu}\partial_{\mu}+\lambda_{n}\gamma_{*})\psi_{-,\vec{n},s}\right\}
+    \end{aligned}
+$$
+
+Notice that zero modes are massless, and others get a pseudo-scalar mass term. In a free theory, we can rewrite this pseudo-scalar mass to a normal mass term through a field redefinition, but if we couple these fermions to a gauge field, this pseudo-scalar will give us an anomaly term.
