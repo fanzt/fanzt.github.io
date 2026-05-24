@@ -4,7 +4,7 @@ title:      "《李政道评传》读书笔记-1"
 subtitle:   "最后留下了故事。"
 date:       2025-02-23 09:00:00
 author:     "fromuly"
-header-img: "img/post-bg-2025-5.png"
+header-img: "img/post-bg-2025-6.png"
 catalog: true
 usemathjax: true
 music-id: 29334511
