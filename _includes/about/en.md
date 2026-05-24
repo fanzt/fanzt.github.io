@@ -1,1 +1,1 @@
-Froumuly/fanzt, SJTU undergraduate student, major in physcis.
+Fromuly/fanzt, SJTU undergraduate student, major in physcis.
