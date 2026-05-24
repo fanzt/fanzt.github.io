@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Kaluza-Klein Theory-1"
+title:      "Kaluza-Klein Theory"
 subtitle:   "Extra Dimensions."
 date:       2026-2-2 22:30:00
 author:     "fromuly"
