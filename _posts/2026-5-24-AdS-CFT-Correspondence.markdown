@@ -4,7 +4,7 @@ title:      "AdS/CFT Correspondence"
 subtitle:   "As above, so below; as within, so without; as the universe, so the soul."
 date:       2026-5-24 22:30:00
 author:     "fromuly"
-header-img: "img/post-bg-2025-5.jpg"
+header-img: "img/post-bg-2025-5.png"
 catalog: true
 usemathjax: true
 music-id: 3372975275
