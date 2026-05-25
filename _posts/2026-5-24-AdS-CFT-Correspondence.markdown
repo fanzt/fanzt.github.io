@@ -27,8 +27,30 @@ tags:
 
 为了介绍 AdS/CFT，我们需要首先简要回顾一下弦论的知识。
 
-为了抵消 Weyl 反常，玻色弦理论需要生活在 26 维时空中，而超弦理论需要生活在 10 维时空中；这几乎已经是人尽皆知的特征。通过标准的光锥量子化/协变量子化，我们可以分别得到开弦和闭弦的最低激发态是快子，而第一激发态则分别是：
+为了抵消 Weyl 反常，玻色弦理论需要生活在 26 维时空中，而超弦理论需要生活在 10 维时空中；这几乎已经是人尽皆知的特征。通过标准的光锥量子化/协变量子化，我们可以分别得到开弦和闭弦的最低激发态是快子场 $T(X)$，而第一激发态则分别是：
 
-- 开弦：规范场 `$A_M$`；
-- 闭弦：度规场 `$G_{MN}$`，Kalb-Ramond 二形式场 `$B_{MN}$` 以及胀子 `$\Phi$`. 
+- 开弦：规范场 `$A_M(X)$`；
+- 闭弦：度规场 `$G_{MN}(X)$`，Kalb-Ramond 二形式场 `$B_{MN}(X)$` 以及胀子场 `$\Phi(X)$`.
 
+在低能截断的情况下，以上第一激发态对应的顶点算符对应于时空中这些相应背景场与弦世界面的耦合[^1]。因此，一般地，弦（只考虑第一激发态）的作用量可以写为：
+
+$$
+    S_{eff}=\frac{1}{4\pi \alpha'}\int_{\Sigma}\mathrm{d}^2\sigma\,\sqrt{\gamma}\left\{\left[\gamma^{ab} G_{MN}(X)+\mathrm{i}\epsilon^{ab}B_{MN}(X)\right]\partial_{a}X^{M}(\sigma)\partial_{b}X^{N}(\sigma)+\alpha' R(\gamma)\Phi(X)+T(X)\right\}+\mathrm{i}\int_{\partial\Sigma}\mathrm{d}\Sigma^{a}\,\partial_a X^{M}(\sigma) A_M(X).
+$$
+
+其中最后一项是开弦的边界耦合。定义 $\beta^{\mathscr{F}}=\mathrm{d}\mathscr{F}/\mathrm{d}\ln\mu$，并令所有的耦合 $G, B, \Phi, A$ 的 $\beta$ 函数为零，可以给出背景场符合的运动方程（特别地，对于时空度规 $G$，这给出 Einstein 场方程）。反向构造可以实现这些运动方程的作用量，我们会得到开弦和闭弦的低能有效作用量：
+
+$$
+\begin{aligned}
+    S_{eff,open}&=-T_{D-1}\int\mathrm{d}^Dx\,\mathrm{e}^{-\Phi}\sqrt{-\det(G_{MN}+B_{MN}+2\pi\alpha' F_{MN})};
+    \\S_{eff,close}&=\frac{1}{2\kappa_0^2}\int\mathrm{d}^Dx\,\mathrm{e}^{-2\Phi}\left\{R+4(\partial_M\Phi)^2-\frac{1}{12}H_{MNL}H^{MNL}-\frac{2(D-D_c)}{3\alpha'}-\partial_M T^2+\frac{4}{\alpha'}T^2+O(\alpha')\right\}
+\end{aligned}
+$$
+
+----
+
+[^1]: 更一般地，在近平直背景附近，弦的任何一个激发态都会对应于一个顶点算符 $V_i(\sigma)$；打开这个激发态对应的背景场就是向 Polyakov 作用量中加入一项：
+$$
+    \delta S_i= \lambda_i\int\mathrm{d}^2\sigma\,V_i(\sigma),
+$$
+这将会给出任一激发态对应的背景场耦合。
