@@ -57,6 +57,8 @@ $$
 
 TBD.
 
+### D-p brane
+
 ----
 
 [^1]: 更一般地，在近平直背景附近，弦的任何一个激发态都会对应于一个顶点算符 $V_i(\sigma)$；打开这个激发态对应的背景场就是向 Polyakov 作用量中加入一项 $$\displaystyle\delta S_i= \lambda_i\int\mathrm{d}^2\sigma\,V_i(\sigma)$$，这将会给出任一激发态对应的背景场耦合。
