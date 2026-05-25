@@ -27,6 +27,8 @@ tags:
 
 为了介绍 AdS/CFT，我们需要首先简要回顾一下弦论的知识。
 
+### Strings in curved spacetime background
+
 为了抵消 Weyl 反常，玻色弦理论需要生活在 26 维时空中，而超弦理论需要生活在 10 维时空中；这几乎已经是人尽皆知的特征。通过标准的光锥量子化/协变量子化，我们可以分别得到开弦和闭弦的最低激发态是快子场 $T(X)$，而第一激发态则分别是：
 
 - 开弦：规范场 `$A_M(X)$`；
@@ -37,7 +39,7 @@ tags:
 $$
 \begin{aligned}
     S_{eff}=\frac{1}{4\pi \alpha'}&\int_{\Sigma}\mathrm{d}^2\sigma\,\sqrt{\gamma}\left\{\left[\gamma^{ab} G_{MN}(X)+\mathrm{i}\epsilon^{ab}B_{MN}(X)\right]\partial_{a}X^{M}(\sigma)\partial_{b}X^{N}(\sigma)+\alpha' R(\gamma)\Phi(X)+T(X)\right\}
-    \\+\mathrm{i}&\int_{\partial\Sigma}\mathrm{d}\Sigma^{a}\,\partial_a X^{M}(\sigma) A_M(X)
+    \\+\mathrm{i}&\int_{\partial\Sigma}\mathrm{d}\Sigma^{a}\,\partial_a X^{M}(\sigma) A_M(X),
 \end{aligned}
 $$
 
@@ -45,10 +47,15 @@ $$
 
 $$
 \begin{aligned}
-    S_{eff,open}&=-T_{D-1}\int\mathrm{d}^Dx\,\mathrm{e}^{-\Phi}\sqrt{-\det(G_{MN}+B_{MN}+2\pi\alpha' F_{MN})};
-    \\S_{eff,close}&=\frac{1}{2\kappa_0^2}\int\mathrm{d}^Dx\,\mathrm{e}^{-2\Phi}\left\{R+4(\partial_M\Phi)^2-\frac{1}{12}H_{MNL}H^{MNL}-\frac{2(D-D_c)}{3\alpha'}-\partial_M T^2+\frac{4}{\alpha'}T^2+O(\alpha')\right\}
+    S_{eff,open}&=-T_{D-1}\int\mathrm{d}^Dx\,\mathrm{e}^{-\Phi}\sqrt{-\det(G_{MN}+B_{MN}+2\pi\alpha' F_{MN})},
+    \\S_{eff,close}&=\frac{1}{2\kappa_0^2}\int\mathrm{d}^Dx\,\sqrt{-G}\mathrm{e}^{-2\Phi}\left\{R+4(\partial_M\Phi)^2-\frac{1}{12}H_{MNL}H^{MNL}-\frac{2(D-D_c)}{3\alpha'}\right.
+    \\&\quad\:\:\left.-\partial_M T^2+\frac{4}{\alpha'}T^2+O(\alpha')\right\}.
 \end{aligned}
 $$
+
+### Superstring and Supergravity
+
+TBD.
 
 ----
 
