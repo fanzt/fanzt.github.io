@@ -43,7 +43,7 @@ $$
 \end{aligned}
 $$
 
-其中最后一项是开弦的边界耦合。定义 $\beta^{\mathscr{F}}=\mathrm{d}\mathscr{F}/\mathrm{d}\ln\mu$，并令所有的耦合 $G, B, \Phi, A$ 的 $\beta$ 函数为零，可以给出背景场符合的运动方程（特别地，对于时空度规 $G$，这给出 Einstein 场方程）。反向构造可以实现这些运动方程的作用量，我们会得到开弦和闭弦的低能有效作用量：
+其中最后一项是开弦的边界耦合。定义 $\beta^{\mathscr{F}}=\mathrm{d}\mathscr{F}/\mathrm{d}\ln\mu$，并令所有的耦合 $G, B, \Phi, A$ 的 $\beta$ 函数为零，可以给出背景场符合的运动方程（特别地，对于时空度规 $G$，这给出 Einstein 场方程）。反向构造可以实现这些运动方程的作用量，我们会得到：
 
 $$
 \begin{aligned}
@@ -53,12 +53,25 @@ $$
 \end{aligned}
 $$
 
+我们将它们分别识别为开弦和闭弦的低能有效作用量。
+
 ### Superstring and Supergravity
 
-TBD.
+由于我们关注的 AdS/CFT 主要来自于 Type II 超弦，我们在这里只关注 Type II 超弦的作用量和低能极限。我们使用所谓的 RNS 超弦形式，即显式地引入世界面超对称（Type IIA 是 $(1,1)$ 型超对称而 Type IIB 是 $(2,0)$ 型）[^2]。世界面超场可以简便地表达出是界面超对称。定义：
+
+$$
+    D_{\theta}=\partial_\theta+\theta\partial_z,\quad D_{\bar{\theta}}=\partial_{\bar{\theta}}+\bar{\theta}\partial_{\bar{z}}
+$$
+
+并构造坐标超场 $\mathbf{X}^{\mu}(\mathbf{z},\mathbf{\bar{z}})$ 为：
+
+$$
+    \mathbf{X}^{\mu}(\mathbf{z},\mathbf{\bar{z}})=X^{\mu}+\mathrm{i}\theta\psi^{\mu}+\mathrm{i}\bar{\theta}\tilde{\psi}^{\mu}+\theta\bar{\theta}F^{\mu}.
+$$
 
 ### D-p brane
 
 ----
 
 [^1]: 更一般地，在近平直背景附近，弦的任何一个激发态都会对应于一个顶点算符 $V_i(\sigma)$；打开这个激发态对应的背景场就是向 Polyakov 作用量中加入一项 $$\displaystyle\delta S_i= \lambda_i\int\mathrm{d}^2\sigma\,V_i(\sigma)$$，这将会给出任一激发态对应的背景场耦合。
+[^2]: 相对应的，我们还有 GS 超弦和 pure spinor 形式；前者显式引入时空超对称，后者通过引入额外的 pure spinor 将前者进行 BRST 量子化。
