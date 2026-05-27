@@ -57,17 +57,43 @@ $$
 
 ### Superstring and Supergravity
 
-由于我们关注的 AdS/CFT 主要来自于 Type II 超弦，我们在这里只关注 Type II 超弦的作用量和低能极限。我们使用所谓的 RNS 超弦形式，即显式地引入世界面超对称（Type IIA 是 $(1,1)$ 型超对称而 Type IIB 是 $(2,0)$ 型）[^2]。世界面超场可以简便地表达出是界面超对称。定义：
+由于我们关注的 AdS/CFT 主要来自于 Type II 超弦，我们在这里只关注 Type II 超弦的作用量和低能极限。Type II 超弦在时空中只有闭弦部分，但是其可以有 D-p 膜解，这使得其可以允许引入连接在 D-p 膜上的开超弦。我们使用所谓的 RNS 超弦形式，即显式地引入世界面超对称（Type IIA 是 $(1,1)$ 型超对称而 Type IIB 是 $(2,0)$ 型）[^2]。对于 Type II 超弦，除了闭玻色弦所含的低能激发外，还会多出一系列 $p$ 形式规范场 $C_p(x)$，$p=1,3$ 对于 Type IIA，$p=0,2,4$ 对于 Type IIB. 世界面超场可以简便地表达出是界面超对称。定义：
 
 $$
-    D_{\theta}=\partial_\theta+\theta\partial_z,\quad D_{\bar{\theta}}=\partial_{\bar{\theta}}+\bar{\theta}\partial_{\bar{z}}
+    \mathscr{D}_m={E_{m}}^{n}(\partial_{n}+\Omega_{n} \mathcal{J})
 $$
 
-并构造坐标超场 $\mathbf{X}^{\mu}(\mathbf{z},\mathbf{\bar{z}})$ 为：
+其中 $m$ 指标取为 $(a,\alpha)=(++,--,+,-)$ 是超世界面参数化（$+\rightarrow\theta,-\rightarrow\bar{\theta}$）；${E_m}^n$ 是超世界面联络，$\Omega_n$ 是自旋联络，$\mathcal{J}$ 是超世界面上的 Lorentz 群生成元。
+
+构造坐标超场 $\mathbf{X}^{\mu}(\mathbf{z},\mathbf{\bar{z}})$ 为：
 
 $$
-    \mathbf{X}^{\mu}(\mathbf{z},\mathbf{\bar{z}})=X^{\mu}+\mathrm{i}\theta\psi^{\mu}+\mathrm{i}\bar{\theta}\tilde{\psi}^{\mu}+\theta\bar{\theta}F^{\mu}.
+    \mathbf{X}^{\mu}(\mathbf{z},\mathbf{\bar{z}})=X^{\mu}+\mathrm{i}\sqrt{\alpha'}\theta\psi^{\mu}+\mathrm{i}\sqrt{\alpha'}\bar{\theta}\tilde{\psi}^{\mu}+\mathrm{i}\alpha'\theta\bar{\theta}F^{\mu}.
 $$
+
+其中 $\psi^{\mu}(z)$ 与 $\tilde{\psi}^{\mu}(\bar{z})$ 是世界面上的 Weyl-Majorana 旋量，但同时是时空中的 Lorentz 矢量；$F^{\mu}$ 是世界面上的标量，时空上的 Lorentz 矢量。于是我们可以给出 RNS 超弦耦合到 NS-NS 背景场后的 Polyakov 作用量：
+
+$$
+    S=\frac{1}{4\pi\alpha'}\int\mathrm{d}^2z\,\mathrm{d}^2\theta\,\mathrm{\,sdet}\,E\left\{\left[G_{\mu\nu}(\mathbf{X})+B_{\mu\nu}(\mathbf{X})\right]\mathscr{D}_{\bar{\theta}}\mathbf{X}^{\mu}\mathscr{D}_{\theta}\mathbf{X}^{\nu}+\alpha'\Phi(\mathbf{X})\mathcal{R}\right\}
+$$
+
+其中 $\mathcal{R}$ 定义为：
+
+$$
+    \{\nabla_+,\nabla_-\}=\mathcal{R}\mathcal{J}.
+$$
+
+我们原则上可以通过要求上述作用量的各个 $\beta$ 函数为零来得到 NS-NS 部分的低能有效作用量。
+
+然而 Type II 超弦还包含 R-R 部分，它们对应的顶点算子不能简单地写成类非线性 sigma  模型，因此无法直接通过令 $\beta$ 函数为零来获得场方程。一般来说，处理 R-R 部分更好的方法是 GS 超弦形式，但如果我们坚持使用 RNS 形式，一个更基本的方法是通过顶点算子计算弦散射振幅，然后寻找能复现这个振幅的低能有效作用量。
+
+不管怎么说，我们可以得到 Type II 超弦的低能有效作用量，其会是一个超引力。我们关注其中的玻色部分，因此有：
+
+$$
+    S_{eff,NSNS-RR,p}=\frac{1}{2\kappa_0^2g_s^2}\int\mathrm{d}^{10}x\,\sqrt{-G}\left\{\mathrm{e}^{-2\tilde{\Phi}}\left(R+4(\partial_M\tilde{\Phi})^2-\frac{1}{12}H_{MNL}H^{MNL}\right)-\frac{g_s^2}{2}|F_{p+2}|^2\right\}.
+$$
+
+其中 $F_{p+2}=\mathrm{d}C_{p+1}$ 是 $p+1$ 形式规范场的场强。注意该作用量依赖于 $p$，这将对应于 D-p 膜的维度 $p$.
 
 ### D-p brane
 
