@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Algebraic Renormalization-Chapter 3"
-subtitle:   A trial translation of Piguet & Sorella's Book.
+subtitle:   Notes of Piguet & Sorella's Book.
 date:       2026-6-23 16:30:00
 author:     "fromuly"
 header-img: "img/post-bg-2026-3.jpg"
