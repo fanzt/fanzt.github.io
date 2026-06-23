@@ -146,4 +146,98 @@ $$
 
 ### 重整化
 
-接下来我们将着手考虑如何系统地对上述构造执行完善的重整化程序。
+接下来我们将着手考虑如何系统地对上述构造执行完善的重整化程序。对于我们构造的三个生成泛函，选择顶点函数（有效作用量）作为着手点是最方便的，因为我们已经看到了，其按 $\hbar$ 展开的结果已经确切地包含了相应的圈积分，进而确实对应于我们需要处理的相应发散。我们会一并考虑基本场 $\phi_i$ 和 外源场 $K_p$，因为我们同样关注于如何重整化一个复合场算符。因此统一地，我们将它们都记作 $\Phi_i$.
+
+#### 紫外发散
+
+重整化的目的是处理紫外发散，因此我们首先需要考虑 1PI 图如何被紫外发散所影响。定义顶点函数的 Fourier 变换：
+
+$$
+\begin{aligned}
+    &(2\pi)^D\delta^D(\sum p_k)\tilde{\Gamma}_{N_1N_2\cdots}(p_1,\cdots,p_{N_1},p_{N_1+1},\cdots,p_{N_1+N_2},\cdots)
+    \\&=\int\left(\prod\mathrm{d}^Dx_k\right)\mathrm{e}^{\mathrm{i}\sum x_kp_k}\Gamma_{N_1N_2\cdots}(x_1,\cdots,x_{N_1},x_{N_1+1},\cdots,x_{N_1+N_2},\cdots)
+\end{aligned}
+$$
+
+其中我们定义：
+
+$$
+\begin{aligned}
+    &\Gamma_{N_1N_2\cdots}(x_1,\cdots,x_{N_1},x_{N_1+1},\cdots,x_{N_1+N_2},\cdots)
+    \\&=\langle\mathrm{T}\Phi_1(x_1)\cdots\Phi_1(x_{N_1})\Phi_2(x_{N_1+1})\cdots\Phi_2(x_{N_1+N_2})\cdots)\rangle_{1\text{PI}}
+\end{aligned}
+$$
+
+其中 $N_A$ 是场 $\Phi_A$ 的出现次数。
+
+接下来我们考虑对某个 1PI 图 $\gamma$ 的贡献：
+
+- $N_A$ 个（被截掉的）外线，对应于 UV 量纲为 $d_A$ 的场 $\Phi_A$，$A=1,2,\cdots$；
+- $N_V$ 个从 Lagrangian 中读出的 UV 量纲为 $d_k$ 的相互作用顶点 $V_k$，$k=1,\cdots,N_V$；
+- $I_{ij}$ 条对应于自由传播子 $\Delta_{ij}$ 的内线，$i,j=1,2,\cdots$；
+- $L$ 个圈。
+
+其中我们如下地定义每个场 $\phi_i$ 的 UV 量纲 $d_i$：
+
+1. 自由 Lagrangian 中二次项的量纲为时空维度 $D$，而每个时空导数被赋予 $1$ 的量纲；
+2. UV 量纲 $d_i$ 必须满足不等式：
+
+$$
+    d_i+d_j\geq d_{ij}+D,
+$$
+
+其中 $d_{ij}$ 是相应场的动量空间自由传播子的 UV 量纲，被定义为动量空间传播子的 UV 渐进行为指数：
+
+$$
+    \tilde{\Delta}_{ij}(p)\sim p^{d_{ij}},\quad p\rightarrow\infty.
+$$
+
+对于耦合到复合场算符 $Q^p$ 的外源场 $K_p$，我们定义 $d_p=D-d_{Q^p}$，其中 $d_{Q^p}$ 是 $Q^p$ 自己的量纲。每一个顶点对应于一系列 $\phi_i$ 与 $K_p$ 和它们的导数的单项式，于是这个顶点的 UV 量纲就是这个单项式的量纲。
+
+对于一个图 $\gamma$，形式地把它写成动量空间积分：
+
+$$
+    J_{\gamma}(p)=\left[\int\prod_{l=1}^L\mathrm{d}^Dk_l\right]\,I_\gamma(p,k)
+$$
+
+其中所有的 $p=(p_1,\cdots,p_N)$ 是外动量（全部取为进入本图的），满足 $\sum_1^N p_k=0$；而 $k=(k_1,\cdots,k_L)$ 是 $L$ 个独立的圈动量。做统一尺度变换 $p\rightarrow\lambda p,k\rightarrow \lambda k$，并令 $\lambda\rightarrow \infty$，若形式积分有渐进性为：
+
+$$
+    \left[\prod_{l=1}^L\mathrm{d}^D(\lambda k_l)\right]I_{\gamma}(\lambda p,\lambda k)\sim \lambda^{d(\gamma)}
+$$
+
+我们便定义 $d(\gamma)$ 为该图的表观 UV 发散度。利用 Euler 恒等式容易验证，表观发散度等于：
+
+$$
+    d(\gamma)=D+\sum_{V_k}(\dim(V_k)-D)-\sum_A N_Ad_A.
+$$
+
+如果所有的顶点量纲都不多于 $D$，那么表观发散度就是有上界的：
+
+$$
+    d(\gamma)\leq d_{\text{max}}(\gamma)=D-\sum_A N_A d_A
+$$
+
+因此这样的理论被称为所谓的“可重整理论”。
+
+特别地，如果我们考虑的生成泛函包含且仅包含一个复合场算符插入，那么我们有 $\sum_A N_Ad_A=d_K+\sum_i N_i d_i=D-d_Q+\sum_i N_i d_i$，于是复合算符插入的最大表观发散度就是：
+
+$$
+    d_{\text{max}}(\gamma)=d_Q-\sum_i N_i d_i.
+$$
+
+#### 紫外减除
+
+Weinberg 与 Zimmermann 关于这类多动量积分的收敛性给出了一个严格的定理，称为**幂次计数定理**：
+
+$$
+\boxed{
+    \begin{aligned}
+        &\large{\boldsymbol{幂次计数定理}：}\large{\text{如果我们的理论中所有的自由传播子都有非零的质量，则当且仅当图本身的表观发散度，}}\\&\large{\text{以及它的所有 1PI 子图的表观发散度都是严格负的时候，形如 $J_\gamma$ 那样的Feynman 积分是绝对收敛的。}}
+    \end{aligned}
+}
+$$
+
+而那些发散的图则来自于我们尝试将过多的传播子分布局域地乘在了一起。为了给这种情况一个好的定义，我们来着手考虑所谓的 BPHZ 动量空间减除方案。BPHZ 减除方案是一个迭代递归的减除方案，其基本思路是在确保图 $\gamma$ 的所有子图的圈积分已经完成了下列手续的情况下，将图 $\gamma$ 的圈积分 $J_\gamma(p)$ 的被积函数 $I_\gamma(p,k)$ 关于外动量 $p$ 的 Taylor 展开中的前几项做合适的减除。
+
+作为一个例子，考虑一个朴素的一圈积分
