@@ -4,7 +4,7 @@ title:      "Notes on operator renormalization of Yang-Mills Theory"
 subtitle:   A reading notes of Joglekar-Lee's Paper.
 date:       2026-6-23 16:30:00
 author:     "fromuly"
-header-img: "img/post-bg-2026-.jpg"
+header-img: "img/post-bg-2026-7.jpg"
 catalog: true
 usemathjax: true
 music-id: 2077297870
